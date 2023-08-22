@@ -1,4 +1,32 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+.nav-link-footer {
+  border-bottom: 1px solid transparent;
+
+  &:hover,
+  &:active {
+    border-bottom: 1px solid $primary;
+  }
+
+  &:focus {
+    background-color: $primary !important;
+    transition: 0.15s ease-in !important;
+    color: $dark !important;
+  }
+}
+
+.footer {
+  &__img {
+    border-bottom: 4px solid $primary;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-10px);
+      border-bottom: 4px solid $dark;
+    }
+  }
+  &_nav_link_icon {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }

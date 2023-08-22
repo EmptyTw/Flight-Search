@@ -1,14 +1,1 @@
-.nav-link {
-  border: 1px solid transparent;
 
-  &:hover,
-  &:active {
-    border: 1px solid $primary !important;
-    transition: border-color 0s ease-in !important;
-  }
-
-  &:focus {
-    background-color: $primary !important;
-    transition: 0.15s ease-in !important;
-  }
-}
