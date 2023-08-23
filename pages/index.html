@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <style>
     /* * {
@@ -30,6 +31,14 @@
           height: 1000px;
           clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
         "
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
       >
         <div class="container text-center pt-6">
           <h1 class="text-light fw-bold ls-10" style="font-size: 80px">
@@ -51,7 +60,17 @@
       <!-- FlightSearch and RealTime - FLIGHTSEARCH -->
 
       <section class="container py-6">
-        <div class="row mb-6">
+        <div
+          class="row mb-6"
+          data-aos="fade-right"
+          data-aos-offset="-200"
+          data-aos-delay="0"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
+        >
           <div
             class="col-4 me-4 border border-primary px-12 py-32 bg-size-256 bg-pos-125-135"
             style="
@@ -137,7 +156,17 @@
 
         <!-- FlightSearch and RealTime - REALTIME -->
 
-        <div class="row">
+        <div
+          class="row"
+          data-aos="fade-left"
+          data-aos-offset="-200"
+          data-aos-delay="0"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
+        >
           <div class="col p-0">
             <img
               class="w-100"
@@ -196,6 +225,14 @@
 
           height: 1000px;
         "
+        data-aos="fade-up"
+        data-aos-offset="-200"
+        data-aos-delay="0"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
       >
         <div class="container text-center pt-240">
           <h2 class="text-light fw-bold ls-10" style="font-size: 80px">
@@ -233,7 +270,17 @@
           </div>
         </div>
         <!-- CARDS -->
-        <div class="row mt-6 card_hover">
+        <div
+          class="row mt-6 card_hover"
+          data-aos="zoom-in"
+          data-aos-offset="-200"
+          data-aos-delay="0"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
+        >
           <div class="col-4 card_hover_spot">
             <div
               class="bg-blend-mode-screen bg-cover position-relative d-flex justify-content-end align-items-end"
@@ -401,7 +448,17 @@
       >
         <div class="container">
           <div class="row">
-            <div class="col">
+            <div
+              class="col"
+              data-aos="fade-right"
+              data-aos-offset="-200"
+              data-aos-delay="0"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top-center"
+            >
               <div class="d-flex mt-32">
                 <h5
                   class="text-primary fw-bold me-2 rotate-90"
@@ -476,7 +533,17 @@
               </ul>
             </div>
             <!-- comment right  -->
-            <div class="col">
+            <div
+              class="col"
+              data-aos="fade-left"
+              data-aos-offset="-200"
+              data-aos-delay="0"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top-center"
+            >
               <div class="d-flex position-relative justify-content-end">
                 <!-- what we have -->
 
@@ -595,5 +662,9 @@
     <%- include('./layout/footer-homepage'); -%>
 
     <script type="module" src="../main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
