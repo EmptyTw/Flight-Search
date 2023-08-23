@@ -6,6 +6,11 @@
   margin-top: 478px;
 }
 
+.px-144 {
+  padding-left: 144px;
+  padding-right: 144px;
+}
+
 .pt-240 {
   padding-top: 240px;
 }
@@ -24,6 +29,14 @@
 
 .bg-blend-mode-screen {
   background-blend-mode: screen;
+}
+
+.border-top-primary {
+  border-top: 1px solid $primary;
+}
+
+.border-top-secondary {
+  border-top: 1px solid $secondary;
 }
 
 ////TOURCARD/////
