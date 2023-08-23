@@ -13,9 +13,9 @@
     />
   </head>
   <style>
-    * {
+    /* * {
       border: 1px red solid !important;
-    }
+    } */
   </style>
   <body>
     <!-- ejs語法 -->
@@ -42,17 +42,21 @@
         <div class="container text-center">
           <h5 class="text-light mb-3 mt-478">尋找您旅行的翅膀 即刻出發</h5>
           <!-- 記得補上位置 -->
-          <a href="#" class="btn btn-primary rounded-0 fw-bold" role="button"
+          <a href="#" class="btn btn-primary rounded-0 fw-bold" 
+          
+          role="button"
             >開啟旅程</a
           >
         </div>
       </div>
 
-      <!-- FlightSearch and RealTime -->
+      <!-- FlightSearch and RealTime - FLIGHTSEARCH -->
+     
 
       <div class="container py-6">
         <div class="row mb-6">
-          <div class="col-5 me-4 border border-primary px-12 py-32">
+          <div class="col-4 me-4 border border-primary px-12 py-32 bg-size-256 bg-pos-125-135"
+          style="background-image: url(/assets/images/homepage/inspection.png);">
             <div class="d-flex">
               <h5
                 class="text-primary fw-bold me-2 rotate-90"
@@ -82,56 +86,84 @@
             </div>
           </div>
           <div class="col position-relative p-0 overflow-hidden">
-            <img
-              class="position-absolute top-0 start-0 opacity-20 translateX-80n"
-              src="/assets/images/homepage/flightSearch-2.PNG"
-              alt="flightSearch-2"
-              style="height: 358px"
-            />
-            <img
-              class="position-absolute top-0 start-50 translateX-50n"
-              src="/assets/images/homepage/flightSearch.jfif"
-              alt="flightSearch-2"
-              style="height: 358px"
-            />
-            <img
-              class="position-absolute top-0 end-0 opacity-20 translateX-80"
-              src="/assets/images/homepage/flightSearch-3.PNG"
-              alt="flightSearch-3"
-              style="height: 358px"
-            />
+            <div class="position-absolute bottom-0 start-75 z-1 d-flex ">
+              <a class="btn btn-primary rounded-0 p-0 d-block  " href="#">
+                <img  src="/assets/images/homepage/Arrow Pointing Left.png" alt="arrow_left">
+              </a>
+
+              <a class="btn btn-primary rounded-0 p-0 d-block carousel-hover" 
+               href="#">
+              <img   src="/assets/images/homepage/Right Arrow.png" alt="arrow_right">
+              </a>
+          
+            </div>
+            
+            
+            <ul class="list-unstyled">
+              <li>
+                <img
+                class="position-absolute top-0 start-0 opacity-20  translateX-83n w-75"
+                src="/assets/images/homepage/flightSearch-2.PNG"
+                alt="flightSearch-2"
+                style="height: 358px; "
+              />
+             </li>
+              <li>
+                <img
+                class="position-absolute top-0 start-50 translateX-50n w-75"
+                src="/assets/images/homepage/flightSearch.jfif"
+                alt="flightSearch-2"
+                style="height: 358px"
+              />
+              </li>
+              <li>
+                 <img
+                class="position-absolute top-0 end-0 opacity-20 w-75 translateX-83" 
+                src="/assets/images/homepage/flightSearch-3.PNG"
+                alt="flightSearch-3"
+                style="height: 358px;"
+              />
+              </li>
+            </ul>
           </div>
-
-          <!-- <img
-            class="position-absolute top-0 end-0"
-            src="/assets/images/homepage/flightSearch-2.PNG"
-            alt="flightSearch-2"
-            style="height: 358px"
-          />
-          <img
-            class="position-absolute top-0 end-0"
-            src="/assets/images/homepage/flightSearch.jfif"
-            alt="flightSearch"
-            style="height: 358px"
-          />
-          <img
-            class="position-absolute top-0 end-0"
-            src="/assets/images/homepage/flightSearch-3.PNG"
-            alt="flightSearch-3"
-            style="height: 358px"
-          /> -->
         </div>
 
-        <div
-          class="container d-flex justify-content-between align-items-center"
-        >
-          <img
-            src="/assets/images/homepage/realTime.jfif"
-            alt="realTime"
-            style="height: 358px"
-          />
-          <div class="">即刻守護</div>
-        </div>
+        <!-- FlightSearch and RealTime - REALTIME -->
+
+        <div class="row">
+          <div class="col p-0">
+            <img class="w-100" src="/assets/images/homepage/realTime.jfif" alt="realTime" style="height: 358px">
+          </div>
+          <div class="col border border-primary px-12 py-32 ms-4 bg-size-256 bg-pos-120-150"
+          style="background-image: url(/assets/images/homepage/inspection.png);">
+            <div class="d-flex">
+              <h5
+                class="text-primary fw-bold me-2 rotate-90"
+                style="height: 20px"
+              >
+                02
+              </h5>
+              <div
+                class="d-flex flex-column justify-content-between border-left-2 ps-2"
+              >
+                <h4 class="text-secondary fw-bold mb-0">班機現況查詢</h4>
+                <h5 class="text-secondary fw-bold opacity-85 mb-0">
+                  追蹤飛行中的奇蹟！即刻發現班機位置
+                </h5>
+              </div>
+            </div>
+
+            <div class="text-center mt-40">
+              <p class="fs-6 mb-90">
+                讓您與摯愛相隨，時刻守護！探索我們的服務，查詢親友班機位置，確保他們平安無慮，一起分享旅程的美好與激動！
+              </p>
+              <a
+                class="btn btn-primary fw-bold text-secondary rounded-0 h5 mb-0 py-12 px-4"
+                href="#"
+                >即刻守護</a
+              >
+            </div>
+          </div>
       </div>
     </main>
 

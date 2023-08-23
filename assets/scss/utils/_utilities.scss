@@ -223,6 +223,7 @@ $utilities: map-merge(
           50: 50%,
           75: 75%,
           80: 80%,
+          85: 85%,
           90: 90%,
           100: 100%,
           auto: auto,
@@ -934,9 +935,9 @@ $utilities: map-merge(
       property: transform,
       class: translateX,
       values: (
-        80: translateX(80%),
+        83: translateX(83%),
         50n: translateX(-50%),
-        80n: translateX(-80%),
+        83n: translateX(-83%),
       ),
     )
   ),
