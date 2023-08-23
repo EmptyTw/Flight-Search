@@ -13,15 +13,127 @@
     />
   </head>
   <style>
-    /* * {
+    * {
       border: 1px red solid !important;
-    } */
+    }
   </style>
   <body>
     <!-- ejs語法 -->
     <%- include('./layout/header'); -%>
 
-    <h1>Homepage</h1>
+    <main>
+      <!-- HERO -->
+      <div
+        class="bg-cover container-fluid px-lg-0"
+        style="
+          background-image: url(/assets/images/homepage/hero_image.jpeg);
+          height: 1000px;
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        "
+      >
+        <div class="container text-center pt-6">
+          <h1 class="text-light fw-bold ls-10" style="font-size: 80px">
+            生活就是不斷探索或一無所有
+          </h1>
+          <h3 class="text-light mt-4">您的旅途比您想像中的還要近</h3>
+          <h3 class="text-light mt-1">千萬不要再等下一次連假</h3>
+        </div>
+
+        <div class="container text-center">
+          <h5 class="text-light mb-3 mt-478">尋找您旅行的翅膀 即刻出發</h5>
+          <!-- 記得補上位置 -->
+          <a href="#" class="btn btn-primary rounded-0 fw-bold" role="button"
+            >開啟旅程</a
+          >
+        </div>
+      </div>
+
+      <!-- FlightSearch and RealTime -->
+
+      <div class="container py-6">
+        <div class="row mb-6">
+          <div class="col-5 me-4 border border-primary px-12 py-32">
+            <div class="d-flex">
+              <h5
+                class="text-primary fw-bold me-2 rotate-90"
+                style="height: 20px"
+              >
+                01
+              </h5>
+              <div
+                class="d-flex flex-column justify-content-between border-left-2 ps-2"
+              >
+                <h4 class="text-secondary fw-bold mb-0">即時班機查詢</h4>
+                <h5 class="text-secondary fw-bold opacity-85 mb-0">
+                  為您的旅行目的地提供通行證
+                </h5>
+              </div>
+            </div>
+
+            <div class="text-center mt-40">
+              <p class="fs-6 mb-90">
+                我們的品牌理念是打破界限，將世界帶到您的腳下，並為每一位旅客提供頂級的航空體驗。
+              </p>
+              <a
+                class="btn btn-primary fw-bold text-secondary rounded-0 h5 mb-0 py-12 px-4"
+                href="#"
+                >立即查詢</a
+              >
+            </div>
+          </div>
+          <div class="col position-relative p-0 overflow-hidden">
+            <img
+              class="position-absolute top-0 start-0 opacity-20 translateX-80n"
+              src="/assets/images/homepage/flightSearch-2.PNG"
+              alt="flightSearch-2"
+              style="height: 358px"
+            />
+            <img
+              class="position-absolute top-0 start-50 translateX-50n"
+              src="/assets/images/homepage/flightSearch.jfif"
+              alt="flightSearch-2"
+              style="height: 358px"
+            />
+            <img
+              class="position-absolute top-0 end-0 opacity-20 translateX-80"
+              src="/assets/images/homepage/flightSearch-3.PNG"
+              alt="flightSearch-3"
+              style="height: 358px"
+            />
+          </div>
+
+          <!-- <img
+            class="position-absolute top-0 end-0"
+            src="/assets/images/homepage/flightSearch-2.PNG"
+            alt="flightSearch-2"
+            style="height: 358px"
+          />
+          <img
+            class="position-absolute top-0 end-0"
+            src="/assets/images/homepage/flightSearch.jfif"
+            alt="flightSearch"
+            style="height: 358px"
+          />
+          <img
+            class="position-absolute top-0 end-0"
+            src="/assets/images/homepage/flightSearch-3.PNG"
+            alt="flightSearch-3"
+            style="height: 358px"
+          /> -->
+        </div>
+
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <img
+            src="/assets/images/homepage/realTime.jfif"
+            alt="realTime"
+            style="height: 358px"
+          />
+          <div class="">即刻守護</div>
+        </div>
+      </div>
+    </main>
 
     <%- include('./layout/footer'); -%>
 
