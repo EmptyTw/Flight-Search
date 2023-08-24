@@ -48,7 +48,17 @@
 }
 
 .mt-478 {
-  margin-top: 478px;
+  @include respond(xl) {
+    margin-top: 478px;
+  }
+  @include respond(lg) {
+    margin-top: 378px;
+  }
+
+  @include respond(sm) {
+    margin-top: 320px;
+  }
+  margin-top: 160px;
 }
 
 .py-64 {

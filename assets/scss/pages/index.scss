@@ -41,3 +41,30 @@
     transform: scale(0.95);
   }
 }
+
+//////CTA 卡片翻轉效果//////
+.cta_right_card {
+  &-side {
+    transition: all 1s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($dark, 0.15);
+  }
+
+  &-back {
+    transform: rotateY(180deg);
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($primary, 0.2),
+      rgba($primary, 0.85)
+    );
+  }
+
+  &:hover &-front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &-back {
+    transform: rotateY(0deg);
+  }
+}
