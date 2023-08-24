@@ -1,0 +1,79 @@
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.bg-size-90 {
+  background-size: 90%;
+}
+
+.bg-size-256 {
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+
+.bg-pos-50-0 {
+  background-position: 50% 0%;
+}
+
+.bg-pos-125-135 {
+  background-position: 130% 130%;
+}
+
+.bg-pos-120-150 {
+  background-position: 115% 130%;
+}
+
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-flex-bewteen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+///////////// MARGIN AND PADDING/////
+
+.mt-240 {
+  margin-top: 240px;
+}
+
+.mt-340 {
+  margin-top: 340px;
+}
+
+.mt-478 {
+  margin-top: 478px;
+}
+
+.py-64 {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.py-80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.px-144 {
+  padding-left: 144px;
+  padding-right: 144px;
+}
+
+.pe-240 {
+  padding-right: 240px;
+}
+
+.pt-224 {
+  padding-top: 224px;
+}
+
+.pt-240 {
+  padding-top: 240px;
+}

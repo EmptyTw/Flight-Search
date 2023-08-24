@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <style>
     /* * {
@@ -21,10 +22,649 @@
     <!-- ejs語法 -->
     <%- include('./layout/header'); -%>
 
-    <h1>Homepage</h1>
+    <main>
+      <!-- HERO -->
+      <section
+        class="bg-cover container-fluid px-lg-0"
+        style="
+          background-image: url(/assets/images/homepage/hero_image.jpeg);
+          height: 1000px;
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        "
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+      >
+        <div class="container text-center pt-6">
+          <h1 class="text-light fw-bold ls-10" style="font-size: 80px">
+            生活就是不斷探索或一無所有
+          </h1>
+          <h3 class="text-light mt-4">您的旅途比您想像中的還要近</h3>
+          <h3 class="text-light mt-1">千萬不要再等下一次連假</h3>
+        </div>
 
-    <%- include('./layout/footer'); -%>
+        <div class="container text-center">
+          <h5 class="text-light mb-3 mt-478">尋找您旅行的翅膀 即刻出發</h5>
+          <!-- 記得補上位置 -->
+          <a href="#" class="btn btn-primary rounded-0 fw-bold" role="button"
+            >開啟旅程</a
+          >
+        </div>
+      </section>
+
+      <!-- FlightSearch and RealTime - FLIGHTSEARCH -->
+
+      <section class="container py-6">
+        <div
+          class="row mb-6"
+          data-aos="fade-right"
+          data-aos-offset="-200"
+          data-aos-delay="0"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
+        >
+          <div
+            class="col-4 me-4 border border-primary px-12 py-32 bg-size-256 bg-pos-125-135"
+            style="
+              background-image: url(/assets/images/homepage/inspection.png);
+            "
+          >
+            <div class="d-flex">
+              <h5
+                class="text-primary fw-bold me-2 rotate-90"
+                style="height: 20px"
+              >
+                01
+              </h5>
+              <div
+                class="d-flex flex-column justify-content-between border-left-2 ps-2"
+              >
+                <h4 class="text-secondary fw-bold mb-0">即時班機查詢</h4>
+                <h5 class="text-secondary fw-bold opacity-85 mb-0">
+                  為您的旅行目的地提供通行證
+                </h5>
+              </div>
+            </div>
+
+            <div class="text-center mt-40">
+              <p class="fs-6 mb-90">
+                我們的品牌理念是打破界限，將世界帶到您的腳下，並為每一位旅客提供頂級的航空體驗。
+              </p>
+              <a
+                class="btn btn-primary fw-bold text-secondary rounded-0 h5 mb-0 py-12 px-4"
+                href="#"
+                >立即查詢</a
+              >
+            </div>
+          </div>
+          <div class="col position-relative p-0 overflow-hidden">
+            <div class="position-absolute bottom-0 start-75 z-1 d-flex">
+              <a class="btn btn-primary rounded-0 p-0 d-block" href="#">
+                <img
+                  src="/assets/images/homepage/Arrow Pointing Left.png"
+                  alt="arrow_left"
+                />
+              </a>
+
+              <a
+                class="btn btn-primary rounded-0 p-0 d-block carousel-hover"
+                href="#"
+              >
+                <img
+                  src="/assets/images/homepage/Right Arrow.png"
+                  alt="arrow_right"
+                />
+              </a>
+            </div>
+
+            <ul class="list-unstyled">
+              <li>
+                <img
+                  class="position-absolute top-0 start-0 opacity-20 translateX-83n w-75"
+                  src="/assets/images/homepage/flightSearch-2.PNG"
+                  alt="flightSearch-2"
+                  style="height: 358px"
+                />
+              </li>
+              <li>
+                <img
+                  class="position-absolute top-0 start-50 translateX-50n w-75"
+                  src="/assets/images/homepage/flightSearch.jfif"
+                  alt="flightSearch-2"
+                  style="height: 358px"
+                />
+              </li>
+              <li>
+                <img
+                  class="position-absolute top-0 end-0 opacity-20 w-75 translateX-83"
+                  src="/assets/images/homepage/flightSearch-3.PNG"
+                  alt="flightSearch-3"
+                  style="height: 358px"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FlightSearch and RealTime - REALTIME -->
+
+        <div
+          class="row"
+          data-aos="fade-left"
+          data-aos-offset="-200"
+          data-aos-delay="0"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
+        >
+          <div class="col p-0">
+            <img
+              class="w-100"
+              src="/assets/images/homepage/realTime.jfif"
+              alt="realTime"
+              style="height: 358px"
+            />
+          </div>
+          <div
+            class="col border border-primary px-12 py-32 ms-4 bg-size-256 bg-pos-120-150"
+            style="
+              background-image: url(/assets/images/homepage/inspection.png);
+            "
+          >
+            <div class="d-flex">
+              <h5
+                class="text-primary fw-bold me-2 rotate-90"
+                style="height: 20px"
+              >
+                02
+              </h5>
+              <div
+                class="d-flex flex-column justify-content-between border-left-2 ps-2"
+              >
+                <h4 class="text-secondary fw-bold mb-0">班機現況查詢</h4>
+                <h5 class="text-secondary fw-bold opacity-85 mb-0">
+                  追蹤飛行中的奇蹟！即刻發現班機位置
+                </h5>
+              </div>
+            </div>
+
+            <div class="text-center mt-40">
+              <p class="fs-6 mb-90">
+                讓您與摯愛相隨，時刻守護！探索我們的服務，查詢親友班機位置，確保他們平安無慮，一起分享旅程的美好與激動！
+              </p>
+              <a
+                class="btn btn-primary fw-bold text-secondary rounded-0 h5 mb-0 py-12 px-4"
+                href="#"
+                >即刻守護</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NearAirport -->
+      <section
+        class="bg-cover bg-pos-50-0 container-fluid mt-6 px-lg-0"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.6),
+              rgba(0, 0, 0, 0.6)
+            ),
+            url(/assets/images/homepage/nearAirport.jfif);
+          clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+
+          height: 1000px;
+        "
+        data-aos="fade-up"
+        data-aos-offset="-200"
+        data-aos-delay="0"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+      >
+        <div class="container text-center pt-240">
+          <h2 class="text-light fw-bold ls-10" style="font-size: 80px">
+            探索無限可能，尋找旅行靈感!
+          </h2>
+          <p class="text-light fs-3 mt-4">探索無限可能，尋找旅行靈感</p>
+          <p class="text-light fs-3 mt-2">
+            當您不確定下一站何處，信賴我們的鄰近機場服務，為您指引前往夢想目的地！
+          </p>
+        </div>
+        <div class="container text-center">
+          <!-- 記得補上位置 -->
+          <a
+            href="#"
+            class="btn btn-primary h5 text-secondary rounded-0 fw-bold mt-340 px-4 py-12"
+            role="button"
+            >探索鄰近機場</a
+          >
+        </div>
+      </section>
+
+      <!-- HotSpots -->
+      <section class="container py-6 my-6">
+        <div class="d-flex">
+          <h5 class="text-primary fw-bold me-2 rotate-90" style="height: 20px">
+            03
+          </h5>
+          <div
+            class="d-flex flex-column justify-content-between border-left-2 ps-2"
+          >
+            <h4 class="text-secondary fw-bold mb-0">熱門目的地</h4>
+            <h5 class="text-secondary fw-bold opacity-85 mb-0">
+              為您推薦最合適的旅行目的
+            </h5>
+          </div>
+        </div>
+        <!-- CARDS -->
+        <div
+          class="row mt-6 card_hover"
+          data-aos="zoom-in"
+          data-aos-offset="-200"
+          data-aos-delay="0"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
+        >
+          <div class="col-4 card_hover_spot">
+            <div
+              class="bg-blend-mode-screen bg-cover position-relative d-flex justify-content-end align-items-end"
+              style="
+                height: 533px;
+                background-image: url(/assets/images/homepage/bangkok.jfif);
+              "
+            >
+              <span
+                class="badge bg-primary h4 px-40 py-3 fw-bold position-absolute top-100 start-13 translate-middle"
+                >曼谷</span
+              >
+              <ul class="list-unstyled d-flex gap-3 me-12">
+                <li>
+                  <img src="/assets/images/homepage/StarRate.png" alt="star" />
+                </li>
+                <li>
+                  <img src="/assets/images/homepage/StarRate.png" alt="star" />
+                </li>
+                <li>
+                  <img src="/assets/images/homepage/StarRate.png" alt="star" />
+                </li>
+                <li>
+                  <img src="/assets/images/homepage/StarRate.png" alt="star" />
+                </li>
+              </ul>
+            </div>
+            <div class="tourCard__details d-flex justify-content-end gap-4">
+              <ul class="list-unstyled mt-32">
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">旅程</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">航空公司</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">座位剩餘</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">機票價格</p>
+                </li>
+              </ul>
+
+              <ul class="list-unstyled mt-32">
+                <li class="mb-2"><p class="fs-6 m-0">3小時30分鐘</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">多</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">多</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">便宜</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-4 card_hover_spot">
+            <div
+              class="bg-blend-mode-screen bg-cover position-relative d-flex justify-content-end align-items-end"
+              style="
+                height: 533px;
+                background-image: url(/assets/images/homepage/tokyo.jfif);
+              "
+            >
+              <span
+                class="badge bg-primary h4 px-40 py-3 fw-bold position-absolute top-100 start-13 translate-middle"
+                >東京</span
+              >
+              <ul class="list-unstyled d-flex gap-3 me-12">
+                <li>
+                  <img src="/assets/images/homepage/StarRate.png" alt="star" />
+                </li>
+                <li>
+                  <img src="/assets/images/homepage/StarRate.png" alt="star" />
+                </li>
+                <li>
+                  <img src="/assets/images/homepage/StarRate.png" alt="star" />
+                </li>
+                <li>
+                  <img src="/assets/images/homepage/StarRate.png" alt="star" />
+                </li>
+              </ul>
+            </div>
+            <div class="tourCard__details d-flex justify-content-end gap-4">
+              <ul class="list-unstyled mt-32">
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">旅程</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">航空公司</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">座位剩餘</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">機票價格</p>
+                </li>
+              </ul>
+
+              <ul class="list-unstyled mt-32">
+                <li class="mb-2"><p class="fs-6 m-0">3小時30分鐘</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">多</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">中等</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">便宜</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-4 card_hover_spot">
+            <div
+              class="bg-blend-mode-screen bg-cover position-relative d-flex justify-content-end align-items-end"
+              style="
+                height: 533px;
+                background-image: url(/assets/images/homepage/seoul.jfif);
+              "
+            >
+              <span
+                class="badge bg-primary h4 px-40 py-3 fw-bold position-absolute top-100 start-13 translate-middle"
+                >首爾</span
+              >
+              <ul class="list-unstyled d-flex gap-3 me-12">
+                <li>
+                  <img src="/assets/images/homepage/StarRate.png" alt="star" />
+                </li>
+                <li>
+                  <img src="/assets/images/homepage/StarRate.png" alt="star" />
+                </li>
+                <li>
+                  <img src="/assets/images/homepage/StarRate.png" alt="star" />
+                </li>
+              </ul>
+            </div>
+            <div class="tourCard__details d-flex justify-content-end gap-4">
+              <ul class="list-unstyled mt-32">
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">旅程</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">航空公司</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">座位剩餘</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">機票價格</p>
+                </li>
+              </ul>
+
+              <ul class="list-unstyled mt-32">
+                <li class="mb-2"><p class="fs-6 m-0">3小時30分鐘</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">多</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">多</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">便宜</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section
+        class="container-fluid bg-cover px-lg-0 mt-240 position-relative"
+        style="
+          background-image: linear-gradient(
+              rgba(255, 255, 255, 0.8),
+              rgba(255, 255, 255, 0.8)
+            ),
+            url(/assets/images/homepage/bg.png);
+          height: 829px;
+        "
+      >
+        <div class="container">
+          <div class="row">
+            <div
+              class="col"
+              data-aos="fade-right"
+              data-aos-offset="-200"
+              data-aos-delay="0"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top-center"
+            >
+              <div class="d-flex mt-32">
+                <h5
+                  class="text-primary fw-bold me-2 rotate-90"
+                  style="height: 20px"
+                >
+                  04
+                </h5>
+                <div
+                  class="d-flex flex-column justify-content-between border-left-2 ps-2"
+                >
+                  <h4 class="text-secondary fw-bold mb-0">
+                    為什麼選擇 FlightEase?
+                  </h4>
+                  <h5 class="text-secondary fw-bold opacity-85 mb-0">
+                    我們提供最優惠的服務
+                  </h5>
+                </div>
+              </div>
+              <ul class="list-unstyled" class="">
+                <li class="d-flex align-items-center gap-4 mt-72 mb-32">
+                  <div
+                    class="bg-cover bg-size-90 bg-secondary rounded-circle"
+                    style="
+                      height: 96px;
+                      width: 96px;
+                      background-image: url(/assets/images/homepage/convenient.png);
+                    "
+                  ></div>
+
+                  <div class="">
+                    <h5 class="mb-3 fw-bold text-secondary">
+                      無與倫比的方便性
+                    </h5>
+                    <p class="fs-6 m-0">
+                      讓您隨時隨地輕鬆預訂航班，節省您寶貴的時間與精力。
+                    </p>
+                  </div>
+                </li>
+                <li class="d-flex align-items-center gap-4 mb-32">
+                  <div
+                    class="bg-cover bg-size-90 bg-secondary rounded-circle"
+                    style="
+                      height: 96px;
+                      width: 96px;
+                      background-image: url(/assets/images/homepage/safety.png);
+                    "
+                  ></div>
+
+                  <div class="">
+                    <h5 class="mb-3 fw-bold text-secondary">安全與可靠性</h5>
+                    <p class="fs-6 m-0">
+                      我們僅與經過驗證的航空公司合作，確保您的旅行安全與舒適。
+                    </p>
+                  </div>
+                </li>
+                <li class="d-flex align-items-center gap-4">
+                  <div
+                    class="bg-cover bg-size-90 bg-secondary rounded-circle"
+                    style="
+                      height: 96px;
+                      width: 96px;
+                      background-image: url(/assets/images/homepage/brooke.png);
+                    "
+                  ></div>
+                  <div class="">
+                    <h5 class="mb-3 fw-bold text-secondary">卓越的客戶服務</h5>
+                    <p class="fs-6 m-0">
+                      我們重視與客戶之間的溝通，致力於提供出色的客戶體驗。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- comment right  -->
+            <div
+              class="col"
+              data-aos="fade-left"
+              data-aos-offset="-200"
+              data-aos-delay="0"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top-center"
+            >
+              <div class="d-flex position-relative justify-content-end">
+                <!-- what we have -->
+
+                <div
+                  style="height: 357px"
+                  class="position-absolute top-30 start-0 z-2 px-40 py-6 bg-light border border-2 border-secondary"
+                >
+                  <h4 class="text-secondary fw-bold text-center">我們擁有</h4>
+                  <ul class="list-unstyled pt-5 mt-3 border-top-secondary">
+                    <li class="d-flex align-items-end">
+                      <img
+                        class="me-2"
+                        src="/assets/images/homepage/StarRate.png"
+                        style="height: 40px"
+                        alt="star"
+                      />
+                      <h2 class="text-secondary fw-bold me-12 mb-0">4.8</h2>
+                      <p class="m-0 fs-6">星級</p>
+                    </li>
+                    <li class="d-flex align-items-end mt-32">
+                      <img
+                        class="me-2"
+                        src="/assets/images/homepage/Vector.png"
+                        style="height: 40px"
+                        alt="star"
+                      />
+                      <h2 class="text-secondary fw-bold me-12 mb-0">2000+</h2>
+                      <p class="m-0 fs-6">訂閱用戶</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- avatar and comment -->
+                <div
+                  class="d-flex flex-column align-items-center bg-secondary py-5 px-144"
+                >
+                  <div
+                    class="bg-cover bg-size-90 rounded-circle mb-2"
+                    style="
+                      height: 120px;
+                      width: 120px;
+                      background-image: url(/assets/images/homepage/avatar.jfif);
+                    "
+                  ></div>
+                  <p class="m-0 fs-5 text-primary mb-4">林美滿</p>
+                  <p class="m-0 text-white mb-2">完美的體驗</p>
+                  <h5 class="fw-bold text-white mb-5">絕對會再訂閱</h5>
+                  <ul class="list-unstyled pt-5 border-top-primary">
+                    <li class="d-flex gap-2 align-items-center mb-3">
+                      <img
+                        style="height: 28px"
+                        src="/assets/images/homepage/verfied.png"
+                        alt="verfied"
+                      />
+                      <h4 class="text-white fw-bold mb-0">服務快速</h4>
+                    </li>
+                    <li class="d-flex gap-2 align-items-center mb-3">
+                      <img
+                        style="height: 28px"
+                        src="/assets/images/homepage/verfied.png"
+                        alt="verfied"
+                      />
+                      <h4 class="text-white fw-bold mb-0">體驗滿分</h4>
+                    </li>
+                    <li class="d-flex gap-2 align-items-center">
+                      <img
+                        style="height: 28px"
+                        src="/assets/images/homepage/verfied.png"
+                        alt="verfied"
+                      />
+                      <h4 class="text-white fw-bold mb-0">輕鬆舒適</h4>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- E-NEWSLETTER -->
+        <div
+          class="container bg-cover py-64 ps-40 position-absolute start-50 top-80 translateX-50n z-1"
+          style="
+            background-image: url(/assets/images/homepage/eNewsLetter.jfif);
+            height: 301px;
+          "
+        >
+          <h4 class="text-white mb-3">加入我們的電子報</h4>
+          <div class="d-flex gap-2 mb-32">
+            <p class="h1 m-0 text-white fw-bold">立即拿優惠金</p>
+            <div class="bg-light d-flex align-items-end rounded">
+              <h5 class="text-secondary fw-bold m-0 me-2">NT</h5>
+              <h2 class="text-secondary fw-bold m-0">$ 500</h2>
+            </div>
+          </div>
+          <form class="d-flex gap-2">
+            <div class="text-center">
+              <input
+                type="email"
+                class="form-control rounded-0 py-12 ps-3 pe-240 fs-6"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="請輸入信箱"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary text-secondary rounded-0 fw-bold py-12 px-4"
+            >
+              訂閱
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <%- include('./layout/footer-homepage'); -%>
 
     <script type="module" src="../main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

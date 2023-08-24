@@ -1,1 +1,43 @@
+.border-left-2 {
+  border-left: 2px solid #0000003e;
+}
 
+.rotate-90 {
+  transform: rotate(270deg);
+}
+
+.carousel-hover {
+  background-color: #ead390;
+}
+
+.bg-blend-mode-screen {
+  background-blend-mode: screen;
+}
+
+.border-top-primary {
+  border-top: 1px solid $primary;
+}
+
+.border-top-secondary {
+  border-top: 1px solid $secondary;
+}
+
+////TOURCARD/////
+
+.card_hover {
+  &_spot {
+    transition: all 0.5s;
+    outline-offset: 16px;
+  }
+
+  &:hover &_spot:hover {
+    outline: 0.3rem solid $primary;
+    transform: scale(1.05) translateY(-5rem);
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.5);
+    z-index: 20;
+  }
+
+  &:hover &_spot:not(:hover) {
+    transform: scale(0.95);
+  }
+}
