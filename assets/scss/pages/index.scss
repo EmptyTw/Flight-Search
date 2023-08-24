@@ -22,6 +22,33 @@
   border-top: 1px solid $secondary;
 }
 
+////HERO////
+
+.hero-img {
+  background-image: url(/assets/images/homepage/hero_image.jpeg);
+  height: 764px;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+
+  @include respond(sm) {
+    height: 1000px;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  }
+}
+
+.hero-text-mt {
+  margin-top: 250px;
+  @include respond(sm) {
+    margin-top: 400px;
+  }
+
+  @include respond(lg) {
+    margin-top: 370px;
+  }
+
+  @include respond(xxl) {
+    margin-top: 500px;
+  }
+}
 ////TOURCARD/////
 
 .card_hover {
