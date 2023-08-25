@@ -22,15 +22,20 @@
   border-top: 1px solid $secondary;
 }
 
-////HERO////
-
-.hero-img {
-  background-image: url(/assets/images/homepage/hero_image.jpeg);
+.img-height-setting {
   height: 764px;
+
+  @include respond(lg) {
+    height: 1000px;
+  }
+}
+
+////HERO///////
+
+.clip-path-hero {
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
 
   @include respond(sm) {
-    height: 1000px;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   }
 }
@@ -60,6 +65,15 @@
   top: 100%;
   @include respond(lg) {
     transform: translateY(-100%);
+  }
+}
+
+// NEAR AIRPORTS //
+
+.clip-path-nearAirport {
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  @include respond(lg) {
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
   }
 }
 
