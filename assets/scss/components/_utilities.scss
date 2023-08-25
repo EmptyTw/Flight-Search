@@ -78,3 +78,11 @@
 .rfs-80 {
   @include font-size(80px);
 }
+
+// HOVER  //
+.focus-primary-light {
+  &:focus,
+  &:visited {
+    background-color: #eac14a40 !important;
+  }
+}

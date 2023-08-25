@@ -49,6 +49,20 @@
     margin-top: 500px;
   }
 }
+
+////CAROUSEL////
+.carousel-active {
+  opacity: 1 !important;
+}
+.flightSearch-arrow-position {
+  position: absolute;
+  right: 9.4%;
+  top: 100%;
+  @include respond(lg) {
+    transform: translateY(-100%);
+  }
+}
+
 ////TOURCARD/////
 
 .card_hover {
