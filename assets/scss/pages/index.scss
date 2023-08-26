@@ -112,7 +112,7 @@
 
 ////TOURCARD/////
 
-.card_hover {
+.card-hover {
   &_spot {
     transition: all 0.5s;
     outline-offset: 16px;
@@ -130,7 +130,29 @@
   }
 }
 
+.card-img-height-rwd {
+  height: 368px;
+  @include respond(lg) {
+    height: 549px;
+  }
+}
+
+.card-scroll-width-rwd {
+  white-space: nowrap;
+  width: 240%;
+  @include respond(lg) {
+    width: 100%;
+  }
+}
+
 //////CTA 卡片翻轉效果//////
+.cta-mt {
+  margin-top: 112px;
+
+  @include respond(lg) {
+    margin-top: 240px;
+  }
+}
 .cta_right_card {
   &-side {
     transition: all 1s ease;
