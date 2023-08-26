@@ -70,10 +70,43 @@
 
 // NEAR AIRPORTS //
 
-.clip-path-nearAirport {
-  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-  @include respond(lg) {
-    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+.nearAirport {
+  &-container-pt {
+    padding-top: 140px;
+
+    @include respond(lg) {
+      padding-top: 240px;
+    }
+  }
+
+  &-clip-path {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    @include respond(lg) {
+      clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    }
+  }
+
+  &-btn-mt {
+    margin-top: 150px;
+
+    @include respond(lg) {
+      margin-top: 200px;
+    }
+    @include respond(xxl) {
+      margin-top: 340px;
+    }
+  }
+
+  &-bg-pos {
+    background-position: 75% 0%;
+
+    @include respond(sm) {
+      background-position: 60% 0%;
+    }
+
+    @include respond(md) {
+      background-position: 50% 0%;
+    }
   }
 }
 
