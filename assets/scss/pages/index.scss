@@ -112,20 +112,27 @@
 
 ////TOURCARD/////
 
+.card-scroll-rwd {
+  overflow: scroll;
+  @include respond(lg) {
+    overflow: visible;
+  }
+}
+
 .card-hover {
-  &_spot {
+  &-spot {
     transition: all 0.5s;
     outline-offset: 16px;
   }
 
-  &:hover &_spot:hover {
+  &:hover &-spot:hover {
     outline: 0.3rem solid $primary;
     transform: scale(1.05) translateY(-5rem);
     box-shadow: 0 1.5rem 4rem rgba(black, 0.5);
     z-index: 20;
   }
 
-  &:hover &_spot:not(:hover) {
+  &:hover &-spot:not(:hover) {
     transform: scale(0.95);
   }
 }
