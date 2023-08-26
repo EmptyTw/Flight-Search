@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <style>
-    /* * {
+    * {
       border: 1px red solid !important;
-    } */
+    }
   </style>
   <body>
     <!-- ejs語法 -->
@@ -445,14 +445,13 @@
               rgba(255, 255, 255, 0.8)
             ),
             url(/assets/images/homepage/bg.png);
-          height: 829px;
         "
       >
-        <div class="container overflow-hidden">
-          <div class="row row-cols-1 row-cols-lg-12 mx-0">
+        <div class="container overflow-hidden px-0">
+          <div class="row row-cols-1 row-cols-xl-12 mx-0">
             <!-- CTA-LEFT -->
             <div
-              class="col col-lg-6 pe-0"
+              class="col col-xl-6 pe-0"
               data-aos="fade-right"
               data-aos-offset="-200"
               data-aos-delay="0"
@@ -481,7 +480,9 @@
                 </div>
               </div>
               <ul class="list-unstyled" class="">
-                <li class="d-flex align-items-center gap-4 mt-72 mb-32">
+                <li
+                  class="d-flex align-items-center flex-column flex-md-row gap-4 mt-72 mb-32"
+                >
                   <div
                     class="bg-cover bg-size-90 bg-secondary rounded-circle"
                     style="
@@ -491,16 +492,18 @@
                     "
                   ></div>
 
-                  <div class="">
+                  <div class="cta-left-textAlign cta-left-width">
                     <h5 class="mb-3 fw-bold text-secondary">
                       無與倫比的方便性
                     </h5>
-                    <p class="fs-6 m-0">
+                    <p class="fs-6">
                       讓您隨時隨地輕鬆預訂航班，節省您寶貴的時間與精力。
                     </p>
                   </div>
                 </li>
-                <li class="d-flex align-items-center gap-4 mb-32">
+                <li
+                  class="d-flex align-items-center gap-4 mb-32 flex-column flex-md-row"
+                >
                   <div
                     class="bg-cover bg-size-90 bg-secondary rounded-circle"
                     style="
@@ -510,14 +513,16 @@
                     "
                   ></div>
 
-                  <div class="">
+                  <div class="cta-left-textAlign cta-left-width">
                     <h5 class="mb-3 fw-bold text-secondary">安全與可靠性</h5>
                     <p class="fs-6 m-0">
                       我們僅與經過驗證的航空公司合作，確保您的旅行安全與舒適。
                     </p>
                   </div>
                 </li>
-                <li class="d-flex align-items-center gap-4">
+                <li
+                  class="d-flex align-items-center gap-4 flex-column flex-md-row"
+                >
                   <div
                     class="bg-cover bg-size-90 bg-secondary rounded-circle"
                     style="
@@ -526,7 +531,7 @@
                       background-image: url(/assets/images/homepage/brooke.png);
                     "
                   ></div>
-                  <div class="">
+                  <div class="cta-left-textAlign cta-left-width">
                     <h5 class="mb-3 fw-bold text-secondary">卓越的客戶服務</h5>
                     <p class="fs-6 m-0">
                       我們重視與客戶之間的溝通，致力於提供出色的客戶體驗。
@@ -535,9 +540,10 @@
                 </li>
               </ul>
             </div>
+
             <!-- CTA-RIGHT  -->
             <div
-              class="col col col-lg-6 pe-0"
+              class="col col-xl-6 ps-4"
               data-aos="fade-left"
               data-aos-offset="-200"
               data-aos-delay="0"
@@ -547,15 +553,18 @@
               data-aos-once="false"
               data-aos-anchor-placement="top-center"
             >
-              <div class="d-flex position-relative justify-content-end">
-                <div class="cta_right_card">
+              <div
+                class="d-flex position-relative justify-content-end row row-cols-1"
+              >
+                <div class="cta_right_card col px-0">
                   <!-- CTA-RIGHT-CARD-what we have----FRONT -->
                   <div
-                    class="position-absolute top-30 start-0 px-32 py-6 bg-light border border-2 border-secondary cta_right_card-side cta_right_card-front"
-                    style="height: 357px; width: 306px"
+                    class="top-30 start-0 mb-32 mb-md-0 px-32 py-4 py-sm-5 bg-light border border-2 border-secondary cta_right_card-side cta_right_card-front"
                   >
                     <h4 class="text-secondary fw-bold text-center">我們擁有</h4>
-                    <ul class="list-unstyled pt-5 mt-3 border-top-secondary">
+                    <ul
+                      class="list-unstyled pt-3 pt-md-5 mt-3 border-top-secondary"
+                    >
                       <li class="d-flex align-items-end">
                         <img
                           class="me-2"
@@ -580,12 +589,11 @@
                   </div>
                   <!-- CTA-RIGHT-CARD-what we have----BACK -->
                   <div
-                    style="height: 357px; width: 306px"
-                    class="position-absolute top-30 start-0 px-32 py-6 bg-light border border-2 border-secondary text-center cta_right_card-side cta_right_card-back"
+                    class="top-30 start-0 mb-32 mb-md-0 px-32 py-4 py-sm-5 bg-light border border-2 border-secondary cta_right_card-side cta_right_card-back text-center"
                   >
-                    <h2 class="fw-bold text-center">還沒成為會員?</h2>
+                    <h2 class="fw-bold">還沒成為會員?</h2>
                     <img
-                      class="text-center d-block mx-auto mt-4"
+                      class="d-block mx-auto mt-4"
                       src="/assets/images/homepage/account.png"
                       style="height: 64px"
                       alt="account"
@@ -599,7 +607,7 @@
 
                 <!-- CTA-RIGHT- avatar and comment -->
                 <div
-                  class="d-flex flex-column align-items-center bg-secondary py-5 px-144"
+                  class="col col-md-8 d-flex flex-column align-items-center bg-secondary py-32 py-md-5"
                 >
                   <div
                     class="bg-cover bg-size-90 rounded-circle mb-2"
@@ -611,8 +619,8 @@
                   ></div>
                   <p class="m-0 fs-5 text-primary mb-4">林美滿</p>
                   <p class="m-0 text-white mb-2">完美的體驗</p>
-                  <h5 class="fw-bold text-white mb-5">絕對會再訂閱</h5>
-                  <ul class="list-unstyled pt-5 border-top-primary">
+                  <h5 class="fw-bold text-white mb-4 mb-md-5">絕對會再訂閱</h5>
+                  <ul class="list-unstyled pt-4 pt-md-5 border-top-primary">
                     <li class="d-flex gap-2 align-items-center mb-3">
                       <img
                         style="height: 28px"

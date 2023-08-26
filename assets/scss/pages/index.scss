@@ -154,7 +154,7 @@
 
 //////CTA 卡片翻轉效果//////
 .cta-mt {
-  margin-top: 112px;
+  margin-top: 80px;
 
   @include respond(lg) {
     margin-top: 240px;
@@ -162,11 +162,16 @@
 }
 .cta_right_card {
   &-side {
+    position: static;
     transition: all 1s ease;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($dark, 0.15);
+
+    @include respond(md) {
+      position: absolute;
+    }
   }
 
   &-back {
@@ -183,5 +188,21 @@
   }
   &:hover &-back {
     transform: rotateY(0deg);
+  }
+}
+
+.cta-left {
+  &-textAlign {
+    text-align: center;
+    @include respond(md) {
+      text-align: left;
+    }
+  }
+
+  &-width {
+    width: 100%;
+    @include respond(md) {
+      width: auto;
+    }
   }
 }
