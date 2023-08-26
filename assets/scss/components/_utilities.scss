@@ -46,7 +46,11 @@
 }
 
 .pe-240 {
-  padding-right: 240px;
+  padding-right: 0px;
+
+  @include respond(sm) {
+    padding-right: 150px;
+  }
 }
 
 ///FONT SIZE RFS///
