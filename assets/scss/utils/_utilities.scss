@@ -940,6 +940,13 @@ $utilities: map-merge(
         83n: translateX(-83%),
         85n: translateX(-87%),
       ),
+    ),
+    "translateY": (
+      property: transform,
+      class: translateY,
+      values: (
+        50: translateY(50%),
+      ),
     )
   ),
   $utilities
