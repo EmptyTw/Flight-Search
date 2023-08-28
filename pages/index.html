@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <style>
-    /* * {
+    * {
       border: 1px red solid !important;
-    } */
+    }
   </style>
   <body>
     <!-- ejs語法 -->
@@ -260,7 +260,17 @@
       </section>
 
       <!-- HotSpots -->
-      <section class="container px-12 py-32 my-6 card-scroll-rwd">
+      <section
+        class="container px-12 py-32 my-6 card-scroll-rwd"
+        data-aos="zoom-in"
+        data-aos-offset="-200"
+        data-aos-delay="0"
+        data-aos-duration="800"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+      >
         <div class="d-flex">
           <h5 class="text-primary fw-bold me-2 rotate-90" style="height: 20px">
             03
@@ -277,14 +287,6 @@
         <!-- CARDS -->
         <div
           class="row px-0 mx-0 mt-32 mt-lg-6 card-hover card-scroll-width-rwd"
-          data-aos="zoom-in"
-          data-aos-offset="-200"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
-          data-aos-anchor-placement="top-center"
         >
           <div class="col-4 card-hover-spot">
             <div
@@ -606,7 +608,7 @@
                   class="col col-md-8 d-flex flex-column align-items-center bg-secondary py-32 py-md-5"
                 >
                   <div
-                    class="bg-cover bg-size-90 rounded-circle mb-2"
+                    class="bg-cover rounded-circle mb-2"
                     style="
                       height: 120px;
                       width: 120px;
