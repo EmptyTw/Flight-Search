@@ -21,6 +21,47 @@
   }
 }
 
+.flightCard {
+  transition: all 1s;
+
+  &:hover {
+    transform: translateX(10rem);
+    // border: 10px solid $primary;
+
+    // margin-bottom: 16px;
+    // margin-top: 16px;
+  }
+
+  &:focus {
+    transform: translateX(0rem);
+
+    margin-top: 16px;
+  }
+}
+
+.flightCard-lower {
+  display: none;
+  transition: all 3s;
+  border: 5px solid transparent;
+  border-image: linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  border-image-slice: 1;
+  @include rainbow;
+  animation: rainbow 2s linear infinite;
+}
+.flightCard-lower-active {
+  display: flex;
+  margin-bottom: 40px;
+}
+
 .arrow-moveIn-animation {
   @include moveInLeft;
   animation-name: moveInLeft;

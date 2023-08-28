@@ -38,3 +38,46 @@
     }
   }
 }
+
+@mixin rainbow {
+  @keyframes rainbow {
+    0% {
+      border-image-source: linear-gradient(
+        45deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+      );
+    }
+
+    50% {
+      border-image-source: linear-gradient(
+        45deg,
+        yellow,
+        orange,
+        red,
+        violet,
+        indigo,
+        blue,
+        green
+      );
+    }
+
+    100% {
+      border-image-source: linear-gradient(
+        45deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+      );
+    }
+  }
+}
