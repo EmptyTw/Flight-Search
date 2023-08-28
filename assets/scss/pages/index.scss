@@ -22,22 +22,187 @@
   border-top: 1px solid $secondary;
 }
 
+.img-height-setting {
+  height: 764px;
+
+  @include respond(lg) {
+    height: 1000px;
+  }
+}
+
+////HERO///////
+
+.clip-path-hero {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+
+  @include respond(sm) {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  }
+}
+
+.hero-text-mt {
+  margin-top: 250px;
+  @include respond(sm) {
+    margin-top: 400px;
+  }
+
+  @include respond(lg) {
+    margin-top: 370px;
+  }
+
+  @include respond(xxl) {
+    margin-top: 500px;
+  }
+}
+
+////CAROUSEL////
+.carousel-active {
+  opacity: 1 !important;
+}
+.flightSearch-arrow-position {
+  position: absolute;
+  right: 9.4%;
+  top: 100%;
+  @include respond(lg) {
+    transform: translateY(-100%);
+  }
+}
+
+// NEAR AIRPORTS //
+
+.nearAirport {
+  &-container-pt {
+    padding-top: 140px;
+
+    @include respond(lg) {
+      padding-top: 240px;
+    }
+  }
+
+  &-clip-path {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    @include respond(lg) {
+      clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    }
+  }
+
+  &-btn-mt {
+    margin-top: 150px;
+
+    @include respond(lg) {
+      margin-top: 200px;
+    }
+    @include respond(xxl) {
+      margin-top: 340px;
+    }
+  }
+
+  &-bg-pos {
+    background-position: 75% 0%;
+
+    @include respond(sm) {
+      background-position: 60% 0%;
+    }
+
+    @include respond(md) {
+      background-position: 50% 0%;
+    }
+  }
+}
+
 ////TOURCARD/////
 
-.card_hover {
-  &_spot {
+.card-scroll-rwd {
+  overflow: scroll;
+  @include respond(lg) {
+    overflow: visible;
+  }
+}
+
+.card-hover {
+  &-spot {
     transition: all 0.5s;
     outline-offset: 16px;
   }
 
-  &:hover &_spot:hover {
+  &:hover &-spot:hover {
     outline: 0.3rem solid $primary;
     transform: scale(1.05) translateY(-5rem);
     box-shadow: 0 1.5rem 4rem rgba(black, 0.5);
     z-index: 20;
   }
 
-  &:hover &_spot:not(:hover) {
+  &:hover &-spot:not(:hover) {
     transform: scale(0.95);
+  }
+}
+
+.card-img-height-rwd {
+  height: 368px;
+  @include respond(lg) {
+    height: 549px;
+  }
+}
+
+.card-scroll-width-rwd {
+  white-space: nowrap;
+  width: 240%;
+  @include respond(lg) {
+    width: 100%;
+  }
+}
+
+//////CTA 卡片翻轉效果//////
+.cta-mt {
+  margin-top: 80px;
+
+  @include respond(lg) {
+    margin-top: 240px;
+  }
+}
+.cta_right_card {
+  &-side {
+    position: static;
+    transition: all 1s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($dark, 0.15);
+
+    @include respond(md) {
+      position: absolute;
+    }
+  }
+
+  &-back {
+    transform: rotateY(180deg);
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($primary, 0.2),
+      rgba($primary, 0.85)
+    );
+  }
+
+  &:hover &-front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &-back {
+    transform: rotateY(0deg);
+  }
+}
+
+.cta-left {
+  &-textAlign {
+    text-align: center;
+    @include respond(md) {
+      text-align: left;
+    }
+  }
+
+  &-width {
+    width: 100%;
+    @include respond(md) {
+      width: auto;
+    }
   }
 }

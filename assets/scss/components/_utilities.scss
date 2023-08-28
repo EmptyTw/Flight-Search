@@ -13,10 +13,6 @@
   background-repeat: no-repeat;
 }
 
-.bg-pos-50-0 {
-  background-position: 50% 0%;
-}
-
 .bg-pos-125-135 {
   background-position: 130% 130%;
 }
@@ -39,41 +35,33 @@
 
 ///////////// MARGIN AND PADDING/////
 
-.mt-240 {
-  margin-top: 240px;
-}
-
-.mt-340 {
-  margin-top: 340px;
-}
-
-.mt-478 {
-  margin-top: 478px;
-}
-
 .py-64 {
   padding-top: 64px;
   padding-bottom: 64px;
 }
 
-.py-80 {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.px-144 {
-  padding-left: 144px;
-  padding-right: 144px;
-}
+// .px-144 {
+//   padding-left: 144px;
+//   padding-right: 144px;
+// }
 
 .pe-240 {
-  padding-right: 240px;
+  padding-right: 0px;
+
+  @include respond(sm) {
+    padding-right: 150px;
+  }
 }
 
-.pt-224 {
-  padding-top: 224px;
+///FONT SIZE RFS///
+.rfs-80 {
+  @include font-size(80px);
 }
 
-.pt-240 {
-  padding-top: 240px;
+// HOVER  //
+.focus-primary-light {
+  &:focus,
+  &:visited {
+    background-color: #eac14a40 !important;
+  }
 }

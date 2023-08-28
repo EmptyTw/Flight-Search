@@ -447,6 +447,8 @@ $spacers: (
 // scss-docs-start position-map
 $position-values: (
   0: 0,
+  5: 5%,
+  9_4: 9.4%,
   10: 10%,
   13: 13%,
   15: 15%,
@@ -455,10 +457,14 @@ $position-values: (
   30: 30%,
   40: 40%,
   50: 50%,
+  60: 60%,
+  65: 65%,
+  70: 70%,
   75: 75%,
   80: 80%,
   85: 85%,
   90: 90%,
+  95: 95%,
 
   100: 100%,
 ) !default;
@@ -694,11 +700,17 @@ $headings-color: inherit !default;
 // scss-docs-start display-headings
 $display-font-sizes: (
   1: 5rem,
+  //80
   2: 4.5rem,
+  //72
   3: 4rem,
+  //64
   4: 3.5rem,
+  //56
   5: 3rem,
+  //48
   6: 2.5rem,
+  //40
 ) !default;
 
 $display-font-family: null !default;

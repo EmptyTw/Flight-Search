@@ -12,6 +12,8 @@
 
   &:hover {
     transform: translateY(-3px);
+    background-color: rgba(234, 193, 74, 0.5);
+
     box-shadow: 0 1rem 2rem rgba($dark, 0.2);
   }
 

@@ -30,3 +30,18 @@
     }
   }
 }
+.footer-eNewsLetter-img-height {
+  height: 221px;
+  @include respond(lg) {
+    height: 301px;
+  }
+}
+
+.footer-logo-padding {
+  padding-top: 182px;
+  padding-bottom: 72px;
+  @include respond(lg) {
+    padding-top: 224px;
+    padding-bottom: 80px;
+  }
+}
