@@ -43,7 +43,7 @@
 .hero-text-mt {
   margin-top: 250px;
   @include respond(sm) {
-    margin-top: 400px;
+    margin-top: 200px;
   }
 
   @include respond(lg) {
@@ -61,10 +61,27 @@
 }
 .flightSearch-arrow-position {
   position: absolute;
-  right: 9.4%;
+  right: 0%;
   top: 100%;
   @include respond(lg) {
     transform: translateY(-100%);
+    right: 9.4%;
+  }
+}
+
+.flightSearch-img-rwd-height {
+  height: 100%;
+
+  @include respond(lg) {
+    height: 358px;
+  }
+}
+
+.flightSearch-img-rwd-height-2 {
+  height: 197px;
+
+  @include respond(lg) {
+    height: 358px;
   }
 }
 
@@ -163,6 +180,8 @@
 .cta_right_card {
   &-side {
     position: static;
+    width: 100%;
+
     transition: all 1s ease;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -171,6 +190,8 @@
 
     @include respond(md) {
       position: absolute;
+      height: 328px;
+      width: 300px;
     }
   }
 
