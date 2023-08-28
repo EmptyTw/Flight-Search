@@ -9,3 +9,32 @@
     transform: translate(0);
   }
 }
+
+@mixin moveInLeft {
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-3rem);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(3rem);
+    }
+  }
+}
+
+@mixin moveUpandDown {
+  @keyframes moveUpandDown {
+    0% {
+      transform: translateY(-0.5rem);
+    }
+
+    50% {
+      transform: translateY(0.5rem);
+    }
+    100% {
+      transform: translateY(-0.5rem);
+    }
+  }
+}

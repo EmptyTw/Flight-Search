@@ -1,0 +1,38 @@
+.flight-polygon-border {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: $secondary;
+  clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
+
+  &-overlap {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: white;
+    z-index: -1;
+    background-image: url(/assets/images/flightCard-background.jpg);
+    background-size: cover;
+    background-position: center;
+
+    clip-path: polygon(0% 0%, 99% 0%, 85% 100%, 0% 100%);
+  }
+}
+
+.arrow-moveIn-animation {
+  @include moveInLeft;
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.moveUpandDown-animation {
+  @include moveUpandDown;
+  animation-name: moveUpandDown;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
