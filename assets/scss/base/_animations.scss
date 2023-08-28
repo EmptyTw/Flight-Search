@@ -54,16 +54,42 @@
       );
     }
 
-    50% {
+    25% {
       border-image-source: linear-gradient(
         45deg,
         yellow,
-        orange,
-        red,
-        violet,
-        indigo,
+        green,
         blue,
+        indigo,
+        violet,
+        red,
+        orange
+      );
+    }
+
+    50% {
+      border-image-source: linear-gradient(
+        45deg,
+        blue,
+        indigo,
+        violet,
+        red,
+        orange,
+        yellow,
         green
+      );
+    }
+
+    75% {
+      border-image-source: linear-gradient(
+        45deg,
+        violet,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo
       );
     }
 

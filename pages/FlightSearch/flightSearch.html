@@ -23,12 +23,14 @@
 
   <body>
     <%- include('./layout/header'); -%>
+
     <div>這裡放進度條</div>
     <p class="text-secondary text-center fw-bold ls-10 rfs-80">航班檢索</p>
     <h2 class="text-center display-4 text-primary fw-bold">
       DAD <span class="fw-normal text-secondary me-3">to</span>TPE
     </h2>
     <!-- FlightSearchCard -->
+
     <div class="container mt-5">
       <ul class="list-unstyled">
         <li class="flightCard">
@@ -297,6 +299,39 @@
           </div>
         </li>
       </ul>
+    </div>
+
+    <!-- PAGINATION -->
+    <div
+      class="container d-flex justify-content-center align-items-center mt-5"
+    >
+      <a class="btn btn-primary rounded-0 p-0 d-block" href="#">
+        <img
+          src="/assets/images/homepage/Arrow Pointing Left.png"
+          alt="arrow_left"
+        />
+      </a>
+      <ul class="list-unstyled d-flex align-items-center mb-0 gap-1">
+        <li class="">
+          <a class="btn mb-0 fs-4 link-secondary fw-bold">1</a>
+        </li>
+        <li class="">
+          <a class="btn mb-0 fs-4 link-secondary fw-bold">2</a>
+        </li>
+        <li class="">
+          <a class="btn mb-0 fs-4 link-secondary fw-bold">3</a>
+        </li>
+        <li class="">
+          <a class="btn mb-0 fs-4 link-secondary fw-bold">4</a>
+        </li>
+        <li class="">
+          <a class="btn mb-0 fs-4 link-secondary fw-bold">5</a>
+        </li>
+      </ul>
+
+      <a class="btn btn-primary rounded-0 p-0 d-block carousel-hover" href="#">
+        <img src="/assets/images/homepage/Right Arrow.png" alt="arrow_right" />
+      </a>
     </div>
 
     <%- include('./layout/footer'); -%>
