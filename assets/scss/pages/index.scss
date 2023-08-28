@@ -175,6 +175,14 @@
   }
 
   &-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include respond(md) {
+      top: 30%;
+    }
+
     transform: rotateY(180deg);
     background-image: linear-gradient(
       to right bottom,
