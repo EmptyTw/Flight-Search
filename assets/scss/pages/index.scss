@@ -156,7 +156,7 @@
 
 .card-img-height-rwd {
   height: 368px;
-  @include respond(lg) {
+  @include respond(xl) {
     height: 549px;
   }
 }
