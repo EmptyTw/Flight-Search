@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlightEase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script type="module" crossorigin src="/web-layout-training-vite/assets/main-5010bd3a.js"></script>
+    <link rel="stylesheet" href="/web-layout-training-vite/assets/main-09e8fd9e.css">
+  </head>
+  <style>
+    /* * {
+      border: 1px red solid !important;
+    } */
+  </style>
+  <body>
+    <!-- ejs語法 -->
+    <nav class="navbar bg-body-tertiary py-3 navbar-position-top-sticky px-3">
+  <div class="container-fluid  d-flex flex-lg-row flex-sm-column flex-row justify-content-sm-around justify-content-between px-lg-0 align-items-center gap-sm-3 w-100 p-0 m-0 ">
+   
+    <!--href還需要再次確認是否可以用 -->
+    
+    <a class=" " href="/web-layout-training-vite/pages/index.html"
+      ><img class="navbar-img" src="/web-layout-training-vite/assets/logo_navbar-9ac2573f.png" alt="logo navbar"
+    /></a>
+
+    <!-- collapse navbar-collapse -->
+    <div class="d-flex justify-content-center">
+      <!--每個分頁待大家完成後 要再加上正確的href-->
+          <ul
+            class="d-flex list-unstyled mb-0 flex-row justify-content-between bg-lg-primary align-items-center gap-lg-4 gap-sm-1 gap-2 py-2 py-sm-1 px-3 px-sm-0 px-md-3  navbar-position-bottom"
+            
+          >
+            <li class="navbar-navItem">
+              <a
+                class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0"
+                href="#"
+                >航班檢索</a
+              >
+            </li>
+            <li class="navbar-navItem">
+              <a
+                class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0"
+                href="#"
+                >延遲航班</a
+              >
+            </li>
+            <li class="navbar-navItem">
+              <a
+                class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0"
+                href="#"
+                >班機座標</a
+              >
+            </li>
+            <li class="navbar-navItem">
+              <a
+                class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0"
+                href="#"
+                >鄰近機場</a
+              >
+            </li>
+            
+            
+          </ul>
+        
+          <ul
+            class="list-unstyled d-flex ms-lg-5 ms-sm-3 mb-0 flex-row bg-lg-primary  gap-sm-4 "
+          >
+            <li class="navbar-navItem-top">
+              <a
+                class="nav-link nav-link-header link-dark h5 py-2 py-sm-1  px-sm-2 px-1 mb-0"
+                href="#"
+              
+                >登入</a
+              >
+            </li>
+
+            <li class="navbar-navItem-top">
+              <a
+                class="nav-link nav-link-header link-dark h5 py-2 py-sm-1 px-sm-2 px-1 mb-0"
+                href="#"
+                >註冊</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    <main>
+      <!-- HERO -->
+      <section
+        class="bg-cover container-fluid pe-0 px-lg-0 img-height-setting clip-path-hero"
+        style="background-image: url(/web-layout-training-vite/assets/hero_image-d3d5e92e.jpeg)"
+        data-aos="fade-up"
+        data-aos-offset="0"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+      >
+        <div class="container text-center pt-6">
+          <p class="text-light fw-bold ls-10 rfs-80">
+            生活就是不斷探索或一無所有
+          </p>
+          <h3 class="text-light mt-4 fs-sm-3 fs-4">
+            您的旅途比您想像中的還要近
+          </h3>
+          <h3 class="text-light mt-1 fs-sm-3 fs-4">千萬不要再等下一次連假</h3>
+        </div>
+
+        <div class="container text-center hero-text-mt">
+          <h5 class="text-light mb-3">尋找您旅行的翅膀 即刻出發</h5>
+          <!-- 記得補上位置 -->
+          <a href="#" class="btn btn-primary rounded-0 fw-bold" role="button"
+            >開啟旅程</a
+          >
+        </div>
+      </section>
+
+      <!-- FlightSearch and RealTime - FLIGHTSEARCH -->
+      <section class="py-6">
+        <div class="container px-3">
+          <div
+            class="row gx-4 row-cols-1 row-cols-lg-12 mb-6"
+            data-aos="fade-right"
+            data-aos-offset="-200"
+            data-aos-delay="0"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div class="col col-lg-5 px-0 pe-lg-4">
+              <div
+                class="border border-primary p-3 bg-size-256 bg-pos-120-150 mb-0 h-100"
+                style="
+                  background-image: url(/web-layout-training-vite/assets/inspection-d9dc626c.png);
+                "
+              >
+                <div class="d-flex">
+                  <h5
+                    class="text-primary fw-bold me-2 rotate-90"
+                    style="height: 20px"
+                  >
+                    01
+                  </h5>
+                  <div
+                    class="d-flex flex-column justify-content-between border-left-2 ps-2"
+                  >
+                    <h4 class="text-secondary fw-bold mb-0">即時班機查詢</h4>
+                    <h5 class="text-secondary fw-bold opacity-85 mb-0">
+                      為您的旅行目的地提供通行證
+                    </h5>
+                  </div>
+                </div>
+
+                <div class="text-center mt-40">
+                  <p class="fs-6 mb-90">
+                    我們的品牌理念是打破界限，將世界帶到您的腳下，並為每一位旅客提供頂級的航空體驗。
+                  </p>
+                  <a
+                    class="btn btn-primary fw-bold text-secondary rounded-0 h5 mb-0 py-12 px-4"
+                    href="#"
+                    >立即查詢</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-lg-7 mt-32 mt-lg-0 p-0 position-relative">
+              <div
+                class="position-absolute flightSearch-arrow-position z-1 d-flex"
+              >
+                <a class="btn btn-primary rounded-0 p-0 d-block" href="#">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH5SURBVHgB7ZU9bxNBEIbfOd8dQbbBJgiLgBQikExiiYYiPwBBCTgRSCloSAX8BWpoIwoEBSCUAkWR6EAIKxVQ2aFIwAhRRAHhRLIQdsCXL99O5i5xvp0u3iL7VLPvbPHe7MwcYDAYDAaDQSe0VzKdvhr34u6QXLvuE+6W8qMjaDFWs8SquUPDYu62HI8RUy80sKvBE70DqVqs7ZmE10KBMGnDH4YGItuF41K5Nsd6TETZME+Yku+49bMw+hka2GKwp+dGzI86T4gwEOSkQacsqH4xNw5N2I0g6Lm5KF4SczYUmH/AcrLT+VdfoZFwijsv9p1UsIZAdDM4M1An4qfwqQAdEFWSy5XcxMT7WlhBBfsOE/fRhmsbTPeaz/h+o/ive/SBBPdDCwzfoU3PrR9aArEKotCUV/UeRhOxLnna/jWj83LhuVwswEfLURHlgdRYaLUhdsnuq9eXHzX6UJgEWYO/8iN5aGR9zVR+f6mdTmbeLdrcKTvwgkgpAl9KdHR/qJa+zUITW/ZguVxcco+cy9mufV52YbdISSa6kkhlctXZYhka2PEn8f58D0y+dV3nLBPS0gPtMs2X46cyH/+Vii2vZGQ3MTCZ6Eh/IkTOSJdmRGonBs/NFN+gxTTddNPjr2cO/18YlDl6IXuoworGYDAYDAaD4cCxAvrHlgyQLNmsAAAAAElFTkSuQmCC"
+                    alt="arrow_left"
+                  />
+                </a>
+
+                <a
+                  class="btn btn-primary rounded-0 p-0 d-block carousel-hover"
+                  href="#"
+                >
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHrSURBVHgB7ZVBSxtBFIDfm0127eI2KilmS6kNFZcmLbaxqNeW9lDopZTgoUKhFnpqj4X+gf6E3qonQU8RxYMiiKAXETwoaECPooKRxFXEjZvnm8SgiDmPh/lgZt8bHuzHm9lZAI1Go9FoNCoxQAGPerOfYm5qKeamu9z7nfOFQj5oVCtAAUZI7wCwDRCGTprN/09S2UTDWlBAc8LbEQLfsGRcoOiiKCUf2K9mDg/XzuAuCPp7m/utbvccYeUDp3EWTYdNYdp1+qcLhdVAuaCkuLt+4LR7CyiM95y28fDKVjnpOn2z1yWVCUpkJ1sSqSU+i/2ctvN4HljlzlbXWyztbhzLGpTTw56PcRTWWxEKGxSASBlCHOJQvv8cAXNmMfp9a2v0KCILDGj6BYS/+Zu2QAFU61OdCAFlg1iwzfGf2jWDyE8y4Y5A3EUSWJZxtYMhnf41wF4BohZQgYAe7tIPVovWUpgQQP9kjKCYjszAMxKVHHfNu1yasormoDx/MlHyJ6mT7B3orgiaupLDMdt3vtTlqiugBnzcl81QCOMcP5VnTm7rPd/5ls8P+9cLlXSw4/Xnlyw3IuWqEoQ5gfDzppwkAgoISXxFhBeX6aRZqt15t9UqOoPhMk8l3ulh2z8bbCSn0Wg0Go1GPRcKqpcL0XhBcgAAAABJRU5ErkJggg=="
+                    alt="arrow_right"
+                  />
+                </a>
+              </div>
+              <div class="overflow-hidden">
+                <ul
+                  class="list-unstyled d-flex justify-content-center mb-0"
+                  style="white-space: nowrap; width: 240%"
+                >
+                  <li class="w-80 translateX-85n">
+                    <img
+                      class="w-100 opacity-50 flightSearch-img-rwd-height"
+                      src="/web-layout-training-vite/assets/flightSearch-2-960f6c8f.PNG"
+                      alt="flightSearch-2"
+                    />
+                  </li>
+                  <li class="w-80 translateX-85n">
+                    <img
+                      class="w-100 opacity-50 carousel-active flightSearch-img-rwd-height"
+                      src="/web-layout-training-vite/assets/flightSearch-4dbea8d8.jfif"
+                      alt="flightSearch-2"
+                    />
+                  </li>
+                  <li class="w-80 translateX-85n">
+                    <img
+                      class="w-100 opacity-50 flightSearch-img-rwd-height"
+                      src="/web-layout-training-vite/assets/flightSearch-3-f24d2694.PNG"
+                      alt="flightSearch-3"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FlightSearch and RealTime - REALTIME -->
+        <div class="container overflow-hidden px-3">
+          <div
+            class="row gx-4 row-cols-1 row-cols-lg-12"
+            data-aos="fade-left"
+            data-aos-offset="-200"
+            data-aos-delay="0"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+          >
+            <div
+              class="col col-lg-6 px-0 pe-lg-4 mt-32 mt-lg-0 order-lg-1 order-2"
+            >
+              <div class="">
+                <img
+                  class="w-100 flightSearch-img-rwd-height-2"
+                  src="/web-layout-training-vite/assets/realTime-8a6e61f6.jfif"
+                  alt="realTime"
+                />
+              </div>
+            </div>
+            <div class="col col-lg-6 px-0 pe-lg-4 order-lg-2 order-1">
+              <div
+                class="border border-primary p-3 ms-0 bg-size-256 bg-pos-120-150 h-100"
+                style="
+                  background-image: url(/web-layout-training-vite/assets/inspection-d9dc626c.png);
+                "
+              >
+                <div class="d-flex">
+                  <h5
+                    class="text-primary fw-bold me-2 rotate-90"
+                    style="height: 20px"
+                  >
+                    02
+                  </h5>
+                  <div
+                    class="d-flex flex-column justify-content-between border-left-2 ps-2"
+                  >
+                    <h4 class="text-secondary fw-bold mb-0">班機現況查詢</h4>
+                    <h5 class="text-secondary fw-bold opacity-85 mb-0">
+                      追蹤飛行中的奇蹟！即刻發現班機位置
+                    </h5>
+                  </div>
+                </div>
+
+                <div class="text-center mt-40">
+                  <p class="fs-6 mb-90">
+                    讓您與摯愛相隨，時刻守護！探索我們的服務，查詢親友班機位置，確保他們平安無慮，一起分享旅程的美好與激動！
+                  </p>
+                  <a
+                    class="btn btn-primary fw-bold text-secondary rounded-0 h5 mb-0 py-12 px-4"
+                    href="#"
+                    >即刻守護</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NearAirport -->
+      <section
+        class="nearAirport-clip-path img-height-setting clip-path-nearAirport bg-cover nearAirport-bg-pos container-fluid pe-0 mt-0 px-lg-0"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.6),
+              rgba(0, 0, 0, 0.6)
+            ),
+            url(/web-layout-training-vite/assets/nearAirport-4320088f.jfif);
+        "
+        data-aos="fade-up"
+        data-aos-offset="-200"
+        data-aos-delay="0"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+      >
+        <div class="container text-center nearAirport-container-pt">
+          <h2 class="text-light fw-bold rfs-80">探索無限可能，尋找旅行靈感!</h2>
+          <p class="text-light fs-3 mt-4">探索無限可能，尋找旅行靈感</p>
+          <p class="text-light fs-3 mt-2">
+            當您不確定下一站何處，信賴我們的鄰近機場服務，為您指引前往夢想目的地！
+          </p>
+        </div>
+        <div class="container text-center">
+          <!-- 記得補上位置 -->
+          <a
+            href="#"
+            class="btn btn-primary h5 text-secondary rounded-0 fw-bold nearAirport-btn-mt px-4 py-12"
+            role="button"
+            >探索鄰近機場</a
+          >
+        </div>
+      </section>
+
+      <!-- HotSpots -->
+      <section
+        class="container px-12 py-32 my-6 card-scroll-rwd"
+        data-aos="zoom-in"
+        data-aos-offset="-200"
+        data-aos-delay="0"
+        data-aos-duration="800"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+      >
+        <div class="d-flex">
+          <h5 class="text-primary fw-bold me-2 rotate-90" style="height: 20px">
+            03
+          </h5>
+          <div
+            class="d-flex flex-column justify-content-between border-left-2 ps-2"
+          >
+            <h4 class="text-secondary fw-bold mb-0">熱門目的地</h4>
+            <h5 class="text-secondary fw-bold opacity-85 mb-0">
+              為您推薦最合適的旅行目的
+            </h5>
+          </div>
+        </div>
+        <!-- CARDS -->
+        <div
+          class="row px-0 mx-0 mt-32 mt-lg-6 card-hover card-scroll-width-rwd"
+        >
+          <div class="col-4 card-hover-spot">
+            <div
+              class="bg-blend-mode-screen bg-cover position-relative d-flex justify-content-end align-items-end card-img-height-rwd"
+              style="
+                background-image: url(/web-layout-training-vite/assets/bangkok-925a2ee3.jfif);
+              "
+            >
+              <span
+                class="badge bg-primary h4 px-4 px-sm-40 py-2 py-sm-3 fw-bold position-absolute top-100 start-13 translate-middle"
+                >曼谷</span
+              >
+              <ul class="list-unstyled d-flex gap-1 gap-sm-3 me-12 mb-12">
+                <li>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGESURBVHgB5VVLUgIxEO1ktEotF8MCwR3cQC4gkx2yEW8w3gBPINxAj+AJdDWwC9zAG8jOUhbDRkoFOyYizEjNp6NuLF9VqvLpzpvu6dcB+FcIZaNyr4eND7cxnjusxfSw8bEi0ObHjh42HoxqaNIz4/zOzDdxWiiIwYTiR45g5nAvmu+Q00Qm0KGuUqMU/j6BUsyLyHg9lJ5L8SMRjGXD0xTxC905bB1QfFc/+VE2fU13rqcV+AEYsMkbYrcseheLdQxGRBvcuVagSF+XgKG+3N8X/VFEmIAH2eywRTRkIMJlWQTt9f1UHZhoHM4l5KdsxBBPi6I/SDrMFFooW+6Mv4YZJpMnnFarGaLLqaLnvFJ0d3OqKZNgTmhsyLkH3yWAtcbGGNzoCrv6YsFYPfOGtAPT3JRS3nKNqM6Kh8FJqd7zFUJ3uW9sslSdShBrbqZKxFI4BiURdAChZs7M+sXZ9q0JPpvbUFdJLakE90Rwq0UlTNps34gPGLFRbcfyqE1tfn8P71rPhMA/AikBAAAAAElFTkSuQmCC" alt="star" />
+                </li>
+                <li>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGESURBVHgB5VVLUgIxEO1ktEotF8MCwR3cQC4gkx2yEW8w3gBPINxAj+AJdDWwC9zAG8jOUhbDRkoFOyYizEjNp6NuLF9VqvLpzpvu6dcB+FcIZaNyr4eND7cxnjusxfSw8bEi0ObHjh42HoxqaNIz4/zOzDdxWiiIwYTiR45g5nAvmu+Q00Qm0KGuUqMU/j6BUsyLyHg9lJ5L8SMRjGXD0xTxC905bB1QfFc/+VE2fU13rqcV+AEYsMkbYrcseheLdQxGRBvcuVagSF+XgKG+3N8X/VFEmIAH2eywRTRkIMJlWQTt9f1UHZhoHM4l5KdsxBBPi6I/SDrMFFooW+6Mv4YZJpMnnFarGaLLqaLnvFJ0d3OqKZNgTmhsyLkH3yWAtcbGGNzoCrv6YsFYPfOGtAPT3JRS3nKNqM6Kh8FJqd7zFUJ3uW9sslSdShBrbqZKxFI4BiURdAChZs7M+sXZ9q0JPpvbUFdJLakE90Rwq0UlTNps34gPGLFRbcfyqE1tfn8P71rPhMA/AikBAAAAAElFTkSuQmCC" alt="star" />
+                </li>
+                <li>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGESURBVHgB5VVLUgIxEO1ktEotF8MCwR3cQC4gkx2yEW8w3gBPINxAj+AJdDWwC9zAG8jOUhbDRkoFOyYizEjNp6NuLF9VqvLpzpvu6dcB+FcIZaNyr4eND7cxnjusxfSw8bEi0ObHjh42HoxqaNIz4/zOzDdxWiiIwYTiR45g5nAvmu+Q00Qm0KGuUqMU/j6BUsyLyHg9lJ5L8SMRjGXD0xTxC905bB1QfFc/+VE2fU13rqcV+AEYsMkbYrcseheLdQxGRBvcuVagSF+XgKG+3N8X/VFEmIAH2eywRTRkIMJlWQTt9f1UHZhoHM4l5KdsxBBPi6I/SDrMFFooW+6Mv4YZJpMnnFarGaLLqaLnvFJ0d3OqKZNgTmhsyLkH3yWAtcbGGNzoCrv6YsFYPfOGtAPT3JRS3nKNqM6Kh8FJqd7zFUJ3uW9sslSdShBrbqZKxFI4BiURdAChZs7M+sXZ9q0JPpvbUFdJLakE90Rwq0UlTNps34gPGLFRbcfyqE1tfn8P71rPhMA/AikBAAAAAElFTkSuQmCC" alt="star" />
+                </li>
+                <li>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGESURBVHgB5VVLUgIxEO1ktEotF8MCwR3cQC4gkx2yEW8w3gBPINxAj+AJdDWwC9zAG8jOUhbDRkoFOyYizEjNp6NuLF9VqvLpzpvu6dcB+FcIZaNyr4eND7cxnjusxfSw8bEi0ObHjh42HoxqaNIz4/zOzDdxWiiIwYTiR45g5nAvmu+Q00Qm0KGuUqMU/j6BUsyLyHg9lJ5L8SMRjGXD0xTxC905bB1QfFc/+VE2fU13rqcV+AEYsMkbYrcseheLdQxGRBvcuVagSF+XgKG+3N8X/VFEmIAH2eywRTRkIMJlWQTt9f1UHZhoHM4l5KdsxBBPi6I/SDrMFFooW+6Mv4YZJpMnnFarGaLLqaLnvFJ0d3OqKZNgTmhsyLkH3yWAtcbGGNzoCrv6YsFYPfOGtAPT3JRS3nKNqM6Kh8FJqd7zFUJ3uW9sslSdShBrbqZKxFI4BiURdAChZs7M+sXZ9q0JPpvbUFdJLakE90Rwq0UlTNps34gPGLFRbcfyqE1tfn8P71rPhMA/AikBAAAAAElFTkSuQmCC" alt="star" />
+                </li>
+              </ul>
+            </div>
+            <div class="tourCard__details d-flex justify-content-end gap-4">
+              <ul class="list-unstyled mt-32">
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">旅程</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">航空公司</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">座位剩餘</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">機票價格</p>
+                </li>
+              </ul>
+
+              <ul class="list-unstyled mt-32">
+                <li class="mb-2"><p class="fs-6 m-0">3小時30分鐘</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">多</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">多</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">便宜</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-4 card-hover-spot">
+            <div
+              class="bg-blend-mode-screen bg-cover position-relative d-flex justify-content-end align-items-end card-img-height-rwd"
+              style="background-image: url(/web-layout-training-vite/assets/tokyo-bc9069cd.jfif)"
+            >
+              <span
+                class="badge bg-primary h4 px-4 px-sm-40 py-2 py-sm-3 fw-bold position-absolute top-100 start-13 translate-middle"
+                >東京</span
+              >
+              <ul class="list-unstyled d-flex gap-1 gap-sm-3 me-12 mb-12">
+                <li>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGESURBVHgB5VVLUgIxEO1ktEotF8MCwR3cQC4gkx2yEW8w3gBPINxAj+AJdDWwC9zAG8jOUhbDRkoFOyYizEjNp6NuLF9VqvLpzpvu6dcB+FcIZaNyr4eND7cxnjusxfSw8bEi0ObHjh42HoxqaNIz4/zOzDdxWiiIwYTiR45g5nAvmu+Q00Qm0KGuUqMU/j6BUsyLyHg9lJ5L8SMRjGXD0xTxC905bB1QfFc/+VE2fU13rqcV+AEYsMkbYrcseheLdQxGRBvcuVagSF+XgKG+3N8X/VFEmIAH2eywRTRkIMJlWQTt9f1UHZhoHM4l5KdsxBBPi6I/SDrMFFooW+6Mv4YZJpMnnFarGaLLqaLnvFJ0d3OqKZNgTmhsyLkH3yWAtcbGGNzoCrv6YsFYPfOGtAPT3JRS3nKNqM6Kh8FJqd7zFUJ3uW9sslSdShBrbqZKxFI4BiURdAChZs7M+sXZ9q0JPpvbUFdJLakE90Rwq0UlTNps34gPGLFRbcfyqE1tfn8P71rPhMA/AikBAAAAAElFTkSuQmCC" alt="star" />
+                </li>
+                <li>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGESURBVHgB5VVLUgIxEO1ktEotF8MCwR3cQC4gkx2yEW8w3gBPINxAj+AJdDWwC9zAG8jOUhbDRkoFOyYizEjNp6NuLF9VqvLpzpvu6dcB+FcIZaNyr4eND7cxnjusxfSw8bEi0ObHjh42HoxqaNIz4/zOzDdxWiiIwYTiR45g5nAvmu+Q00Qm0KGuUqMU/j6BUsyLyHg9lJ5L8SMRjGXD0xTxC905bB1QfFc/+VE2fU13rqcV+AEYsMkbYrcseheLdQxGRBvcuVagSF+XgKG+3N8X/VFEmIAH2eywRTRkIMJlWQTt9f1UHZhoHM4l5KdsxBBPi6I/SDrMFFooW+6Mv4YZJpMnnFarGaLLqaLnvFJ0d3OqKZNgTmhsyLkH3yWAtcbGGNzoCrv6YsFYPfOGtAPT3JRS3nKNqM6Kh8FJqd7zFUJ3uW9sslSdShBrbqZKxFI4BiURdAChZs7M+sXZ9q0JPpvbUFdJLakE90Rwq0UlTNps34gPGLFRbcfyqE1tfn8P71rPhMA/AikBAAAAAElFTkSuQmCC" alt="star" />
+                </li>
+                <li>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGESURBVHgB5VVLUgIxEO1ktEotF8MCwR3cQC4gkx2yEW8w3gBPINxAj+AJdDWwC9zAG8jOUhbDRkoFOyYizEjNp6NuLF9VqvLpzpvu6dcB+FcIZaNyr4eND7cxnjusxfSw8bEi0ObHjh42HoxqaNIz4/zOzDdxWiiIwYTiR45g5nAvmu+Q00Qm0KGuUqMU/j6BUsyLyHg9lJ5L8SMRjGXD0xTxC905bB1QfFc/+VE2fU13rqcV+AEYsMkbYrcseheLdQxGRBvcuVagSF+XgKG+3N8X/VFEmIAH2eywRTRkIMJlWQTt9f1UHZhoHM4l5KdsxBBPi6I/SDrMFFooW+6Mv4YZJpMnnFarGaLLqaLnvFJ0d3OqKZNgTmhsyLkH3yWAtcbGGNzoCrv6YsFYPfOGtAPT3JRS3nKNqM6Kh8FJqd7zFUJ3uW9sslSdShBrbqZKxFI4BiURdAChZs7M+sXZ9q0JPpvbUFdJLakE90Rwq0UlTNps34gPGLFRbcfyqE1tfn8P71rPhMA/AikBAAAAAElFTkSuQmCC" alt="star" />
+                </li>
+                <li>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGESURBVHgB5VVLUgIxEO1ktEotF8MCwR3cQC4gkx2yEW8w3gBPINxAj+AJdDWwC9zAG8jOUhbDRkoFOyYizEjNp6NuLF9VqvLpzpvu6dcB+FcIZaNyr4eND7cxnjusxfSw8bEi0ObHjh42HoxqaNIz4/zOzDdxWiiIwYTiR45g5nAvmu+Q00Qm0KGuUqMU/j6BUsyLyHg9lJ5L8SMRjGXD0xTxC905bB1QfFc/+VE2fU13rqcV+AEYsMkbYrcseheLdQxGRBvcuVagSF+XgKG+3N8X/VFEmIAH2eywRTRkIMJlWQTt9f1UHZhoHM4l5KdsxBBPi6I/SDrMFFooW+6Mv4YZJpMnnFarGaLLqaLnvFJ0d3OqKZNgTmhsyLkH3yWAtcbGGNzoCrv6YsFYPfOGtAPT3JRS3nKNqM6Kh8FJqd7zFUJ3uW9sslSdShBrbqZKxFI4BiURdAChZs7M+sXZ9q0JPpvbUFdJLakE90Rwq0UlTNps34gPGLFRbcfyqE1tfn8P71rPhMA/AikBAAAAAElFTkSuQmCC" alt="star" />
+                </li>
+              </ul>
+            </div>
+            <div class="tourCard__details d-flex justify-content-end gap-4">
+              <ul class="list-unstyled mt-32">
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">旅程</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">航空公司</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">座位剩餘</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">機票價格</p>
+                </li>
+              </ul>
+
+              <ul class="list-unstyled mt-32">
+                <li class="mb-2"><p class="fs-6 m-0">3小時30分鐘</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">多</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">中等</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">便宜</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-4 card-hover-spot">
+            <div
+              class="bg-blend-mode-screen bg-cover position-relative d-flex justify-content-end align-items-end card-img-height-rwd"
+              style="background-image: url(/web-layout-training-vite/assets/seoul-043bfe77.jfif)"
+            >
+              <span
+                class="badge bg-primary h4 px-4 px-sm-40 py-2 py-sm-3 fw-bold position-absolute top-100 start-13 translate-middle"
+                >首爾</span
+              >
+              <ul class="list-unstyled d-flex gap-1 gap-sm-3 me-12 mb-12">
+                <li>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGESURBVHgB5VVLUgIxEO1ktEotF8MCwR3cQC4gkx2yEW8w3gBPINxAj+AJdDWwC9zAG8jOUhbDRkoFOyYizEjNp6NuLF9VqvLpzpvu6dcB+FcIZaNyr4eND7cxnjusxfSw8bEi0ObHjh42HoxqaNIz4/zOzDdxWiiIwYTiR45g5nAvmu+Q00Qm0KGuUqMU/j6BUsyLyHg9lJ5L8SMRjGXD0xTxC905bB1QfFc/+VE2fU13rqcV+AEYsMkbYrcseheLdQxGRBvcuVagSF+XgKG+3N8X/VFEmIAH2eywRTRkIMJlWQTt9f1UHZhoHM4l5KdsxBBPi6I/SDrMFFooW+6Mv4YZJpMnnFarGaLLqaLnvFJ0d3OqKZNgTmhsyLkH3yWAtcbGGNzoCrv6YsFYPfOGtAPT3JRS3nKNqM6Kh8FJqd7zFUJ3uW9sslSdShBrbqZKxFI4BiURdAChZs7M+sXZ9q0JPpvbUFdJLakE90Rwq0UlTNps34gPGLFRbcfyqE1tfn8P71rPhMA/AikBAAAAAElFTkSuQmCC" alt="star" />
+                </li>
+                <li>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGESURBVHgB5VVLUgIxEO1ktEotF8MCwR3cQC4gkx2yEW8w3gBPINxAj+AJdDWwC9zAG8jOUhbDRkoFOyYizEjNp6NuLF9VqvLpzpvu6dcB+FcIZaNyr4eND7cxnjusxfSw8bEi0ObHjh42HoxqaNIz4/zOzDdxWiiIwYTiR45g5nAvmu+Q00Qm0KGuUqMU/j6BUsyLyHg9lJ5L8SMRjGXD0xTxC905bB1QfFc/+VE2fU13rqcV+AEYsMkbYrcseheLdQxGRBvcuVagSF+XgKG+3N8X/VFEmIAH2eywRTRkIMJlWQTt9f1UHZhoHM4l5KdsxBBPi6I/SDrMFFooW+6Mv4YZJpMnnFarGaLLqaLnvFJ0d3OqKZNgTmhsyLkH3yWAtcbGGNzoCrv6YsFYPfOGtAPT3JRS3nKNqM6Kh8FJqd7zFUJ3uW9sslSdShBrbqZKxFI4BiURdAChZs7M+sXZ9q0JPpvbUFdJLakE90Rwq0UlTNps34gPGLFRbcfyqE1tfn8P71rPhMA/AikBAAAAAElFTkSuQmCC" alt="star" />
+                </li>
+                <li>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGESURBVHgB5VVLUgIxEO1ktEotF8MCwR3cQC4gkx2yEW8w3gBPINxAj+AJdDWwC9zAG8jOUhbDRkoFOyYizEjNp6NuLF9VqvLpzpvu6dcB+FcIZaNyr4eND7cxnjusxfSw8bEi0ObHjh42HoxqaNIz4/zOzDdxWiiIwYTiR45g5nAvmu+Q00Qm0KGuUqMU/j6BUsyLyHg9lJ5L8SMRjGXD0xTxC905bB1QfFc/+VE2fU13rqcV+AEYsMkbYrcseheLdQxGRBvcuVagSF+XgKG+3N8X/VFEmIAH2eywRTRkIMJlWQTt9f1UHZhoHM4l5KdsxBBPi6I/SDrMFFooW+6Mv4YZJpMnnFarGaLLqaLnvFJ0d3OqKZNgTmhsyLkH3yWAtcbGGNzoCrv6YsFYPfOGtAPT3JRS3nKNqM6Kh8FJqd7zFUJ3uW9sslSdShBrbqZKxFI4BiURdAChZs7M+sXZ9q0JPpvbUFdJLakE90Rwq0UlTNps34gPGLFRbcfyqE1tfn8P71rPhMA/AikBAAAAAElFTkSuQmCC" alt="star" />
+                </li>
+              </ul>
+            </div>
+            <div class="tourCard__details d-flex justify-content-end gap-4">
+              <ul class="list-unstyled mt-32">
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">旅程</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">航空公司</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">座位剩餘</p>
+                </li>
+                <li class="mb-2">
+                  <p class="m-0 text-end fw-bold">機票價格</p>
+                </li>
+              </ul>
+
+              <ul class="list-unstyled mt-32">
+                <li class="mb-2"><p class="fs-6 m-0">3小時30分鐘</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">多</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">多</p></li>
+                <li class="mb-2"><p class="fs-6 m-0">便宜</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section
+        class="container-fluid pe-0 bg-cover px-lg-0 cta-mt position-relative"
+        style="
+          background-image: linear-gradient(
+              rgba(255, 255, 255, 0.8),
+              rgba(255, 255, 255, 0.8)
+            ),
+            url(/web-layout-training-vite/assets/bg-ea42bb29.png);
+        "
+      >
+        <div class="container overflow-hidden px-0">
+          <div class="row row-cols-1 row-cols-xl-12 mx-0">
+            <!-- CTA-LEFT -->
+            <div
+              class="col col-xl-6 pe-0"
+              data-aos="fade-right"
+              data-aos-offset="-200"
+              data-aos-delay="0"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top-center"
+            >
+              <div class="d-flex mt-32">
+                <h5
+                  class="text-primary fw-bold me-2 rotate-90"
+                  style="height: 20px"
+                >
+                  04
+                </h5>
+                <div
+                  class="d-flex flex-column justify-content-between border-left-2 ps-2"
+                >
+                  <h4 class="text-secondary fw-bold mb-0">
+                    為什麼選擇 FlightEase?
+                  </h4>
+                  <h5 class="text-secondary fw-bold opacity-85 mb-0">
+                    我們提供最優惠的服務
+                  </h5>
+                </div>
+              </div>
+              <ul class="list-unstyled" class="">
+                <li
+                  class="d-flex align-items-center flex-column flex-md-row gap-4 mt-72 mb-32"
+                >
+                  <div
+                    class="bg-cover bg-size-90 bg-secondary rounded-circle"
+                    style="
+                      height: 96px;
+                      width: 96px;
+                      background-image: url(/web-layout-training-vite/assets/convenient-198e5569.png);
+                    "
+                  ></div>
+
+                  <div class="cta-left-textAlign cta-left-width">
+                    <h5 class="mb-3 fw-bold text-secondary">
+                      無與倫比的方便性
+                    </h5>
+                    <p class="fs-6">
+                      讓您隨時隨地輕鬆預訂航班，節省您寶貴的時間與精力。
+                    </p>
+                  </div>
+                </li>
+                <li
+                  class="d-flex align-items-center gap-4 mb-32 flex-column flex-md-row"
+                >
+                  <div
+                    class="bg-cover bg-size-90 bg-secondary rounded-circle"
+                    style="
+                      height: 96px;
+                      width: 96px;
+                      background-image: url(/web-layout-training-vite/assets/safety-933eea6b.png);
+                    "
+                  ></div>
+
+                  <div class="cta-left-textAlign cta-left-width">
+                    <h5 class="mb-3 fw-bold text-secondary">安全與可靠性</h5>
+                    <p class="fs-6 m-0">
+                      我們僅與經過驗證的航空公司合作，確保您的旅行安全與舒適。
+                    </p>
+                  </div>
+                </li>
+                <li
+                  class="d-flex align-items-center gap-4 flex-column flex-md-row"
+                >
+                  <div
+                    class="bg-cover bg-size-90 bg-secondary rounded-circle"
+                    style="
+                      height: 96px;
+                      width: 96px;
+                      background-image: url(/web-layout-training-vite/assets/brooke-19fe012a.png);
+                    "
+                  ></div>
+                  <div class="cta-left-textAlign cta-left-width">
+                    <h5 class="mb-3 fw-bold text-secondary">卓越的客戶服務</h5>
+                    <p class="fs-6 m-0">
+                      我們重視與客戶之間的溝通，致力於提供出色的客戶體驗。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- CTA-RIGHT  -->
+            <div
+              class="col col-xl-6 ps-4"
+              data-aos="fade-left"
+              data-aos-offset="-200"
+              data-aos-delay="0"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top-center"
+            >
+              <div
+                class="d-flex position-relative justify-content-end row row-cols-1"
+              >
+                <div class="cta_right_card col px-0">
+                  <!-- CTA-RIGHT-CARD-what we have----FRONT -->
+                  <div
+                    class="top-30 start-0 mb-32 mb-md-0 px-32 py-4 py-sm-5 bg-light border border-2 border-secondary cta_right_card-side cta_right_card-front"
+                  >
+                    <h4 class="text-secondary fw-bold text-center">我們擁有</h4>
+                    <ul
+                      class="list-unstyled pt-3 pt-md-5 mt-3 border-top-secondary"
+                    >
+                      <li class="d-flex align-items-end">
+                        <img
+                          class="me-2"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGESURBVHgB5VVLUgIxEO1ktEotF8MCwR3cQC4gkx2yEW8w3gBPINxAj+AJdDWwC9zAG8jOUhbDRkoFOyYizEjNp6NuLF9VqvLpzpvu6dcB+FcIZaNyr4eND7cxnjusxfSw8bEi0ObHjh42HoxqaNIz4/zOzDdxWiiIwYTiR45g5nAvmu+Q00Qm0KGuUqMU/j6BUsyLyHg9lJ5L8SMRjGXD0xTxC905bB1QfFc/+VE2fU13rqcV+AEYsMkbYrcseheLdQxGRBvcuVagSF+XgKG+3N8X/VFEmIAH2eywRTRkIMJlWQTt9f1UHZhoHM4l5KdsxBBPi6I/SDrMFFooW+6Mv4YZJpMnnFarGaLLqaLnvFJ0d3OqKZNgTmhsyLkH3yWAtcbGGNzoCrv6YsFYPfOGtAPT3JRS3nKNqM6Kh8FJqd7zFUJ3uW9sslSdShBrbqZKxFI4BiURdAChZs7M+sXZ9q0JPpvbUFdJLakE90Rwq0UlTNps34gPGLFRbcfyqE1tfn8P71rPhMA/AikBAAAAAElFTkSuQmCC"
+                          style="height: 40px"
+                          alt="star"
+                        />
+                        <h2 class="text-secondary fw-bold me-12 mb-0">4.8</h2>
+                        <p class="m-0 fs-6">星級</p>
+                      </li>
+                      <li class="d-flex align-items-end mt-32">
+                        <img
+                          class="me-2"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAiCAYAAADVhWD8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANySURBVHgBtVhLThtBEK3qdiRCFnGk8FvFPgFkn4BnR8zGN8CcAHMChhMAJ8CcAGeBYTe2k33MCRhWCR/JIAVkBdydqvHY8Wc+7YE8yb+Z6urXNfU1QgL8dFYzEiCHUi5qgHTvutb6Qko8V4/6bNaqNmFCoKlgy8mln1LTm6CwpEGnDZa4AqEmO2rnnXXqGsjHk/FIyDfbdOoSJASRKpuQiiRz2fhSEFocGFoiDq6QaL//dHwYJiDCblx/y2+jxqMXIsLIqI4us94wAQwjohXYEI86OfJRR6k7KcRbhVigx5mLW4QC7JnP1Z1YMsZEFGxQxJRHL/9y1kpC6N3Y5ai35pdP9kLJtChkH4U4j1WkSJE1rCgJITrQx8EUMOQzRMSBeLhRRBjz1jHfdyEGKHGIcJ/MVSNfpI9MnAIF8BXMECvH/nXzfW19jAxo2AYD0HO9NZHTpnIKijBI5tpZzYGBVTwyCB9M5CjRLZrIsXX8/btktBAFMIWGAmflKBEOBK1hCQzR8ff3yCCi0Sl8UHl4HflIn6TcBENLM6S/f4rfTBLVILTG0k0jnx6tN2yxjpw+UFqbW7q7v2dFbDmF9KP404KEIKvWyFldcuzMpIcaBGXxbKoN7bQML1Gx6BHQ8HwkZ/EfkIKEoGi5QIEO+ccd5x7u+CSFvVaYBdSTBISHKWjferXpqr5GPmPUKtSpMJXvoV3JWrXQpNZtSwW1pbhu6kezK1X0LEOJrEknjVpUR6XsGeu0BgZY6EZYmV9MLCXlQQypOr91k57WZ2FSlK53iHXOlEgQsZnlY4v1hMlQvWv2ydCpKyFy7pxVteEFwHo4DQTdk/7+Hhk+dZDgBBXaFEHji9uzej+0dUePNcp0c/3KyRvXmChwvaJkVBzfA+3e96FO77qx5gQ4mvtKKct09gkj4jdumVHd5I/Zf8QGQNbZCtDlKeqV+UlB0ZR7EvJHABEuAdbg77GGPKp/NR3GGH7R3FUBj4bB0TUaHIGjyqWTt2mcCJ9vECqUfSuDMzVv3oaptD+DRya7ICKhZEwIJUUYkUgyDIqkInQJZeCZQMBbpdTGnHUSltOiqzYPaexkNOIewjOgFOz/VvfZKCIM479EuMYIgTadcAUMLNW1hN5/gIe9qKI6vCYB/ES4pAVkKHP3pwVuJ4RSzQ5AbSFBXvoLi7moC2EhNBsAAAAASUVORK5CYII="
+                          style="height: 40px"
+                          alt="star"
+                        />
+                        <h2 class="text-secondary fw-bold me-12 mb-0">2000+</h2>
+                        <p class="m-0 fs-6">訂閱用戶</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- CTA-RIGHT-CARD-what we have----BACK -->
+                  <div
+                    class="mb-32 mb-md-0 px-32 py-4 py-sm-5 bg-light border border-2 border-secondary cta_right_card-side cta_right_card-back text-center"
+                  >
+                    <h2 class="fw-bold">還沒成為會員?</h2>
+                    <img
+                      class="d-block mx-auto mt-4"
+                      src="/web-layout-training-vite/assets/account-daaf9c48.png"
+                      style="height: 64px"
+                      alt="account"
+                    />
+
+                    <a class="btn btn-primary fw-bold mt-4 rounded-0" href="#"
+                      >立即前往加入</a
+                    >
+                  </div>
+                </div>
+
+                <!-- CTA-RIGHT- avatar and comment -->
+                <div
+                  class="col col-md-8 d-flex flex-column align-items-center bg-secondary py-32 py-md-5"
+                >
+                  <div
+                    class="bg-cover rounded-circle mb-2"
+                    style="
+                      height: 120px;
+                      width: 120px;
+                      background-image: url(/web-layout-training-vite/assets/avatar-ae0e55ce.jfif);
+                    "
+                  ></div>
+                  <p class="m-0 fs-5 text-primary mb-4">林美滿</p>
+                  <p class="m-0 text-white mb-2">完美的體驗</p>
+                  <h5 class="fw-bold text-white mb-4 mb-md-5">絕對會再訂閱</h5>
+                  <ul class="list-unstyled pt-4 pt-md-5 border-top-primary">
+                    <li class="d-flex gap-2 align-items-center mb-3">
+                      <img
+                        style="height: 28px"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAInSURBVHgB3VVLctNAEO2ZcaogG5QqkixRToBygUjaxWJBOAH2DbgB4QicwOEGyQLjnSRfIOYEUVaUQ6qsKopPEauHbkGUkbBkCVbwquz5qOd198zrGYB/HWKdwfU0GHGrMny15U8S7n8ID72eUk8B0N4+ePfsjx1cTYMBaBgVxkJE3GqtvWIO0d/2J1EdRw+aoOFlaWgQF3NScgB7dRSlDBahZ32H+55U0qWhs4qwhmQGnF2WnfXg22zLj1JYlcGN3DwnY5uIoQvI2qH0HJDyxQ1sJmBkJEuRCJHA3+PSHJQcoMZL6IYZ/RJzQgOmtQ6kEA+gA/ln/OJnpCLTiRBysdLBfNo/oq0/gnbIyffoMO+BtAQIC+5SGHykOikc8t8iPLSXUp1r0FYX8kUYOEspwhXr0g3EfS7MPIOlUqOqEUWVAsI+hfSmIznDYk7u5DJdZtlQUQZgGCPq17v+mA9xcBX32eXjluR5cMz5s/8LvG9UlaFpKEEMHrpv8wwuqAjbkOekxvVRquR53D8h78/rnLQhJ5me7bqTQiylSmaZVosYQZ9cx09AoX6/jjyPuCLTymXHcvv9mmAnWoq0lcp0+eIrFRrdQXb9ulYSZjwyB6UMuCo3QPA+ewqES6QOtEOMJOEe6ugTfI3MD80PThxcUGNDM5Idd1z7HsimlSS3YWUqvn3V7gjEcSMHrME8Dk7p2BOFeHqrbXqTbSnFMTnTOwfjIfzX+AHRSwjKAyo/pgAAAABJRU5ErkJggg=="
+                        alt="verfied"
+                      />
+                      <h4 class="text-white fw-bold mb-0">服務快速</h4>
+                    </li>
+                    <li class="d-flex gap-2 align-items-center mb-3">
+                      <img
+                        style="height: 28px"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAInSURBVHgB3VVLctNAEO2ZcaogG5QqkixRToBygUjaxWJBOAH2DbgB4QicwOEGyQLjnSRfIOYEUVaUQ6qsKopPEauHbkGUkbBkCVbwquz5qOd198zrGYB/HWKdwfU0GHGrMny15U8S7n8ID72eUk8B0N4+ePfsjx1cTYMBaBgVxkJE3GqtvWIO0d/2J1EdRw+aoOFlaWgQF3NScgB7dRSlDBahZ32H+55U0qWhs4qwhmQGnF2WnfXg22zLj1JYlcGN3DwnY5uIoQvI2qH0HJDyxQ1sJmBkJEuRCJHA3+PSHJQcoMZL6IYZ/RJzQgOmtQ6kEA+gA/ln/OJnpCLTiRBysdLBfNo/oq0/gnbIyffoMO+BtAQIC+5SGHykOikc8t8iPLSXUp1r0FYX8kUYOEspwhXr0g3EfS7MPIOlUqOqEUWVAsI+hfSmIznDYk7u5DJdZtlQUQZgGCPq17v+mA9xcBX32eXjluR5cMz5s/8LvG9UlaFpKEEMHrpv8wwuqAjbkOekxvVRquR53D8h78/rnLQhJ5me7bqTQiylSmaZVosYQZ9cx09AoX6/jjyPuCLTymXHcvv9mmAnWoq0lcp0+eIrFRrdQXb9ulYSZjwyB6UMuCo3QPA+ewqES6QOtEOMJOEe6ugTfI3MD80PThxcUGNDM5Idd1z7HsimlSS3YWUqvn3V7gjEcSMHrME8Dk7p2BOFeHqrbXqTbSnFMTnTOwfjIfzX+AHRSwjKAyo/pgAAAABJRU5ErkJggg=="
+                        alt="verfied"
+                      />
+                      <h4 class="text-white fw-bold mb-0">體驗滿分</h4>
+                    </li>
+                    <li class="d-flex gap-2 align-items-center">
+                      <img
+                        style="height: 28px"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAInSURBVHgB3VVLctNAEO2ZcaogG5QqkixRToBygUjaxWJBOAH2DbgB4QicwOEGyQLjnSRfIOYEUVaUQ6qsKopPEauHbkGUkbBkCVbwquz5qOd198zrGYB/HWKdwfU0GHGrMny15U8S7n8ID72eUk8B0N4+ePfsjx1cTYMBaBgVxkJE3GqtvWIO0d/2J1EdRw+aoOFlaWgQF3NScgB7dRSlDBahZ32H+55U0qWhs4qwhmQGnF2WnfXg22zLj1JYlcGN3DwnY5uIoQvI2qH0HJDyxQ1sJmBkJEuRCJHA3+PSHJQcoMZL6IYZ/RJzQgOmtQ6kEA+gA/ln/OJnpCLTiRBysdLBfNo/oq0/gnbIyffoMO+BtAQIC+5SGHykOikc8t8iPLSXUp1r0FYX8kUYOEspwhXr0g3EfS7MPIOlUqOqEUWVAsI+hfSmIznDYk7u5DJdZtlQUQZgGCPq17v+mA9xcBX32eXjluR5cMz5s/8LvG9UlaFpKEEMHrpv8wwuqAjbkOekxvVRquR53D8h78/rnLQhJ5me7bqTQiylSmaZVosYQZ9cx09AoX6/jjyPuCLTymXHcvv9mmAnWoq0lcp0+eIrFRrdQXb9ulYSZjwyB6UMuCo3QPA+ewqES6QOtEOMJOEe6ugTfI3MD80PThxcUGNDM5Idd1z7HsimlSS3YWUqvn3V7gjEcSMHrME8Dk7p2BOFeHqrbXqTbSnFMTnTOwfjIfzX+AHRSwjKAyo/pgAAAABJRU5ErkJggg=="
+                        alt="verfied"
+                      />
+                      <h4 class="text-white fw-bold mb-0">輕鬆舒適</h4>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+  <!-- E-NEWSLETTER -->
+
+  <div class="px-12">
+    <div
+      class="container footer-eNewsLetter-img-height bg-cover py-32 py-sm-64 px-4 px-sm-40 z-1 translateY-50"
+      style="background-image: url(/web-layout-training-vite/assets/eNewsLetter-a876b71a.jfif)"
+    >
+      <h4 class="text-white mb-3">加入我們的電子報</h4>
+      <div class="d-flex gap-2 mb-32">
+        <p class="h1 m-0 text-white fw-bold">立即拿優惠金</p>
+        <div class="bg-light d-flex align-items-end rounded">
+          <h5 class="text-secondary fw-bold m-0 me-2">NT</h5>
+          <h2 class="text-secondary fw-bold m-0">$ 500</h2>
+        </div>
+      </div>
+      <form class="d-flex gap-2">
+        <div class="text-center">
+          <input
+            type="email"
+            class="form-control rounded-0 ps-3 pe-240 fs-6 h-100"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="請輸入信箱"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary text-secondary rounded-0 fw-bold py-12 px-4"
+        >
+          訂閱
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- FOOTER LOGO -->
+  <div class="bg-secondary container-fluid text-center footer-logo-padding">
+    <a class="footer__logo" href="/web-layout-training-vite/pages/index.html">
+      <img
+        class="footer__img pb-4"
+        src="/web-layout-training-vite/assets/logo_footer-163225e4.svg"
+        alt="logo-footer"
+    /></a>
+    <p class="h5 pt-4 text-light">讓夢想起飛</p>
+  </div>
+  <!--FOOTER ICONS AND CTA  -->
+  <nav class="navbar navbar-expand-lg py-3 bg-dark">
+    <div class="container justify-content-lg-between">
+      <ul
+        class="navbar-nav me-auto ms-auto mb-2 mb-lg-0 d-flex flex-row justify-content-between align-items-center gap-lg-4"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link link-white h5 py-1 px-2 footer_nav_link_icon"
+            href="#"
+            ><img
+              src="data:image/png;base64,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"
+              style="height: 48px"
+              alt="facebook"
+          /></a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link link-white h5 py-1 px-2 footer_nav_link_icon"
+            href="#"
+            ><img
+              src="/web-layout-training-vite/assets/instgram-3d67f54c.png"
+              style="height: 48px"
+              alt="instgram"
+          /></a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link link-white h5 py-1 px-2 footer_nav_link_icon"
+            href="#"
+            ><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAZuSURBVHgB7Z1biFVVHMa/M2mZhZZaRnTxFhndoUKDiqSirDBCzBcfCqW0h4wyqSiIICLCbhQV0YPVSyiEYkhgEIZ2gSi7KFFWlKHpdDPNW+6+z7VmHGfOnjNrz9pnwd7/H3wc2Wfvc5z/t/Zaa//X5TSQQ5ZlHXwZTU2gbqSmUJOpk6ljYDRjL/UbtZH6iHqX+p7qbDQaWbMLGs0OMvhD+HILNZO6Gi7oRjgyYw21jFpBEw70PqGPAQz+SL7cS91JjUWOScaAUcnfRr1GLaEJf/R884jgMviqYp6Cq3I6YMTkILWaWkQTvuk62G0Ag38CX96kpsNKfVnIBLULc2jCnzpwqJT7Ov8+6gZY8MtE8VYBX8iYH3XogO/tqMGdB6t22oFirPZ1BmPf6OpqqrdjPZ32oc6NYj5aBqifr66mVT3tQ7GeRk2UAerxWOlvP7oLrpcBU2CkYqoMmAwjFZMbbIn3wHI7qdgjAzIYqcis35+WhhmQGDMgMWZAYsoyYB+llOvz1JXUKdQwajx1K/U69QtcdrDWlNEL+o961eurZqNAPgGozOsC6hrqaNSU2AaoRL9APdZ75Kc33oRx1HPUTagpMQ1QSV9KPcDgdw70Ij8QtB41fSKP2QaoTl8aEnzhR4aepv5FDYlpwJdwUzGKsJb6GjUkpgErWZr3ohi6ez5BDYlpwE8ojhKCmkNTu7xUTAP2oSC8c9R7UiNuBgyC01AQ9oT0kDYGNXwyj/kHT9UoP4oxijoLNSSmAZdRZ6IYmhhwKWpITAPOp+bxLhgecpE//yHUdGJATAM0rDmHunmgF/i6fy51HWpKGcm4n+GSbKvy5sQLfu3xfJlP3Y8aT4spa0xYaYWVcGnnb6mdcN1UlfgT4RrcR6lLUPMJYWUPyv9DfUb9Su2mlHjTmIASb8fCgM2KSMwQ1AsVtq7qsGugaCjcgJDapLZXh2UYoD/yY2pHi/M0P179/4n9/D82UT/AjbL1h4J3MTWyyXv7qc/hsq3KV6mTsAuH09/D/fV6hhlHnUddgDaZUYYBanifhKvz+0N/oCaoLqGuavK+gj+L+h2tc0QqwerKvtLjmAK/Dm5o9FNqO/W3zzv1wS9SGQHXI7sCbg6/TC03PZLFZRsV9ETL82/L+ayHEQiv2UEdpDZTs6jCY816QKTmUlv8Z5ZCbHfV6wkdE8gbO96FYt+vXtd8lvS3qcFkaHdTWtm4ECUOFlWtEf4Rrvpbg3i8AzfZ4FkMIuObR9UMeISldi0iws9TW7I8c5MHXkbkmFUq/x47+L14C8XHvHOxqYkDhOZq2PRFuOHTaJgBYXxIfYCImAFhaOKAHjL3IxJmQAC+W7sB+V3nYCqbC2KvRV3Ga+HmnV4Il/PZSr0Hlyrf4Ov1UL7wnxNlDKOSBjD4yi89A5ee6LkA8Qy4sefZ/v2XEM4WuPRIFCpXBTH4J/HlCbiS32z1p3JQk6jHee5UBMK7Rkm8wUxCO4JKGcCAKuB3UzPQOpupqTAyYRTC+Q6RqNodoJRyXslvxtkoNh1mOyJRNQPOgZseM1DG+GtC2YlIVM0ALXsKSUFrksCkLHAuEyJ2Q6tmwLkIR7M0QicIFEmVN6VqBpyOcI6De0YI4QAiUTUDimw60oHwOERbXmupiGKYAREpMvsh2lwqMyAxZkBizIDEmAGJMQMSYwYkxgxIjBlQDHsOqApmQGLMgMSYAcWwNqAqmAGJMQMSE9uAIqNLeecXydO3a5lptO+JbYBWkYROdJqYc/xUBJBlmVY4jkA4+v+GDspHW6oU2wCt013MYIxvtQBQKxipafznHTmnzOb7l1NDW3yOVvtrouyDKLb9wUXU7Zn7CUe0+K4hlJauLkAkbKuCxFgjnBgzIDFmQGLMgLQc6qkUXs5vDJp9MmAbjFRslQGbYKRikwxYDyMV62TAKlg1lALFfLUM2Ey9jxruXJ4QxVpb6myWAVrzuhx2F7QTxXoZ1dnh91DTpkTaW632v+vVBhRj7Tu0QjsLd+e1/YZEb1DTYQ9oZaHgq82dw+D/pQPdgfa/ZrTIn9Bqm0gjHAV/NbW4K/iiz8iOz4vfQ90F9xOEtd7bOQJqcLW5hzYAXOILejdNg0sTtKmqlvvPpDRoMhZGEdTYqrejBld1fp+aJbd0+xEtDddNgGsXpsCtKtfo0zAYzej6NaiNcJvGqspRN78zbyv//wGW8YBzFWHMFwAAAABJRU5ErkJggg=="
+              style="height: 48px"
+              alt="linkedin"
+          /></a>
+        </li>
+      </ul>
+
+      <!--每個分頁  待大家完成後 要再加上正確的href-->
+      <ul
+        class="navbar-nav me-auto mb-2 mb-lg-0 d-md-flex d-none flex-row justify-content-between align-items-center gap-xl-5 gap-lg-3"
+      >
+        <li class="nav-item">
+          <a class="nav-link nav-link-footer link-light h5 py-1 px-2" href="#"
+            >航班檢索</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-footer link-light h5 py-1 px-2" href="#"
+            >延遲航班</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-footer link-light h5 py-1 px-2" href="#"
+            >班機座標</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-footer link-light h5 py-1 px-2" href="#"
+            >鄰近機場</a
+          >
+        </li>
+      </ul>
+
+      <!-- 登入註冊 -->
+
+      <ul
+        class="navbar-nav mb-lg-2 d-md-flex d-none flex-row justify-content-between align-items-center gap-lg-5"
+      >
+        <li class="nav-item ms-lg-5">
+          <a class="nav-link link-light nav-link-footer h5 py-3 px-2" href="#"
+            >登入</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link link-light nav-link-footer h5 py-3 px-2" href="#"
+            >註冊</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</footer>
+
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
