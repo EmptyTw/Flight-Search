@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon -->
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet" />
+    <title>2-1searchForm</title>
+  </head>
+
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <div class="searchForm-page container mt-5">
+      <div class="progress-bar d-flex mt-4 mb-6 justify-content-center">
+        <div class="d-flex justify-content-between position-relative">
+            <div class="item d-flex flex-column align-items-center text-secondary me-5">
+                <div class="circle bg-primary d-flex flex-column">
+                    <p class="fs-5 fw-bold m-auto">1</p>
+                </div>
+                <p class="mt-2 d-inline-block">查詢航班資訊</p>
+            </div>
+            <div class="item d-flex flex-column align-items-center text-secondary me-5">
+                <div class="circle d-flex flex-column">
+                    <p class="fs-5 fw-bold m-auto">2</p>
+                </div>
+                <p class="mt-2 d-inline-block">檢視航班資訊</p>
+            </div>
+            <div class="item d-flex flex-column align-items-center text-secondary me-5">
+                <div class="circle d-flex flex-column">
+                    <p class="fs-5 fw-bold m-auto">3</p>
+                </div>
+                <p class="mt-2 d-inline-block">填寫旅客資料</p>
+            </div>
+            <div class="item d-flex flex-column align-items-center text-secondary me-5">
+                <div class="circle d-flex flex-column">
+                    <p class="fs-5 fw-bold m-auto">4</p>
+                </div>
+                <p class="mt-2 d-inline-block">確認付款資訊</p>
+            </div>
+            <div class="item d-flex flex-column align-items-center text-secondary">
+                <div class="circle d-flex flex-column">
+                    <span class="material-symbols-outlined fw-bold m-auto">
+                        done
+                    </span>
+                </div>
+                <p class="mt-2 d-inline-block">完成機票預訂</p>
+            </div>
+            <hr class="position-absolute">
+        </div>
+      </div>
+
+      <form action="">
+        <div class="formHeader border-bottom border-1 border-secondary">
+          <div class="row">
+            <div class="col-6 d-flex justify-content-end">
+              <div class="bg-primary text-secondary text-center py-3 fs-4 fw-bold">
+                來回
+              </div>
+            </div>
+            <div class="col-6 d-flex justify-content-start">
+              <div class="bg-primary text-secondary text-center py-3 fs-4 fw-bold bg-opacity-25">
+                單程
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="formBody py-5 text-secondary">
+          <div class="row mb-5">
+            <div class="col-6 fs-4 d-flex departure-location pe-4">
+              <label for="departure-location" name="departure-location" id="departure-location" class="w-25">出發地<span class="text-danger">*</span></label>
+              <div class="btn-group w-75">
+                <div class="dropdown-control-div border border-1 border-secondary d-flex justify-content-between">
+                  <button type="button" class="btn text-secondary py-2 w-100 text-start">--未選擇--</button>
+                  <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuDepartureLocation" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuDepartureLocation">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-6 fs-4 d-flex arrival-location ps-4">
+              <label for="arrival-location" name="arrival-location" id="arrival-location" class="w-25">目的地<span class="text-danger">*</span></label>
+              <div class="btn-group w-75">
+                <div class="dropdown-control-div border border-1 border-secondary d-flex justify-content-between">
+                  <button type="button" class="btn text-secondary py-2 w-100 text-start">--未選擇--</button>
+                  <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuArrivalLocation" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuArrivalLocation">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-6 fs-4 d-flex departure-time pe-4">
+              <label for="departure-time" name="departure-time" id="departure-time" class="w-25">
+                出發時間<span class="text-danger">*</span>
+              <p class="fs-6">GMT+8</p>
+              </label>
+              <div class="btn-group w-75">
+                <div>
+                  <div class="dropdown-control-div border border-1 border-secondary d-flex justify-content-between">
+                    <button type="button" class="btn text-secondary py-2 w-100 text-start">--未選擇--</button>
+                    <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuDepartureTime" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                      <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                  </div>
+                  <p class="fs-6 mt-1">( 僅供查詢未來 10 個小時以內 )</p>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuDepartureTime">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-6 fs-4 d-flex airline ps-4">
+              <label for="airline" name="airline" id="airline" class="w-25">航空公司</label>
+              <div class="btn-group w-75">
+                <div class="dropdown-control-div border border-1 border-secondary d-flex justify-content-between">
+                  <button type="button" class="btn text-secondary py-2 w-100 text-start">--未選擇--</button>
+                  <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuAirline" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuAirline">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="formFooter d-flex justify-content-end">
+          <button class="btn btn-primary text-secondary py-2 px-4 fs-5">查詢</button>
+        </div>
+      </form>
+    </div>
+
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../../main.js"></script>
+  </body>
+</html>
