@@ -9,3 +9,14 @@ flightCard.forEach((item) => {
     flightCardLower.classList.toggle("flightCard-lower-active");
   });
 });
+
+const flightSearchPage = document.querySelector(".flightSearchPage");
+
+flightSearchPage.addEventListener("click", function (e) {
+  if (e.target.classList.contains("flightSearchPage")) {
+    flightCard.forEach((item) => {
+      const flightCardLower = item.querySelector(".flightCard-lower");
+      flightCardLower.classList.remove("flightCard-lower-active");
+    });
+  }
+});
