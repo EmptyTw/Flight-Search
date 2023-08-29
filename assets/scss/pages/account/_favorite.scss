@@ -1,0 +1,68 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sidebar {
+    text-align: center;
+    .sidebar_option {
+        list-style: none;
+    }
+    .sidebar_fs{
+        font-size: 1.25rem;
+    }
+}
+
+.account_ticketLibrary-lg {
+    .account_ticketCard {
+        height: 150px;
+    }
+}
+
+.singleArrow {
+    height: 3px;
+    position: relative;
+    background-color: #000;
+}
+.singleArrow::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -6px;
+    top: -1.5px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 6px solid #000;
+}
+.rounded-lb{
+    border-radius: 0 0 0 31px;
+}
+.rounded-rb{
+    border-radius: 0 0 31px 0;
+}
+
+@media (max-width: 991px) {
+    .account_ticketLibrary-lg {
+        .account_ticketCard {
+            height: 130px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .airportName{
+        font-size: 0.75rem;
+    }
+    .timeTag{
+        font-size: 0.75rem;
+    }
+}
+@media(max-width: 575px){
+    .sidebar{
+        .sidebar_fs{
+            font-size: 1rem;
+        }
+    }
+    .timeUse{
+        font-size: 0.75rem;
+    }
+}

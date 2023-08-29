@@ -27,6 +27,7 @@
 @import "../node_modules/bootstrap/scss/buttons";
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/breadcrumb";
 @import "./components/utilities";
 @import "./components/button";
 
@@ -40,3 +41,4 @@
 
 //pages
 @import "./pages/index.scss";
+@import "./pages/account/favorite";
