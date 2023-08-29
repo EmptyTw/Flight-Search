@@ -15,6 +15,7 @@
 @import "./utils/utilities";
 @import "./utils/mixins";
 @import "../node_modules/rfs/scss";
+@import "./base/animations";
 
 // 4. Include any optional Bootstrap components as you like
 @import "../node_modules/bootstrap/scss/root";
@@ -40,3 +41,4 @@
 
 //pages
 @import "./pages/index.scss";
+@import "./pages/flightSearch.scss";

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- 國旗CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/css/flag-icons.min.css"
+    />
+    <title>2-2FlightSearch</title>
+  </head>
+  <style>
+    /* * {
+      border: 1px red solid !important;
+    } */
+  </style>
+
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <div>這裡放進度條</div>
+    <p class="text-secondary text-center fw-bold ls-10 rfs-80">航班檢索</p>
+    <h2 class="text-center display-4 text-primary fw-bold">
+      DAD <span class="fw-normal text-secondary me-3">to</span>TPE
+    </h2>
+    <!-- FlightSearchCard -->
+
+    <div class="container mt-5">
+      <ul class="list-unstyled">
+        <li class="flightCard">
+          <!-- upper -->
+          <div class="d-flex flight-polygon-border p-12">
+            <div class="w-85 d-flex justify-content-between align-items-center">
+              <div class="">
+                <div class="d-flex align-items-center">
+                  <img
+                    class=""
+                    src="https://www.gstatic.com/flights/airline_logos/70px/BR.png"
+                    alt="flightCompany"
+                    height="70px"
+                  />
+                  <h3 class="ms-3 text-secondary">Eva Airways</h3>
+                </div>
+                <p class="mt-3 mb-0">BR384</p>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <div>
+                  <p class="mb-0 h1 text-secondary">DAD</p>
+                  <time>14:02</time>
+                </div>
+                <p class="mb-0 h1 text-secondary">&rarr;</p>
+                <div class="">
+                  <p class="mb-0 h1 text-secondary">TPE</p>
+                  <time>17:49</time>
+                </div>
+              </div>
+              <div class="rounded-circle bg-primary">
+                <p class="mb-0 p-3 h4 text-secondary">scheduled</p>
+              </div>
+              <img
+                class=""
+                src="/assets/images/homepage/flightSearch-plane.png"
+                alt="plane"
+                height="67px"
+              />
+            </div>
+            <div class="flight-polygon-border-overlap"></div>
+          </div>
+
+          <!-- lower -->
+          <div
+            class="w-85 justify-content-between gap-3 py-3 px-12 flightCard-lower"
+          >
+            <div class="w-30">
+              <div class="d-flex justify-content-between mb-3 gap-0">
+                <span class="fi fi-vn w-50"></span>
+                <h3 class="mb-0 fw-bold text-secondary">DAD</h3>
+              </div>
+              <p class="mb-3 text-secondary">Da Nang International Airport</p>
+              <p>Terminal: 2</p>
+              <time>2023-07-18 14:02</time>
+              <p>GMT+8</p>
+            </div>
+            <div
+              class="w-20 d-flex flex-column justify-content-between align-self-center align-items-center"
+            >
+              <h3 class="mb-3">130mins</h3>
+              <img
+                class="d-block w-15 mb-3 moveUpandDown-animation"
+                src="/assets/images/homepage/airplane-flightCard.png"
+                alt="airplane"
+              />
+              <img
+                class="d-block w-15 mb-3 arrow-moveIn-animation"
+                src="/assets/images/homepage/right-arrow-blue.png"
+                alt="rightArrow"
+              />
+              <a
+                href="#"
+                class="btn btn-primary rounded-0 fw-bold p-2"
+                role="button"
+                >go to Book</a
+              >
+            </div>
+            <div class="w-30">
+              <div class="d-flex justify-content-between mb-3">
+                <span class="fi fi-tw w-50"></span>
+                <h3 class="mb-0 fw-bold text-secondary">TPE</h3>
+              </div>
+              <p class="mb-3 text-secondary">
+                Taiwan Taoyuan International Airport
+              </p>
+              <p>Terminal: 3 Gate: D3</p>
+              <time>2023-07-18 17:49</time>
+              <p>GMT+8</p>
+            </div>
+          </div>
+        </li>
+        <li class="flightCard">
+          <!-- upper -->
+          <div class="d-flex flight-polygon-border p-12">
+            <div class="w-85 d-flex justify-content-between align-items-center">
+              <div class="">
+                <div class="d-flex align-items-center">
+                  <img
+                    class="transparent-image"
+                    src="https://www.gstatic.com/flights/airline_logos/70px/IT.png"
+                    alt="flightCompany"
+                    height="70px"
+                  />
+                  <h3 class="ms-3 text-secondary">Tigerair Taiwan</h3>
+                </div>
+                <p class="mt-3 mb-0">IT552</p>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <div>
+                  <p class="mb-0 h1 text-secondary">DAD</p>
+                  <time>18:20</time>
+                </div>
+                <p class="mb-0 h1 text-secondary">&rarr;</p>
+                <div class="">
+                  <p class="mb-0 h1 text-secondary">TPE</p>
+                  <time>22:10</time>
+                </div>
+              </div>
+              <div class="rounded-circle bg-primary">
+                <p class="mb-0 p-3 h4 text-secondary">scheduled</p>
+              </div>
+              <img
+                class=""
+                src="/assets/images/homepage/flightSearch-plane.png"
+                alt="plane"
+                height="67px"
+              />
+            </div>
+            <div class="flight-polygon-border-overlap"></div>
+          </div>
+          <!-- lower -->
+          <div
+            class="w-85 justify-content-between gap-3 py-3 px-12 flightCard-lower"
+          >
+            <div class="w-30">
+              <div class="d-flex justify-content-between mb-3 gap-0">
+                <span class="fi fi-vn w-50"></span>
+                <h3 class="mb-0 fw-bold text-secondary">DAD</h3>
+              </div>
+              <p class="mb-3 text-secondary">Da Nang International Airport</p>
+              <p>Terminal: 2</p>
+              <time>2023-07-18 18:20</time>
+              <p>GMT+8</p>
+            </div>
+            <div
+              class="w-20 d-flex flex-column justify-content-between align-self-center align-items-center"
+            >
+              <h3 class="mb-3">170mins</h3>
+              <img
+                class="d-block w-15 mb-3 moveUpandDown-animation"
+                src="/assets/images/homepage/airplane-flightCard.png"
+                alt="airplane"
+              />
+              <img
+                class="d-block w-15 mb-3 arrow-moveIn-animation"
+                src="/assets/images/homepage/right-arrow-blue.png"
+                alt="rightArrow"
+              />
+              <a
+                href="#"
+                class="btn btn-primary rounded-0 fw-bold p-2"
+                role="button"
+                >go to Book</a
+              >
+            </div>
+            <div class="w-30">
+              <div class="d-flex justify-content-between mb-3">
+                <span class="fi fi-tw w-50"></span>
+                <h3 class="mb-0 fw-bold text-secondary">TPE</h3>
+              </div>
+              <p class="mb-3 text-secondary">
+                Taiwan Taoyuan International Airport
+              </p>
+              <p>Terminal: 3 Gate: D3</p>
+              <time>2023-07-18 22:10</time>
+              <p>GMT+8</p>
+            </div>
+          </div>
+        </li>
+        <li class="flightCard">
+          <!-- upper -->
+          <div class="d-flex flight-polygon-border p-12">
+            <div class="w-85 d-flex justify-content-between align-items-center">
+              <div class="">
+                <div class="d-flex align-items-center">
+                  <img
+                    class="transparent-image"
+                    src="https://www.gstatic.com/flights/airline_logos/70px/JX.png"
+                    alt="flightCompany"
+                    height="70px"
+                  />
+                  <h3 class="ms-3 text-secondary">Starlux Airlines</h3>
+                </div>
+                <p class="mt-3 mb-0">JX704</p>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <div>
+                  <p class="mb-0 h1 text-secondary">DAD</p>
+                  <time>22:50</time>
+                </div>
+                <p class="mb-0 h1 text-secondary">&rarr;</p>
+                <div class="">
+                  <p class="mb-0 h1 text-secondary">TPE</p>
+                  <time>18:55</time>
+                </div>
+              </div>
+              <div class="rounded-circle bg-primary">
+                <p class="mb-0 p-3 h4 text-secondary">scheduled</p>
+              </div>
+              <img
+                class=""
+                src="/assets/images/homepage/flightSearch-plane.png"
+                alt="plane"
+                height="67px"
+              />
+            </div>
+            <div class="flight-polygon-border-overlap"></div>
+          </div>
+          <!-- lower -->
+          <div
+            class="w-85 justify-content-between gap-3 py-3 px-12 flightCard-lower"
+          >
+            <div class="w-30">
+              <div class="d-flex justify-content-between mb-3 gap-0">
+                <span class="fi fi-vn w-50"></span>
+                <h3 class="mb-0 fw-bold text-secondary">DAD</h3>
+              </div>
+              <p class="mb-3 text-secondary">Da Nang International Airport</p>
+              <p>Terminal: 2</p>
+              <time>2023-07-18 18:55</time>
+              <p>GMT+8</p>
+            </div>
+            <div
+              class="w-20 d-flex flex-column justify-content-between align-self-center align-items-center"
+            >
+              <h3 class="mb-3">175mins</h3>
+              <img
+                class="d-block w-15 mb-3 moveUpandDown-animation"
+                src="/assets/images/homepage/airplane-flightCard.png"
+                alt="airplane"
+              />
+              <img
+                class="d-block w-15 mb-3 arrow-moveIn-animation"
+                src="/assets/images/homepage/right-arrow-blue.png"
+                alt="rightArrow"
+              />
+              <a
+                href="#"
+                class="btn btn-primary rounded-0 fw-bold p-2"
+                role="button"
+                >go to Book</a
+              >
+            </div>
+            <div class="w-30">
+              <div class="d-flex justify-content-between mb-3">
+                <span class="fi fi-tw w-50"></span>
+                <h3 class="mb-0 fw-bold text-secondary">TPE</h3>
+              </div>
+              <p class="mb-3 text-secondary">
+                Taiwan Taoyuan International Airport
+              </p>
+              <p>Terminal: 3 Gate: D3</p>
+              <time>2023-07-18 22:50</time>
+              <p>GMT+8</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- PAGINATION -->
+    <div
+      class="container d-flex justify-content-center align-items-center mt-5"
+    >
+      <a class="btn btn-primary rounded-0 p-0 d-block" href="#">
+        <img
+          src="/assets/images/homepage/Arrow Pointing Left.png"
+          alt="arrow_left"
+        />
+      </a>
+      <ul class="list-unstyled d-flex align-items-center mb-0 gap-1">
+        <li class="">
+          <a class="btn mb-0 fs-4 link-secondary fw-bold">1</a>
+        </li>
+        <li class="">
+          <a class="btn mb-0 fs-4 link-secondary fw-bold">2</a>
+        </li>
+        <li class="">
+          <a class="btn mb-0 fs-4 link-secondary fw-bold">3</a>
+        </li>
+        <li class="">
+          <a class="btn mb-0 fs-4 link-secondary fw-bold">4</a>
+        </li>
+        <li class="">
+          <a class="btn mb-0 fs-4 link-secondary fw-bold">5</a>
+        </li>
+      </ul>
+
+      <a class="btn btn-primary rounded-0 p-0 d-block carousel-hover" href="#">
+        <img src="/assets/images/homepage/Right Arrow.png" alt="arrow_right" />
+      </a>
+    </div>
+
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../../main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
