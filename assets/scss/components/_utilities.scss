@@ -58,10 +58,20 @@
   @include font-size(80px);
 }
 
+.rfs-24 {
+  @include font-size(24px);
+}
+
 // HOVER  //
 .focus-primary-light {
   &:focus,
   &:visited {
     background-color: #eac14a40 !important;
   }
+}
+
+// FONT
+
+.overflow-wrap-break {
+  overflow-wrap: break-word;
 }
