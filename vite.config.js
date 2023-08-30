@@ -25,7 +25,7 @@ function moveOutputPlugin() {
 export default defineConfig({
   // base 的寫法：ss
   // base: '/Repository 的名稱/'
-  base: "/web-layout-training-vite/",
+  base: "/Flight-Search/",
   plugins: [
     liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
     ViteEjsPlugin(),
@@ -34,6 +34,7 @@ export default defineConfig({
   server: {
     // 啟動 server 時預設開啟的頁面
     open: "pages/index.html",
+	port :3000
   },
   build: {
     rollupOptions: {
