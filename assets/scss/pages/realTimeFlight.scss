@@ -1,0 +1,7 @@
+.map-rwd-size {
+  height: 500px;
+  width: 100%;
+  @include respond(md) {
+    height: 1000px;
+  }
+}

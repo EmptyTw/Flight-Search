@@ -1,0 +1,114 @@
+.flight-polygon-border {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/images/flightCard-background.jpg);
+  background-size: cover;
+  background-position: center;
+  // clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
+
+  @include respond(md) {
+    background: $secondary;
+    clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
+  }
+
+  &-overlap {
+    background: white;
+    z-index: -1;
+    background-image: url(/assets/images/flightCard-background.jpg);
+    background-size: cover;
+    background-position: center;
+
+    clip-path: polygon(0% 0%, 99% 0%, 85% 100%, 0% 100%);
+
+    @include respond(md) {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+      background: white;
+      z-index: -1;
+      background-image: url(/assets/images/flightCard-background.jpg);
+      background-size: cover;
+      background-position: center;
+
+      clip-path: polygon(0% 0%, 99% 0%, 85% 100%, 0% 100%);
+    }
+  }
+}
+
+.flightCard {
+  transition: all 1s;
+  cursor: pointer;
+  box-shadow: 0 1rem 4rem rgba($dark, 0.2);
+
+  @include respond(md) {
+    box-shadow: none;
+  }
+
+  @include respond(lg) {
+    &:hover {
+      transform: translateX(10rem);
+    }
+  }
+
+  &:focus {
+    transform: translateX(0rem);
+
+    margin-top: 16px;
+  }
+}
+
+.flightCard-rwd-width {
+  width: 100%;
+  @include respond(md) {
+    width: 85%;
+  }
+}
+
+.flightCard-lower {
+  display: none;
+  transition: all 3s;
+  border: 5px solid transparent;
+  border-image: linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  border-image-slice: 1;
+  @include rainbow;
+  animation: rainbow 3s linear infinite;
+}
+.flightCard-lower-active {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.arrow-moveIn-animation {
+  @include moveInLeft;
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.moveUpandDown-animation {
+  @include moveUpandDown;
+  animation-name: moveUpandDown;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.rwd-width-50-md-15 {
+  width: 30%;
+  @include respond(sm) {
+    width: 15%;
+  }
+}
