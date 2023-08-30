@@ -2,18 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FlightEase</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script type="module" crossorigin src="/Flight-Search/assets/main-f2863f4d.js"></script>
-    <link rel="stylesheet" href="/Flight-Search/assets/main-6e85e84f.css">
+    <!-- 國旗CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.11.0/css/flag-icons.min.css"
+    />
+    <title>delayed Flight</title>
+    <script type="module" crossorigin src="/Flight-Search/assets/main-767ade57.js"></script>
+    <link rel="stylesheet" href="/Flight-Search/assets/main-94200b48.css">
   </head>
   <style>
     /* * {
@@ -21,7 +23,6 @@
     } */
   </style>
   <body>
-    <!-- ejs語法 -->
     <nav class="navbar bg-body-tertiary py-3 navbar-position-top-sticky px-3">
   <div class="container-fluid  d-flex flex-lg-row flex-sm-column flex-row justify-content-sm-around justify-content-between px-lg-0 align-items-center gap-sm-3 w-100 p-0 m-0 ">
    
@@ -47,15 +48,15 @@
             </li>
             <li class="navbar-navItem">
               <a
-                class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0"
-                href="#"
+                class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0" 
+                href="./DelayFlight/delayFlight.html"
                 >延遲航班</a
               >
             </li>
             <li class="navbar-navItem">
               <a
                 class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0"
-                href="#"
+                href="./RealTimeFlight/realTimeFlight.html"
                 >班機座標</a
               >
             </li>
@@ -95,9 +96,528 @@
     </div>
   </div>
 </nav>
-  
+
     <main>
-        123
+      <p class="text-secondary text-center fw-bold ls-10 rfs-80">
+        延遲航班查詢
+      </p>
+
+      <div class="container">
+        <!-- delayed FORM -->
+        <form
+          action="#"
+          class="border p-5 bg-cover"
+          style="
+            background-image: linear-gradient(
+                rgba(255, 255, 255, 0.8),
+                rgba(255, 255, 255, 0.8)
+              ),
+              url(/Flight-Search/assets/bg-ea42bb29.png);
+          "
+        >
+          <h2 class="fw-bold">選擇查詢方式</h2>
+          <div class="d-flex flex-column flex-md-row">
+            <div class="form-check">
+              <input
+                class="form-check-input mt-2"
+                type="radio"
+                name="flightSearchParams"
+                id="flightSearchParams1"
+                style="height: 40px; width: 40px"
+                checked
+              />
+              <label
+                class="form-check- d-block py-3 mb-0 ms-4 cursor-pointer fs-rwd-16-sm-24"
+                for="flightSearchParams1"
+              >
+                輸入機場代碼(ex.TPE)
+              </label>
+            </div>
+            <div class="form-check ms-0 ms-md-3">
+              <input
+                class="form-check-input mt-2"
+                type="radio"
+                name="flightSearchParams"
+                id="flightSearchParams2"
+                style="height: 40px; width: 40px"
+              />
+              <label
+                class="form-check-label d-block py-3 mb-0 ms-4 cursor-pointer fs-rwd-16-sm-24"
+                for="flightSearchParams2"
+              >
+                輸入航班代碼(ex.BR383)
+              </label>
+            </div>
+          </div>
+          <h2 class="fw-bold mt-3">選擇出境/入境班機</h2>
+          <div class="d-flex flex-column flex-md-row">
+            <div class="form-check">
+              <input
+                class="form-check-input mt-2"
+                type="radio"
+                name="flightType"
+                id="flightType1"
+                style="height: 40px; width: 40px"
+                checked
+              />
+              <label
+                class="form-check-label py-3 mb-0 ms-1 cursor-pointer fs-rwd-16-sm-24"
+                for="flightType1"
+              >
+                出境班機
+              </label>
+            </div>
+            <div class="form-check ms-0 ms-md-3">
+              <input
+                class="form-check-input mt-2"
+                type="radio"
+                name="flightType"
+                id="flightType2"
+                style="height: 40px; width: 40px"
+              />
+              <label
+                class="form-check-label py-3 mb-0 ms-1 cursor-pointer fs-rwd-16-sm-24"
+                for="flightType2"
+              >
+                入境班機
+              </label>
+            </div>
+          </div>
+          <div class="mt-3 mb-3">
+            <label
+              for="delayedSearchParams"
+              class="form-label h2 fw-bold cursor-pointer"
+              >輸入機場代碼/班機資訊</label
+            >
+            <input
+              type="text"
+              class="form-control formInfo"
+              id="delayedSearchParams"
+              placeholder="EX.TPE/BR383 請依據選擇的搜尋條件進行輸入"
+              aria-describedby="emailHelp"
+              required
+            />
+            <label
+              for="delayedSearchParams"
+              class="d-block mt-1 ms-3 formInfo-label"
+              >EX.TPE/BR383 請依據選擇的搜尋條件進行輸入</label
+            >
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary px-5 py-2 rounded-0 mt-3"
+          >
+            提交
+          </button>
+        </form>
+
+        <!-- delayed FLIGHT Card -->
+        <div class="container mt-5">
+          <ul class="list-unstyled">
+            <li class="flightCard mb-3 mb-md-0">
+              <!-- upper -->
+              <div class="d-flex flight-polygon-border p-12">
+                <div
+                  class="flightCard-rwd-width d-flex flex-column flex-md-row align-items-center justify-content-between"
+                >
+                  <div class="">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="transparent-image"
+                        src="https://www.gstatic.com/flights/airline_logos/70px/CI.png"
+                        alt="flightCompany"
+                        height="70px"
+                      />
+                      <h3 class="ms-sm-3 text-secondary">China Ariline</h3>
+                    </div>
+                    <p
+                      class="d-none d-md-block mt-0 mt-lg-3 mb-0 text-center h5"
+                    >
+                      CI9801
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex mb-0 align-items-center flex-row flex-lg-row gap-3"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <div>
+                        <p class="mb-0 h1 text-secondary">TPE</p>
+                        <time class="d-block text-center">2023-08-29</time>
+                        <time class="d-block text-center">21:15</time>
+                      </div>
+                      <p class="mb-0 h1 text-secondary">&rarr;</p>
+                      <div class="">
+                        <p class="mb-0 h1 text-secondary">MNL</p>
+                        <time class="d-block text-center">2023-08-29</time>
+                        <time class="d-block text-center">23:35</time>
+                      </div>
+                    </div>
+                    <div class="bg-primary">
+                      <p class="mb-0 p-2 h4 text-secondary">delayed</p>
+                    </div>
+                  </div>
+                  <img
+                    class="d-none d-md-block"
+                    src="/Flight-Search/assets/flightSearch-plane-0ef8a6f7.png"
+                    alt="plane"
+                    height="67px"
+                  />
+                </div>
+                <div class="flight-polygon-border-overlap"></div>
+              </div>
+              <!-- lower -->
+              <div
+                class="flightCard-rwd-width justify-content-between gap-1 gap-sm-3 py-3 px-12 flightCard-lower"
+              >
+                <div class="w-30 d-flex flex-column justify-content-between">
+                  <div class="d-flex justify-content-between mb-3 gap-0">
+                    <span class="fi fi-tw w-50"></span>
+                    <h3 class="mb-0 fw-bold text-secondary">TPE</h3>
+                  </div>
+                  <p
+                    class="mb-3 text-secondary text-center overflow-wrap-break"
+                  >
+                    Taiwan Taoyuan International Airport
+                  </p>
+                  <p class="text-center d-none d-sm-block">
+                    Terminal: 1 Gate: A3
+                  </p>
+                  <time class="text-center mb-1 fw-bold text-danger"
+                    >2023-08-29 21:15</time
+                  >
+                  <time
+                    class="text-center mb-1 text-decoration-line-through opacity-50"
+                    >2023-08-29 22:25</time
+                  >
+                  <p class="text-center">GMT+8</p>
+                </div>
+                <div
+                  class="w-20 d-flex flex-column justify-content-between align-self-sm-center align-self-end align-items-center"
+                >
+                  <p class="d-block d-md-none mb-3 text-center h5 fw-bold">
+                    BR384
+                  </p>
+                  <h3 class="mb-3 text-center">
+                    Delayed <span class="text-danger fw-bold h3">70</span>mins
+                  </h3>
+                  <img
+                    class="d-none d-sm-block w-15 mb-3 moveUpandDown-animation"
+                    src="/Flight-Search/assets/airplane-flightCard-e4d03abf.png"
+                    alt="airplane"
+                  />
+                  <img
+                    class="d-block rwd-width-50-md-15 mb-3 arrow-moveIn-animation"
+                    src="/Flight-Search/assets/right-arrow-blue-cf50c668.png"
+                    alt="rightArrow"
+                  />
+                </div>
+                <div class="w-30 d-flex flex-column justify-content-between">
+                  <div class="d-flex justify-content-between mb-3">
+                    <span class="fi fi-ph w-50"></span>
+                    <h3 class="mb-0 fw-bold text-secondary">MNL</h3>
+                  </div>
+                  <p
+                    class="mb-3 text-secondary text-center overflow-wrap-break"
+                  >
+                    Ninoy Aquino International Airport
+                  </p>
+                  <p class="d-none d-sm-block text-center">
+                    Terminal: 3 Gate: D3
+                  </p>
+                  <time class="text-center mb-1 fw-bold text-danger"
+                    >22023-08-29 23:35</time
+                  >
+                  <time
+                    class="text-center mb-1 text-decoration-line-through opacity-50"
+                    >2023-08-30 00:45</time
+                  >
+                  <p class="text-center">GMT+8</p>
+                </div>
+              </div>
+            </li>
+            <li class="flightCard mb-3 mb-md-0">
+              <!-- upper -->
+              <div class="d-flex flight-polygon-border p-12">
+                <div
+                  class="flightCard-rwd-width d-flex flex-column flex-md-row align-items-center justify-content-between"
+                >
+                  <div class="">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="transparent-image"
+                        src="https://www.gstatic.com/flights/airline_logos/70px/CI.png"
+                        alt="flightCompany"
+                        height="70px"
+                      />
+                      <h3 class="ms-sm-3 text-secondary">China Ariline</h3>
+                    </div>
+                    <p
+                      class="d-none d-md-block mt-0 mt-lg-3 mb-0 text-center h5"
+                    >
+                      CI9801
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex mb-0 align-items-center flex-row flex-lg-row gap-3"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <div>
+                        <p class="mb-0 h1 text-secondary">TPE</p>
+                        <time class="d-block text-center">2023-08-29</time>
+                        <time class="d-block text-center">21:15</time>
+                      </div>
+                      <p class="mb-0 h1 text-secondary">&rarr;</p>
+                      <div class="">
+                        <p class="mb-0 h1 text-secondary">MNL</p>
+                        <time class="d-block text-center">2023-08-29</time>
+                        <time class="d-block text-center">23:35</time>
+                      </div>
+                    </div>
+                    <div class="bg-primary">
+                      <p class="mb-0 p-2 h4 text-secondary">delayed</p>
+                    </div>
+                  </div>
+                  <img
+                    class="d-none d-md-block"
+                    src="/Flight-Search/assets/flightSearch-plane-0ef8a6f7.png"
+                    alt="plane"
+                    height="67px"
+                  />
+                </div>
+                <div class="flight-polygon-border-overlap"></div>
+              </div>
+              <!-- lower -->
+              <div
+                class="flightCard-rwd-width justify-content-between gap-1 gap-sm-3 py-3 px-12 flightCard-lower"
+              >
+                <div class="w-30 d-flex flex-column justify-content-between">
+                  <div class="d-flex justify-content-between mb-3 gap-0">
+                    <span class="fi fi-tw w-50"></span>
+                    <h3 class="mb-0 fw-bold text-secondary">TPE</h3>
+                  </div>
+                  <p
+                    class="mb-3 text-secondary text-center overflow-wrap-break"
+                  >
+                    Taiwan Taoyuan International Airport
+                  </p>
+                  <p class="text-center d-none d-sm-block">
+                    Terminal: 1 Gate: A3
+                  </p>
+                  <time class="text-center mb-1 fw-bold text-danger"
+                    >2023-08-29 21:15</time
+                  >
+                  <time
+                    class="text-center mb-1 text-decoration-line-through opacity-50"
+                    >2023-08-29 22:25</time
+                  >
+                  <p class="text-center">GMT+8</p>
+                </div>
+                <div
+                  class="w-20 d-flex flex-column justify-content-between align-self-sm-center align-self-end align-items-center"
+                >
+                  <p class="d-block d-md-none mb-3 text-center h5 fw-bold">
+                    BR384
+                  </p>
+                  <h3 class="mb-3 text-center">
+                    Delayed <span class="text-danger fw-bold h3">70</span>mins
+                  </h3>
+                  <img
+                    class="d-none d-sm-block w-15 mb-3 moveUpandDown-animation"
+                    src="/Flight-Search/assets/airplane-flightCard-e4d03abf.png"
+                    alt="airplane"
+                  />
+                  <img
+                    class="d-block rwd-width-50-md-15 mb-3 arrow-moveIn-animation"
+                    src="/Flight-Search/assets/right-arrow-blue-cf50c668.png"
+                    alt="rightArrow"
+                  />
+                </div>
+                <div class="w-30 d-flex flex-column justify-content-between">
+                  <div class="d-flex justify-content-between mb-3">
+                    <span class="fi fi-ph w-50"></span>
+                    <h3 class="mb-0 fw-bold text-secondary">MNL</h3>
+                  </div>
+                  <p
+                    class="mb-3 text-secondary text-center overflow-wrap-break"
+                  >
+                    Ninoy Aquino International Airport
+                  </p>
+                  <p class="d-none d-sm-block text-center">
+                    Terminal: 3 Gate: D3
+                  </p>
+                  <time class="text-center mb-1 fw-bold text-danger"
+                    >22023-08-29 23:35</time
+                  >
+                  <time
+                    class="text-center mb-1 text-decoration-line-through opacity-50"
+                    >2023-08-30 00:45</time
+                  >
+                  <p class="text-center">GMT+8</p>
+                </div>
+              </div>
+            </li>
+            <li class="flightCard mb-3 mb-md-0">
+              <!-- upper -->
+              <div class="d-flex flight-polygon-border p-12">
+                <div
+                  class="flightCard-rwd-width d-flex flex-column flex-md-row align-items-center justify-content-between"
+                >
+                  <div class="">
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="transparent-image"
+                        src="https://www.gstatic.com/flights/airline_logos/70px/CI.png"
+                        alt="flightCompany"
+                        height="70px"
+                      />
+                      <h3 class="ms-sm-3 text-secondary">China Ariline</h3>
+                    </div>
+                    <p
+                      class="d-none d-md-block mt-0 mt-lg-3 mb-0 text-center h5"
+                    >
+                      CI9801
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex mb-0 align-items-center flex-row flex-lg-row gap-3"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <div>
+                        <p class="mb-0 h1 text-secondary">TPE</p>
+                        <time class="d-block text-center">2023-08-29</time>
+                        <time class="d-block text-center">21:15</time>
+                      </div>
+                      <p class="mb-0 h1 text-secondary">&rarr;</p>
+                      <div class="">
+                        <p class="mb-0 h1 text-secondary">MNL</p>
+                        <time class="d-block text-center">2023-08-29</time>
+                        <time class="d-block text-center">23:35</time>
+                      </div>
+                    </div>
+                    <div class="bg-primary">
+                      <p class="mb-0 p-2 h4 text-secondary">delayed</p>
+                    </div>
+                  </div>
+                  <img
+                    class="d-none d-md-block"
+                    src="/Flight-Search/assets/flightSearch-plane-0ef8a6f7.png"
+                    alt="plane"
+                    height="67px"
+                  />
+                </div>
+                <div class="flight-polygon-border-overlap"></div>
+              </div>
+              <!-- lower -->
+              <div
+                class="flightCard-rwd-width justify-content-between gap-1 gap-sm-3 py-3 px-12 flightCard-lower"
+              >
+                <div class="w-30 d-flex flex-column justify-content-between">
+                  <div class="d-flex justify-content-between mb-3 gap-0">
+                    <span class="fi fi-tw w-50"></span>
+                    <h3 class="mb-0 fw-bold text-secondary">TPE</h3>
+                  </div>
+                  <p
+                    class="mb-3 text-secondary text-center overflow-wrap-break"
+                  >
+                    Taiwan Taoyuan International Airport
+                  </p>
+                  <p class="text-center d-none d-sm-block">
+                    Terminal: 1 Gate: A3
+                  </p>
+                  <time class="text-center mb-1 fw-bold text-danger"
+                    >2023-08-29 21:15</time
+                  >
+                  <time
+                    class="text-center mb-1 text-decoration-line-through opacity-50"
+                    >2023-08-29 22:25</time
+                  >
+                  <p class="text-center">GMT+8</p>
+                </div>
+                <div
+                  class="w-20 d-flex flex-column justify-content-between align-self-sm-center align-self-end align-items-center"
+                >
+                  <p class="d-block d-md-none mb-3 text-center h5 fw-bold">
+                    BR384
+                  </p>
+                  <h3 class="mb-3 text-center">
+                    Delayed <span class="text-danger fw-bold h3">70</span>mins
+                  </h3>
+                  <img
+                    class="d-none d-sm-block w-15 mb-3 moveUpandDown-animation"
+                    src="/Flight-Search/assets/airplane-flightCard-e4d03abf.png"
+                    alt="airplane"
+                  />
+                  <img
+                    class="d-block rwd-width-50-md-15 mb-3 arrow-moveIn-animation"
+                    src="/Flight-Search/assets/right-arrow-blue-cf50c668.png"
+                    alt="rightArrow"
+                  />
+                </div>
+                <div class="w-30 d-flex flex-column justify-content-between">
+                  <div class="d-flex justify-content-between mb-3">
+                    <span class="fi fi-ph w-50"></span>
+                    <h3 class="mb-0 fw-bold text-secondary">MNL</h3>
+                  </div>
+                  <p
+                    class="mb-3 text-secondary text-center overflow-wrap-break"
+                  >
+                    Ninoy Aquino International Airport
+                  </p>
+                  <p class="d-none d-sm-block text-center">
+                    Terminal: 3 Gate: D3
+                  </p>
+                  <time class="text-center mb-1 fw-bold text-danger"
+                    >22023-08-29 23:35</time
+                  >
+                  <time
+                    class="text-center mb-1 text-decoration-line-through opacity-50"
+                    >2023-08-30 00:45</time
+                  >
+                  <p class="text-center">GMT+8</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- PAGINATION -->
+          <div
+            class="container d-flex justify-content-center align-items-center mt-5"
+          >
+            <a class="btn btn-primary rounded-0 p-0 d-block" href="#">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH5SURBVHgB7ZU9bxNBEIbfOd8dQbbBJgiLgBQikExiiYYiPwBBCTgRSCloSAX8BWpoIwoEBSCUAkWR6EAIKxVQ2aFIwAhRRAHhRLIQdsCXL99O5i5xvp0u3iL7VLPvbPHe7MwcYDAYDAaDQSe0VzKdvhr34u6QXLvuE+6W8qMjaDFWs8SquUPDYu62HI8RUy80sKvBE70DqVqs7ZmE10KBMGnDH4YGItuF41K5Nsd6TETZME+Yku+49bMw+hka2GKwp+dGzI86T4gwEOSkQacsqH4xNw5N2I0g6Lm5KF4SczYUmH/AcrLT+VdfoZFwijsv9p1UsIZAdDM4M1An4qfwqQAdEFWSy5XcxMT7WlhBBfsOE/fRhmsbTPeaz/h+o/ive/SBBPdDCwzfoU3PrR9aArEKotCUV/UeRhOxLnna/jWj83LhuVwswEfLURHlgdRYaLUhdsnuq9eXHzX6UJgEWYO/8iN5aGR9zVR+f6mdTmbeLdrcKTvwgkgpAl9KdHR/qJa+zUITW/ZguVxcco+cy9mufV52YbdISSa6kkhlctXZYhka2PEn8f58D0y+dV3nLBPS0gPtMs2X46cyH/+Vii2vZGQ3MTCZ6Eh/IkTOSJdmRGonBs/NFN+gxTTddNPjr2cO/18YlDl6IXuoworGYDAYDAaD4cCxAvrHlgyQLNmsAAAAAElFTkSuQmCC"
+                alt="arrow_left"
+              />
+            </a>
+            <ul class="list-unstyled d-flex align-items-center mb-0 gap-1">
+              <li class="">
+                <a class="btn mb-0 fs-4 link-secondary fw-bold">1</a>
+              </li>
+              <li class="">
+                <a class="btn mb-0 fs-4 link-secondary fw-bold">2</a>
+              </li>
+              <li class="">
+                <a class="btn mb-0 fs-4 link-secondary fw-bold">3</a>
+              </li>
+              <li class="">
+                <a class="btn mb-0 fs-4 link-secondary fw-bold">4</a>
+              </li>
+              <li class="">
+                <a class="btn mb-0 fs-4 link-secondary fw-bold">5</a>
+              </li>
+            </ul>
+
+            <a
+              class="btn btn-primary rounded-0 p-0 d-block carousel-hover"
+              href="#"
+            >
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHrSURBVHgB7ZVBSxtBFIDfm0127eI2KilmS6kNFZcmLbaxqNeW9lDopZTgoUKhFnpqj4X+gf6E3qonQU8RxYMiiKAXETwoaECPooKRxFXEjZvnm8SgiDmPh/lgZt8bHuzHm9lZAI1Go9FoNCoxQAGPerOfYm5qKeamu9z7nfOFQj5oVCtAAUZI7wCwDRCGTprN/09S2UTDWlBAc8LbEQLfsGRcoOiiKCUf2K9mDg/XzuAuCPp7m/utbvccYeUDp3EWTYdNYdp1+qcLhdVAuaCkuLt+4LR7CyiM95y28fDKVjnpOn2z1yWVCUpkJ1sSqSU+i/2ctvN4HljlzlbXWyztbhzLGpTTw56PcRTWWxEKGxSASBlCHOJQvv8cAXNmMfp9a2v0KCILDGj6BYS/+Zu2QAFU61OdCAFlg1iwzfGf2jWDyE8y4Y5A3EUSWJZxtYMhnf41wF4BohZQgYAe7tIPVovWUpgQQP9kjKCYjszAMxKVHHfNu1yasormoDx/MlHyJ6mT7B3orgiaupLDMdt3vtTlqiugBnzcl81QCOMcP5VnTm7rPd/5ls8P+9cLlXSw4/Xnlyw3IuWqEoQ5gfDzppwkAgoISXxFhBeX6aRZqt15t9UqOoPhMk8l3ulh2z8bbCSn0Wg0Go1GPRcKqpcL0XhBcgAAAABJRU5ErkJggg=="
+                alt="arrow_right"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
@@ -193,12 +713,16 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-link-footer link-light h5 py-1 px-2" href="#"
+          <a
+            class="nav-link nav-link-footer link-light h5 py-1 px-2"
+            href="./DelayFlight/delayFlight.html"
             >延遲航班</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-link-footer link-light h5 py-1 px-2" href="#"
+          <a
+            class="nav-link nav-link-footer link-light h5 py-1 px-2"
+            href="./RealTimeFlight/realTimeFlight.html"
             >班機座標</a
           >
         </li>
@@ -229,7 +753,6 @@
     </div>
   </nav>
 </footer>
-
     
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
