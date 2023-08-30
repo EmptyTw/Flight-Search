@@ -1,4 +1,4 @@
-.favorite{
+.myOrder{
     img {
         max-width: 100%;
         height: auto;
@@ -44,7 +44,7 @@
 }
 
 @media (max-width: 991px) {
-    .favorite{
+    .myOrder{
         .account_ticketLibrary-lg {
             .account_ticketCard {
                 height: 130px;
@@ -53,7 +53,7 @@
     }
 }
 @media (max-width: 767px) {
-    .favorite{
+    .myOrder{
         .airportName{
             font-size: 0.75rem;
         }
@@ -63,7 +63,7 @@
     }
 }
 @media(max-width: 575px){
-    .favorite{
+    .myOrder{
         .sidebar{
             .sidebar_fs{
                 font-size: 1rem;

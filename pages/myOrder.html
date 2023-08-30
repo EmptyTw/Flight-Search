@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlightEase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- ejs語法 -->
+    <%- include('./layout/header'); -%>
+        <div class="myOrder container">
+            <div class="row mt-5">
+                <ul
+                    class="sidebar col-lg-2 border py-lg-3 d-flex flex-lg-column justify-content-sm-evenly justify-content-between">
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_myOrder">
+                        <a class="text-decoration-none text-secondary" href="#">我的最愛</a>
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_myFavorite text-primary fw-bold">
+                        我的預定
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_reviseData">
+                        <a class="text-decoration-none text-secondary" href="#">修改會員資料</a>
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_revisePassword">
+                        <a class="text-decoration-none text-secondary" href="#">修改會員密碼</a>
+                    </li>
+                </ul>
+                <div class="col-lg-10 ps-lg-4">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="#">首頁</a>
+                            </li>
+                            <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="#">會員專區</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">我的預定</li>
+                        </ol>
+                    </nav>
+                    <div class="account_ticketLibrary-lg d-flex flex-column">
+                        <div class="account_ticketCard-sm">
+                            <div class="account_ticketCard row border px-1 mb-sm-3">
+                                <div class="col-2 col-sm-1 d-flex-center p-0 m-0">
+                                    <img src="/assets/images/account/cathay.png" alt="cathayair">
+                                </div>
+                                <div class="departureTime timeTag col-2 text-center p-0 d-flex-center">
+                                    2025/01/01 <br>
+                                    10:35 <br>
+                                    GMT+8
+                                </div>
+                                <div class="col-2 p-0 text-center d-flex-center flex-column">
+                                    <div class="airportCode">TPE</div>
+                                    <div class="airportName d-none d-sm-block">台北桃園國際機場</div>
+                                    <div class="airportCountry d-none d-sm-block">台灣</div>
+                                </div>
+                                <div class="col-2 p-2 d-flex flex-column justify-content-center">
+                                    <div class="timeUse text-center mb-2">2小時25分鐘</div>
+                                    <div class="singleArrow"></div>
+                                </div>
+                                <div class="col-2 p-0 text-center d-flex-center flex-column">
+                                    <div class="airportCode">ICN</div>
+                                    <div class="airportName d-none d-sm-block">首爾仁川國際機場</div>
+                                    <div class="airportCountry d-none d-sm-block">韓國</div>
+                                </div>
+                                <div class="arrivalTime timeTag col-2 text-center p-0 d-flex-center">
+                                    2025/01/01 <br>
+                                    14:00 <br>
+                                    GMT+8
+                                </div>
+                                <div class="col-sm-1 p-0 d-flex-center flex-column d-none d-sm-flex">
+                                    <button class="btn btn-sm btn-primary rounded-0 mb-2">詳細</button>
+                                </div>
+                            </div>
+                            <div class="row justify-content-around mb-3 d-sm-none">
+                                <button class="col-12 border btn btn-sm btn-primary rounded-lb">詳細資訊</button>
+                            </div>
+                        </div>
+                        <div class="account_ticketCard-sm">
+                            <div class="account_ticketCard row border px-1 mb-sm-3">
+                                <div class="col-2 col-sm-1 p-0 m-0 d-flex-center">
+                                    <img src="/assets/images/account/Tigerair_Taiwan_logo.svg.png" alt="tigerair">
+                                </div>
+                                <div class="departureTime timeTag col-2 text-center p-0 d-flex-center">
+                                    2025/01/01 <br>
+                                    23:40 <br>
+                                    GMT+8
+                                </div>
+                                <div class="col-2 p-0 text-center d-flex-center flex-column">
+                                    <div class="airportCode">TPE</div>
+                                    <div class="airportName d-none d-sm-block">台北桃園國際機場</div>
+                                    <div class="airportCountry d-none d-sm-block">台灣</div>
+                                </div>
+                                <div class="col-2 p-2 d-flex flex-column justify-content-center">
+                                    <div class="timeUse text-center mb-2">11小時10分鐘</div>
+                                    <div class="singleArrow"></div>
+                                </div>
+                                <div class="col-2 p-0 text-center d-flex-center flex-column">
+                                    <div class="airportCode">SEA</div>
+                                    <div class="airportName d-none d-sm-block">西雅圖/塔科馬國際機場
+                                    </div>
+                                    <div class="airportCountry d-none d-sm-block">美國</div>
+                                </div>
+                                <div class="arrivalTime timeTag col-2 text-center p-0 d-flex-center">
+                                    2025/01/02 <br>
+                                    19:50 <br>
+                                    GMT+8
+                                </div>
+                                <div
+                                    class="col-2 col-sm-1 p-0 d-flex-center flex-column account_ticketBtn d-none d-sm-flex">
+                                    <button class="btn btn-sm btn-primary rounded-0 mb-2">詳細</button>
+                                </div>
+                            </div>
+                            <div class="row justify-content-around mb-3 d-sm-none">
+                                <button class="col-12 border btn btn-sm btn-primary rounded-lb">詳細資訊</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('./layout/footer'); -%>
+
+            <script type="module" src="../main.js"></script>
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+</body>
+
+</html>
