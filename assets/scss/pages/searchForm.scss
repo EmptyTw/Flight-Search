@@ -1,0 +1,29 @@
+.searchForm-page {
+    .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #faefd2; //做出透明效果。如果用opacity的話會蓋不住hr
+    }
+    
+    hr {
+        border-top: 2px dashed #1d3455;
+        opacity: 0.5;
+        width: 90%;
+        top: 9%;
+        right: 5%;
+        z-index: -1;
+    }
+    
+    .formHeader .row {
+        >div:first-child >div {
+            margin-right: -12px;
+            width: 81%;
+        }
+
+        >div:last-child >div {
+            margin-left: -12px;
+            width: 81%;
+        }
+    }
+}
