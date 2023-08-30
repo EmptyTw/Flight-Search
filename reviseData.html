@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Error</title>
+    <title>FlightEase</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" crossorigin src="/Flight-Search/assets/main-55367ac1.js"></script>
-    <link rel="stylesheet" href="/Flight-Search/assets/main-da32cc1f.css">
-  </head>
-  <style>
-    /* * {
-      border: 1px red solid !important;
-    } */
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script type="module" crossorigin src="/Flight-Search/assets/main-55367ac1.js"></script>
+  <link rel="stylesheet" href="/Flight-Search/assets/main-da32cc1f.css">
+</head>
 
-  <body>
+<body>
+    <!-- ejs語法 -->
     <nav class="navbar bg-body-tertiary py-3 navbar-position-top-sticky px-3">
   <div class="container-fluid  d-flex flex-lg-row flex-sm-column flex-row justify-content-sm-around justify-content-between px-lg-0 align-items-center gap-sm-3 w-100 p-0 m-0 ">
    
@@ -93,30 +89,174 @@
     </div>
   </div>
 </nav>
-    <main class="py-6">
-      <div class="container d-flex flex-column align-items-center gap-3">
-        <h1 class="text-secondary text-center fw-bold ls-10 rfs-80">
-          Sorry...發生錯誤
-        </h1>
-        <div class="d-flex align-items-center gap-2 mt-4">
-          <img
-            class=""
-            src="/Flight-Search/assets/sorry-48025c58.png"
-            alt="sorry"
-            style="height: 128px; width: 128px"
-          />
-          <h2 class="text-secondary text-center fw-bold ls-10 h2">
-            似乎哪裡出錯了
-          </h2>
+        <div class="reviseData container">
+            <div class="row mt-5">
+                <!-- sidebar主選單 -->
+                <ul
+                    class="sidebar col-lg-2 border py-lg-3 d-flex flex-lg-column justify-content-sm-start justify-content-between">
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_myFavorite">
+                        <a class="text-decoration-none text-secondary" href="#">我的最愛</a>
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_myOrder">
+                        <a class="text-decoration-none text-secondary" href="#">我的預定</a>
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_reviseData text-primary fw-bold">
+                        修改會員資料
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_revisePassword">
+                        <a class="text-decoration-none text-secondary" href="#">修改會員密碼</a>
+                    </li>
+                </ul>
+                <!--  -->
+                <div class="col-lg-10 ps-lg-4">
+                    <!-- 麵包屑 -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="#">首頁</a>
+                            </li>
+                            <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="#">會員專區</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">修改會員資料</li>
+                        </ol>
+                    </nav>
+                    <!--  -->
+                    <div class="reviseData_main">
+                        <!-- 帳號 -->
+                        <div class="row">
+                            <div class="col-2 d-flex justify-content-end align-items-center">
+                                <label for="account_id">帳號</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="ps-2 form-control" type="email" name="id" id="account_id" disabled
+                                    placeholder="jack@flightease.com">
+                            </div>
+                        </div>
+                        <!-- 暱稱 -->
+                        <div class="row mt-3">
+                            <div class="col-2 d-flex justify-content-end align-items-center">
+                                <label for="nickName">暱稱</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="ps-2 form-control" type="text" name="nickName" id="nickName"
+                                    placeholder="僅使用於本站及信件的稱呼，未來可隨時變更">
+                            </div>
+                        </div>
+                        <!-- 姓名 -->
+                        <div class="d-none d-lg-block">
+                            <div class="row mt-3">
+                                <div class="col-2 d-flex justify-content-end align-items-center">
+                                    <label for="lastName">姓氏</label>
+                                </div>
+                                <div class="col-3">
+                                    <input class="ps-2 form-control" type="text" name="lastName" id="lastName" value="王">
+                                </div>
+                                <div class="col-1 d-flex justify-content-end align-items-center">
+                                    <label for="firstName">名字</label>
+                                </div>
+                                <div class="col-3">
+                                    <input class="ps-2 form-control" type="text" name="firstName" id="firstName" value="小明">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-lg-none">
+                            <div class="row mt-3">
+                                <div class="col-2 d-flex justify-content-end align-items-center">
+                                    <label for="lastName">姓氏</label>
+                                </div>
+                                <div class="col-6">
+                                    <input class="ps-2 form-control" type="text" name="lastName" id="lastName"
+                                        value="王">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-2 d-flex justify-content-end align-items-center">
+                                    <label for="firstName">名字</label>
+                                </div>
+                                <div class="col-6">
+                                    <input class="ps-2 form-control" type="email" name="firstName" id="firstName"
+                                        value="小明">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="row mt-3">
+                            <div class="col-2 d-flex justify-content-end align-items-center">
+                                <label for="email">E-mail</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="ps-2 form-control" type="email" name="email" id="email"
+                                    value="jack@flightease.com">
+                            </div>
+                        </div>
+                        <!-- 通訊地址 -->
+                        <div class="row mt-3">
+                            <div class="col-2 d-flex justify-content-end align-items-center">
+                                <label for="address">通訊地址</label>
+                            </div>
+                            <div class="col-6">
+                                <input class="ps-2 form-control" type="text" name="address" id="address"
+                                    value="高雄市小港區中山四路2號">
+                            </div>
+                        </div>
+                        <!-- 郵遞區號 -->
+                        <div class="row mt-3">
+                            <div class="col-2 d-flex justify-content-end align-items-center">
+                                <label for="postalCode">郵遞區號</label>
+                            </div>
+                            <div class="col-2">
+                                <input class="ps-2 form-control" type="number" name="postalCode" id="postalCode"
+                                    value="812">
+                            </div>
+                        </div>
+                        <!-- 聯絡電話 -->
+                        <div class="d-none d-lg-block">
+                            <div class="row mt-3">
+                                <div class="col-2 d-flex justify-content-end align-items-center">
+                                    <label for="phone">聯絡電話</label>
+                                </div>
+                                <div class="col-3">
+                                    <input class="ps-2 form-control" type="number" name="phone" id="phone" value="0912345678">
+                                </div>
+                                <div class="col-1 d-flex justify-content-end align-items-center">
+                                    <label for="ext">分機</label>
+                                </div>
+                                <div class="col-2">
+                                    <input class="ps-2 form-control" type="number" name="ext" id="ext">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-lg-none">
+                            <div class="row mt-3">
+                                <div class="col-2 d-flex justify-content-end align-items-center">
+                                    <label for="phone">聯絡電話</label>
+                                </div>
+                                <div class="col-6">
+                                    <input class="ps-2 form-control" type="text" name="phone" id="phone"
+                                        value="0912345678">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-2 d-flex justify-content-end align-items-center">
+                                    <label for="ext">分機</label>
+                                </div>
+                                <div class="col-6">
+                                    <input class="ps-2 form-control" type="email" name="ext" id="ext">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row flex-column flex-lg-row align-items-center justify-content-center mt-4">
+                            <button type="button" class="btn btn-secondary col-7 col-lg-2 mb-2 me-lg-2">
+                                取消變更
+                            </button>
+                            <button type="button" class="btn btn-primary col-7 col-lg-2 mb-2">
+                                儲存變更
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="mt-4">
-          <h2 class="text-secondary text-center fw-bold ls-10 h2">
-            錯誤原因: 未正確輸入搜尋資訊
-          </h2>
-        </div>
-      </div>
-    </main>
-    <footer class="footer">
+        <footer class="footer">
   <!-- E-NEWSLETTER -->
 
   <div class="px-12">
@@ -250,6 +390,11 @@
   </nav>
 </footer>
 
-    
-  </body>
+            
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+</body>
+
 </html>

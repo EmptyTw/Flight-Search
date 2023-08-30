@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Error</title>
+    <title>FlightEase</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" crossorigin src="/Flight-Search/assets/main-55367ac1.js"></script>
-    <link rel="stylesheet" href="/Flight-Search/assets/main-da32cc1f.css">
-  </head>
-  <style>
-    /* * {
-      border: 1px red solid !important;
-    } */
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script type="module" crossorigin src="/Flight-Search/assets/main-55367ac1.js"></script>
+  <link rel="stylesheet" href="/Flight-Search/assets/main-da32cc1f.css">
+</head>
 
-  <body>
+<body>
+    <!-- ejs語法 -->
     <nav class="navbar bg-body-tertiary py-3 navbar-position-top-sticky px-3">
   <div class="container-fluid  d-flex flex-lg-row flex-sm-column flex-row justify-content-sm-around justify-content-between px-lg-0 align-items-center gap-sm-3 w-100 p-0 m-0 ">
    
@@ -93,30 +89,115 @@
     </div>
   </div>
 </nav>
-    <main class="py-6">
-      <div class="container d-flex flex-column align-items-center gap-3">
-        <h1 class="text-secondary text-center fw-bold ls-10 rfs-80">
-          Sorry...發生錯誤
-        </h1>
-        <div class="d-flex align-items-center gap-2 mt-4">
-          <img
-            class=""
-            src="/Flight-Search/assets/sorry-48025c58.png"
-            alt="sorry"
-            style="height: 128px; width: 128px"
-          />
-          <h2 class="text-secondary text-center fw-bold ls-10 h2">
-            似乎哪裡出錯了
-          </h2>
+        <div class="myOrder container">
+            <div class="row mt-5">
+                <ul
+                    class="sidebar col-lg-2 border py-lg-3 d-flex flex-lg-column justify-content-sm-start justify-content-between">
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_myFavorite">
+                        <a class="text-decoration-none text-secondary" href="#">我的最愛</a>
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_myOrder text-primary fw-bold">
+                        我的預定
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_reviseData">
+                        <a class="text-decoration-none text-secondary" href="#">修改會員資料</a>
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_revisePassword">
+                        <a class="text-decoration-none text-secondary" href="#">修改會員密碼</a>
+                    </li>
+                </ul>
+                <div class="col-lg-10 ps-lg-4">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="#">首頁</a>
+                            </li>
+                            <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="#">會員專區</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">我的預定</li>
+                        </ol>
+                    </nav>
+                    <div class="account_ticketLibrary-lg d-flex flex-column">
+                        <div class="account_ticketCard-sm">
+                            <div class="account_ticketCard row border px-1 mb-sm-3">
+                                <div class="col-2 col-sm-1 d-flex-center p-0 m-0">
+                                    <img src="/Flight-Search/assets/cathay-be335ff3.png" alt="cathayair">
+                                </div>
+                                <div class="departureTime timeTag col-2 text-center p-0 d-flex-center">
+                                    2025/01/01 <br>
+                                    10:35 <br>
+                                    GMT+8
+                                </div>
+                                <div class="col-2 p-0 text-center d-flex-center flex-column">
+                                    <div class="airportCode">TPE</div>
+                                    <div class="airportName d-none d-sm-block">台北桃園國際機場</div>
+                                    <div class="airportCountry d-none d-sm-block">台灣</div>
+                                </div>
+                                <div class="col-2 p-2 d-flex flex-column justify-content-center">
+                                    <div class="timeUse text-center mb-2">2小時25分鐘</div>
+                                    <div class="singleArrow"></div>
+                                </div>
+                                <div class="col-2 p-0 text-center d-flex-center flex-column">
+                                    <div class="airportCode">ICN</div>
+                                    <div class="airportName d-none d-sm-block">首爾仁川國際機場</div>
+                                    <div class="airportCountry d-none d-sm-block">韓國</div>
+                                </div>
+                                <div class="arrivalTime timeTag col-2 text-center p-0 d-flex-center">
+                                    2025/01/01 <br>
+                                    14:00 <br>
+                                    GMT+8
+                                </div>
+                                <div class="col-sm-1 p-0 d-flex-center flex-column d-none d-sm-flex">
+                                    <button class="btn btn-sm btn-primary rounded-0 mb-2">詳細</button>
+                                </div>
+                            </div>
+                            <div class="row justify-content-around mb-3 d-sm-none">
+                                <button class="col-12 border btn btn-sm btn-primary rounded-lb">詳細資訊</button>
+                            </div>
+                        </div>
+                        <div class="account_ticketCard-sm">
+                            <div class="account_ticketCard row border px-1 mb-sm-3">
+                                <div class="col-2 col-sm-1 p-0 m-0 d-flex-center">
+                                    <img src="/Flight-Search/assets/Tigerair_Taiwan_logo.svg-71562027.png" alt="tigerair">
+                                </div>
+                                <div class="departureTime timeTag col-2 text-center p-0 d-flex-center">
+                                    2025/01/01 <br>
+                                    23:40 <br>
+                                    GMT+8
+                                </div>
+                                <div class="col-2 p-0 text-center d-flex-center flex-column">
+                                    <div class="airportCode">TPE</div>
+                                    <div class="airportName d-none d-sm-block">台北桃園國際機場</div>
+                                    <div class="airportCountry d-none d-sm-block">台灣</div>
+                                </div>
+                                <div class="col-2 p-2 d-flex flex-column justify-content-center">
+                                    <div class="timeUse text-center mb-2">11小時10分鐘</div>
+                                    <div class="singleArrow"></div>
+                                </div>
+                                <div class="col-2 p-0 text-center d-flex-center flex-column">
+                                    <div class="airportCode">SEA</div>
+                                    <div class="airportName d-none d-sm-block">西雅圖/塔科馬國際機場
+                                    </div>
+                                    <div class="airportCountry d-none d-sm-block">美國</div>
+                                </div>
+                                <div class="arrivalTime timeTag col-2 text-center p-0 d-flex-center">
+                                    2025/01/02 <br>
+                                    19:50 <br>
+                                    GMT+8
+                                </div>
+                                <div
+                                    class="col-2 col-sm-1 p-0 d-flex-center flex-column account_ticketBtn d-none d-sm-flex">
+                                    <button class="btn btn-sm btn-primary rounded-0 mb-2">詳細</button>
+                                </div>
+                            </div>
+                            <div class="row justify-content-around mb-3 d-sm-none">
+                                <button class="col-12 border btn btn-sm btn-primary rounded-lb">詳細資訊</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="mt-4">
-          <h2 class="text-secondary text-center fw-bold ls-10 h2">
-            錯誤原因: 未正確輸入搜尋資訊
-          </h2>
-        </div>
-      </div>
-    </main>
-    <footer class="footer">
+        <footer class="footer">
   <!-- E-NEWSLETTER -->
 
   <div class="px-12">
@@ -250,6 +331,11 @@
   </nav>
 </footer>
 
-    
-  </body>
+            
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+</body>
+
 </html>
