@@ -83,7 +83,7 @@
       crossorigin=""
     ></script>
     <script>
-      const map = L.map("map").setView([20.8, 116.8], 8);
+      let map = L.map("map").setView([20.8, 116.8], 8);
 
       L.tileLayer(
         "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
@@ -94,6 +94,11 @@
           maxZoom: 20,
         }
       ).addTo(map);
+
+      //Resolve the issue where the Leaflet map is not fully loaded initially, but when inspecting the element, it loads completely.
+      setTimeout(function () {
+        map.invalidateSize(true);
+      }, 300);
 
       const myIcon = L.icon({
         iconUrl: "/assets/images/realTimeFlight_Icon.png",
