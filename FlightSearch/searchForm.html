@@ -6,8 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
     <title>2-1 Search Form</title>
-    <script type="module" crossorigin src="/Flight-Search/assets/main-55367ac1.js"></script>
-    <link rel="stylesheet" href="/Flight-Search/assets/main-da32cc1f.css">
+    <script type="module" crossorigin src="/Flight-Search/assets/main-e41d1714.js"></script>
+    <link rel="stylesheet" href="/Flight-Search/assets/main-b8b6f753.css">
   </head>
 
   <body>
@@ -16,7 +16,7 @@
    
     <!--href還需要再次確認是否可以用 -->
     
-    <a class=" " href="./pages/index.html"
+    <a class=" " href="/Flight-Search/pages/index.html"
       ><img class="navbar-img" src="/Flight-Search/assets/logo_navbar-9ac2573f.png" alt="logo navbar"
     /></a>
 
@@ -30,21 +30,22 @@
             <li class="navbar-navItem">
               <a
                 class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0"
-                href="#"
+                href="/Flight-Search/pages/FlightSearch/searchForm.html"
                 >航班檢索</a
               >
             </li>
             <li class="navbar-navItem">
               <a
                 class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0" 
-                href="./DelayFlight/delayFlight.html"
+                href="/Flight-Search/pages/DelayFlight/delayFlight.html"
+               
                 >延遲航班</a
               >
             </li>
             <li class="navbar-navItem">
               <a
                 class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0"
-                href="./RealTimeFlight/realTimeFlight.html"
+                href="/Flight-Search/pages/RealTimeFlight/realTimeFlight.html"
                 >班機座標</a
               >
             </li>
@@ -76,6 +77,13 @@
                 class="nav-link nav-link-header link-dark h5 py-2 py-sm-1 px-sm-2 px-1 mb-0"
                 href="#"
                 >註冊</a
+              >
+            </li>
+            <li class="navbar-navItem-top">
+              <a
+                class="nav-link nav-link-header link-dark h5 py-2 py-sm-1 px-sm-2 px-1 mb-0"
+                href="/Flight-Search/pages/favorite.html"
+                >會員</a
               >
             </li>
           </ul>
@@ -128,14 +136,14 @@
         <div class="formHeader border-bottom border-1 border-secondary">
           <div class="row">
             <div class="col-6 d-flex justify-content-end">
-              <div class="bg-primary text-secondary text-center py-3 fs-4 fw-bold">
+              <a class="d-inline-block bg-primary text-secondary text-center py-3 fs-4 fw-bold" href="#">
                 來回
-              </div>
+              </a>
             </div>
             <div class="col-6 d-flex justify-content-start">
-              <div class="bg-primary text-secondary text-center py-3 fs-4 fw-bold bg-opacity-25">
+              <a class="d-inline-block bg-primary text-secondary text-center py-3 fs-4 fw-bold bg-opacity-25" href="#">
                 單程
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -273,7 +281,7 @@
   </div>
   <!-- FOOTER LOGO -->
   <div class="bg-secondary container-fluid text-center footer-logo-padding">
-    <a class="footer__logo" href="./pages/index.html">
+    <a class="footer__logo" href="/Flight-Search/pages/index.html">
       <img
         class="footer__img pb-4"
         src="/Flight-Search/assets/logo_footer-163225e4.svg"
@@ -282,7 +290,7 @@
     <p class="h5 pt-4 text-light">讓夢想起飛</p>
   </div>
   <!--FOOTER ICONS AND CTA  -->
-  <nav class="navbar navbar-expand-lg py-3 bg-dark">
+  <nav class="navbar navbar-expand-lg py-5 py-sm-3 bg-dark">
     <div class="container justify-content-lg-between">
       <ul
         class="navbar-nav me-auto ms-auto mb-2 mb-lg-0 d-flex flex-row justify-content-between align-items-center gap-lg-4"
@@ -324,21 +332,23 @@
         class="navbar-nav me-auto mb-2 mb-lg-0 d-md-flex d-none flex-row justify-content-between align-items-center gap-xl-5 gap-lg-3"
       >
         <li class="nav-item">
-          <a class="nav-link nav-link-footer link-light h5 py-1 px-2" href="#"
+          <a
+            class="nav-link nav-link-footer link-light h5 py-1 px-2"
+            href="/Flight-Search/pages/FlightSearch/searchForm.html"
             >航班檢索</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link nav-link-footer link-light h5 py-1 px-2"
-            href="./DelayFlight/delayFlight.html"
+            href="/Flight-Search/pages/DelayFlight/delayFlight.html"
             >延遲航班</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link nav-link-footer link-light h5 py-1 px-2"
-            href="./RealTimeFlight/realTimeFlight.html"
+            href="/Flight-Search/pages/RealTimeFlight/realTimeFlight.html"
             >班機座標</a
           >
         </li>
