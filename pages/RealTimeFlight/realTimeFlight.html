@@ -104,35 +104,39 @@
         iconUrl: "/assets/images/realTimeFlight_Icon.png",
         iconSize: [64, 64],
         iconAnchor: [0, 0],
+        className: "u-turn-icon",
       });
-      L.marker([20.8, 116.8], { icon: myIcon }).addTo(map);
+
+      L.marker([20.8, 116.8], {
+        icon: myIcon,
+      }).addTo(map);
 
       const content = `   <div
-      class="d-flex flex-column justify-content-between"
-      style="height: 200px; width: 200px"
-    >
-      <h4 class="text-secondary">TPE → SGN</h4>
-      <div class="d-flex">
+        class="d-flex flex-column justify-content-between"
+        style="height: 200px; width: 200px"
+      >
+        <h4 class="text-secondary">SGN → TPE</h4>
+        <div class="d-flex">
+          <h5 class="text-secondary">
+            Flight: <span class="text-primary fw-bold me-1">VJ842</span>
+          </h5>
+          <img
+            class="ms-1 "
+            src="https://www.gstatic.com/flights/airline_logos/70px/VJ.png"
+            alt="flightCompany"
+            height="30px"
+          />
+        </div>
         <h5 class="text-secondary">
-          Flight: <span class="text-primary fw-bold me-1">VJ842</span>
+          LatLng: <span class="text-primary fw-bold me-1">20.8, 116.8</span>
         </h5>
-        <img
-          class="ms-1"
-          src="https://www.gstatic.com/flights/airline_logos/70px/VJ.png"
-          alt="flightCompany"
-          height="30px"
-        />
-      </div>
-      <h5 class="text-secondary">
-        LatLng: <span class="text-primary fw-bold me-1">20.8, 116.8</span>
-      </h5>
-      <h5 class="text-secondary">
-        Speed: <span class="text-primary fw-bold me-1">796</span>km
-      </h5>
-      <h5 class="text-secondary">
-        Elevation: <span class="text-primary fw-bold me-1">10687</span>m
-      </h5>
-    </div>`;
+        <h5 class="text-secondary">
+          Speed: <span class="text-primary fw-bold me-1">796</span>km
+        </h5>
+        <h5 class="text-secondary">
+          Elevation: <span class="text-primary fw-bold me-1">10687</span>m
+        </h5>
+      </div>`;
 
       let popup = L.popup([20.8, 116.8], {
         offset: L.point(32, 0),
@@ -142,7 +146,25 @@
         .setContent(content)
         .openOn(map);
 
-      marker.bindPopup(popup).openPopup();
+      // change the direction of flight icon when zooming
+      // map.on("zoomstart", function (ev) {
+      //   let icons = document.getElementsByClassName("u-turn-icon");
+      //   for (let icon of icons) {
+      //     icon.style.visibility = "hidden";
+      //   }
+      // });
+
+      map.on("zoomend", function (ev) {
+        let icons = document.getElementsByClassName("u-turn-icon");
+        for (let icon of icons) {
+          icon.style.transform += " rotate(20deg)";
+          icon.style.visibility = "";
+        }
+      });
+
+      map.fire("zoomend");
+
+      // marker.bindPopup(popup).openPopup();
     </script>
   </body>
 </html>
