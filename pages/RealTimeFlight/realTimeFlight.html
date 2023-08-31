@@ -100,6 +100,8 @@
         map.invalidateSize(true);
       }, 300);
 
+      // add marker icon
+
       const myIcon = L.icon({
         iconUrl: "/assets/images/realTimeFlight_Icon.png",
         iconSize: [64, 64],
@@ -111,6 +113,7 @@
         icon: myIcon,
       }).addTo(map);
 
+      // add pop up
       const content = `   <div
         class="d-flex flex-column justify-content-between"
         style="height: 200px; width: 200px"
@@ -147,12 +150,12 @@
         .openOn(map);
 
       // change the direction of flight icon when zooming
-      // map.on("zoomstart", function (ev) {
-      //   let icons = document.getElementsByClassName("u-turn-icon");
-      //   for (let icon of icons) {
-      //     icon.style.visibility = "hidden";
-      //   }
-      // });
+      map.on("zoomstart", function (ev) {
+        let icons = document.getElementsByClassName("u-turn-icon");
+        for (let icon of icons) {
+          icon.style.visibility = "hidden";
+        }
+      });
 
       map.on("zoomend", function (ev) {
         let icons = document.getElementsByClassName("u-turn-icon");
