@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlightEase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- ejs語法 -->
+    <%- include('./layout/header_member'); -%>
+        <div class="account_index container">
+            <div class="row mt-5">
+                <ul
+                    class="sidebar col-lg-2 border py-lg-3 d-flex flex-lg-column justify-content-lg-start justify-content-sm-evenly justify-content-between">
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_myFavorite text-primary fw-bold">
+                        我的最愛
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_myOrder">
+                        <a class="text-decoration-none text-secondary" href="./myOrder.html">我的預定</a>
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_reviseData">
+                        <a class="text-decoration-none text-secondary" href="./reviseData.html">修改會員資料</a>
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_revisePassword">
+                        <a class="text-decoration-none text-secondary" href="./revisePassword.html">修改會員密碼</a>
+                    </li>
+                </ul>
+                <div class="col-lg-10 ps-lg-4">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="#">首頁</a>
+                            </li>
+                            <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="#">會員專區</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">我的最愛</li>
+                        </ol>
+                    </nav>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                                type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                                type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">home
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('./layout/footer'); -%>
+
+            <script type="module" src="../../main.js"></script>
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+</body>
+
+</html>
