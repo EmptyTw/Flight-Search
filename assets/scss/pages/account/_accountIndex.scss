@@ -41,6 +41,12 @@
     .rounded-rb{
         border-radius: 0 0 31px 0;
     }
+    .timeTag{
+        font-size: 0.75rem;
+    }
+    .airportName{
+        font-size: 0.75rem;
+    }
 }
 
 @media (max-width: 991px) {
@@ -54,12 +60,6 @@
 }
 @media (max-width: 767px) {
     .account_index{
-        .airportName{
-            font-size: 0.75rem;
-        }
-        .timeTag{
-            font-size: 0.75rem;
-        }
     }
 }
 @media(max-width: 575px){
