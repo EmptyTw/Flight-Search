@@ -1,4 +1,5 @@
 import "./assets/scss/all.scss";
+import "bootstrap/dist/js/bootstrap";
 
 //2-2FLIGHTSEARCH 卡片點擊  先用BTN ONCLICK 來DEMO
 const flightCard = document.querySelectorAll(".flightCard");

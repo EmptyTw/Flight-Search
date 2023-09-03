@@ -45,10 +45,13 @@
 //pages
 @import "./pages/index.scss";
 
+// account
 @import "./pages/account/favorite";
 @import "./pages/account/myOrder";
 @import "./pages/account/revisePassword";
 @import "./pages/account/reviseData";
+@import "./pages/account/accountIndex";
+@import "./pages/account/accountIndex";
 
 @import "./pages/flightSearch.scss";
 @import "./pages/delayFlight.scss";
