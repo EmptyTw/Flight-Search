@@ -34,8 +34,16 @@
     </div>
   </div>
   <!-- FOOTER LOGO -->
+  <% 
+      const _url='http://127.0.0.1:3000'; //local
+      //const _url='https://emptytw.github.io'; //github
+      let baseUrl=`${_url}/Flight-Search` ;
+      if(baseUrl.indexOf('emptytw')<0){
+        baseUrl+='/pages';
+      }
+      %>
   <div class="bg-secondary container-fluid text-center footer-logo-padding">
-    <a class="footer__logo" href="<%= '/Flight-Search' %>/pages/index.html">
+    <a class="footer__logo" href="<%= baseUrl %>/index.html">
       <img
         class="footer__img pb-4"
         src="/assets/images/homepage/logo_footer.svg"
@@ -88,26 +96,26 @@
         <li class="nav-item">
           <a
             class="nav-link nav-link-footer link-light h5 py-1 px-2"
-            href="<%= '/Flight-Search' %>/pages/FlightSearch/searchForm.html"
+            href="<%= baseUrl %>/FlightSearch/searchForm.html"
             >航班檢索</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link nav-link-footer link-light h5 py-1 px-2"
-            href="<%= '/Flight-Search' %>/pages/DelayFlight/delayFlight.html"
+            href="<%= baseUrl %>/DelayFlight/delayFlight.html"
             >延遲航班</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link nav-link-footer link-light h5 py-1 px-2"
-            href="<%= '/Flight-Search' %>/pages/RealTimeFlight/realTimeFlight.html"
+            href="<%= baseUrl %>/RealTimeFlight/realTimeFlight.html"
             >班機座標</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-link-footer link-light h5 py-1 px-2" href="#"
+          <a class="nav-link nav-link-footer link-light h5 py-1 px-2" href="<%= baseUrl %>/NearAirport/airportSearch.html"
             >鄰近機場</a
           >
         </li>
@@ -119,13 +127,13 @@
         class="navbar-nav mb-lg-2 d-md-flex d-none flex-row justify-content-between align-items-center gap-lg-5"
       >
         <li class="nav-item ms-lg-5">
-          <a class="nav-link link-light nav-link-footer h5 py-3 px-2" href="#"
+          <a class="nav-link link-light nav-link-footer h5 py-3 px-2" href="<%= baseUrl %>/Register/login.html"
             >登入</a
           >
         </li>
 
         <li class="nav-item">
-          <a class="nav-link link-light nav-link-footer h5 py-3 px-2" href="#"
+          <a class="nav-link link-light nav-link-footer h5 py-3 px-2" href="<%= baseUrl %>/Register/register.html"
             >註冊</a
           >
         </li>

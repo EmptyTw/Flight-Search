@@ -13,6 +13,7 @@ function moveOutputPlugin() {
     apply: "build",
     async generateBundle(options, bundle) {
       for (const fileName in bundle) {
+        console.log(fileName);
         if (fileName.startsWith("pages/")) {
           const newFileName = fileName.slice("pages/".length);
           bundle[fileName].fileName = newFileName;
@@ -27,7 +28,7 @@ export default defineConfig({
   // base: '/Repository 的名稱/'
   base: "/Flight-Search/",
   plugins: [
-    liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
+    liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html", "./pages/**/**/*.html"]),
     ViteEjsPlugin(),
     moveOutputPlugin(),
   ],
@@ -42,11 +43,12 @@ export default defineConfig({
         glob
           .sync("pages/**/*.html")
           .map((file) => [
+            
             path.relative(
               "pages",
               file.slice(0, file.length - path.extname(file).length)
             ),
-            fileURLToPath(new URL(file, import.meta.url)),
+            fileURLToPath(new URL(file, import.meta.url)),            
           ])
       ),
     },

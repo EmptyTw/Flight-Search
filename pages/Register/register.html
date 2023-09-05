@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlightEase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="icon" type="image/x-icon" href="/assets/images/homepage/LOGO-IMAGE.svg" />
+</head>
+
+<body>
+    <!-- ejs語法 -->
+    <%- include('./layout/header'); -%>
+        <div class="bg-gray400 py-40">
+            <section class="forgetpwd container mt-5">
+                <div class="text-center">
+                    <div class="col-lg-4 mx-auto">
+                        <div>
+                            <a href="../index.html"><img class="footer__img pb-4" src="/assets/images/homepage/LOGO.png"
+                                    alt="logo-footer"></a>
+                        </div>
+                        <h2 class="fw-bold py-40">立即註冊</h2>
+                        <div class="d-flex align-items-center justify-content-center mb-40">
+                            <h3>已有FlightEase帳號?</h3>
+                            <p><a href="../Register/login.html" class="text-info">立即登入</a></p>
+                        </div>
+                        <form>
+                            <div class="mb-3 text-start">
+                                <label for="account" class="form-label">使用者帳號</label>
+                                <input type="email" class="form-control border-3 border-secondary" id="account" placeholder="請輸入帳號">
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="mail" class="form-label">Email</label>
+                                <input type="email" class="form-control border-3 border-secondary" id="mail" placeholder="請輸入Email">
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="pwd" class="form-label">登入密碼</label>
+                                <input type="password" class="form-control border-3 border-secondary" id="pwd" placeholder="請設定登入密碼">
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="Confirmpwd" class="form-label">再次確認密碼</label>
+                                <input type="password" class="form-control border-3 border-secondary" id="Confirmpwd" placeholder="請再次輸入設定登入密碼">
+                            </div>
+                            <div class="mb-3 text-start form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">我同意接受FlightEase之 <a
+                                        href="#">服務條館</a> 與 <a href="#">隱私權政策</a></label>
+                            </div>
+                            <button type="submit" class="btn btn-primary col-12 p-12">註冊</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <%- include('./layout/footer'); -%>
+
+            <script type="module" src="../../main.js"></script>
+</body>
+
+</html>
