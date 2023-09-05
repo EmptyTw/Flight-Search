@@ -11,16 +11,16 @@ flightCard.forEach((item) => {
   });
 });
 
-// const flightSearchPage = document.querySelector(".flightSearchPage");
+const flightSearchPage = document.querySelector(".flightSearchPage");
 
-// flightSearchPage.addEventListener("click", function (e) {
-//   if (e.target.classList.contains("flightSearchPage")) {
-//     flightCard.forEach((item) => {
-//       const flightCardLower = item.querySelector(".flightCard-lower");
-//       flightCardLower.classList.remove("flightCard-lower-active");
-//     });
-//   }
-// });
+flightSearchPage.addEventListener("click", function (e) {
+  if (e.target.classList.contains("flightSearchPage")) {
+    flightCard.forEach((item) => {
+      const flightCardLower = item.querySelector(".flightCard-lower");
+      flightCardLower.classList.remove("flightCard-lower-active");
+    });
+  }
+});
 
 //2-3 新增旅客資料
 const addPassenger = document.querySelector(".js-add-passenger");
