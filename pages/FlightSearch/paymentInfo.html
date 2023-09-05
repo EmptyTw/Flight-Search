@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>2-4 Payment Info</title>
+  </head>
+
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <!--進度條-->
+    <div class="paymentInfo-page container mt-5">
+      <div class="d-flex mt-5 mb-5 justify-content-center">
+        <div class="progress-bar d-flex justify-content-between position-relative">
+            <div class="d-flex flex-column align-items-center me-sm-5">
+                <div class="progress-bar-circle d-flex flex-column">
+                    <a class="fs-5 fw-bold m-auto text-secondary" href="searchForm.html">1</a>
+                </div>
+                <p class="progress-bar-label mt-2 d-inline-block text-secondary w-md-100 text-center mb-0 mb-sm-3">查詢航班</p>
+            </div>
+            <div class="d-flex flex-column align-items-center me-sm-5">
+                <div class="progress-bar-circle d-flex flex-column">
+                    <a class="fs-5 fw-bold m-auto text-secondary" href="flightSearch.html">2</a>
+                </div>
+                <p class="progress-bar-label mt-2 d-inline-block text-secondary w-md-100 text-center mb-0 mb-sm-3">檢視航班</p>
+            </div>
+            <div class="d-flex flex-column align-items-center me-sm-5">
+                <div class="progress-bar-circle d-flex flex-column">
+                    <a class="fs-5 fw-bold m-auto text-secondary" href="passengerInfo.html">3</a>
+                </div>
+                <p class="progress-bar-label mt-2 d-inline-block text-secondary w-md-100 text-center mb-0 mb-sm-3">填寫資料</p>
+            </div>
+            <div class="d-flex flex-column align-items-center me-sm-5">
+                <div class="progress-bar-circle d-flex flex-column bg-primary">
+                    <a class="fs-5 fw-bold m-auto text-secondary" href="#">4</a>
+                </div>
+                <p class="progress-bar-label mt-2 d-inline-block text-secondary w-md-100 text-center mb-0 mb-sm-3">確認付款</p>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <div class="progress-bar-circle d-flex flex-column">
+                    <span class="material-symbols-outlined fw-bold m-auto text-secondary">
+                        done
+                    </span>
+                </div>
+                <p class="progress-bar-label mt-2 d-inline-block text-secondary w-md-100 text-center mb-0 mb-sm-3" href="">完成預訂</p>
+            </div>
+            <hr class="position-absolute progress-bar-hr">
+        </div>
+      </div>
+
+      <!--表單-->
+      <form action="">
+        <p class="text-danger fw-bold py-2">*下列旅客資料如有錯誤，請直接進行修改</p>
+
+        <div class="position-relative">
+          <h3 class="text-secondary py-2 px-4 fs-5 fw-bold d-inline-block w-auto fs-2 ps-0">旅客 1</h3>
+          <div class="bg-primary position-absolute bg-opacity-50 customized-highlight"></div>
+        </div>
+        <div class="formBody text-secondary pb-md-0">
+          <section class="py-5 pb-sm-3">
+            <div class="row row-cols-1 row-cols-md-2 mb-md-5">
+              <div class="col-12 col-md-6 d-flex pe-md-4 mb-5 mb-sm-4 mb-md-3 mb-lg-0">
+                <label for="surname" name="surname" id="surname" class="fs-5 col-3 w-lg-20 d-flex my-auto">姓氏<span class="text-danger">*</span></label>
+                <input type="text" name="surname" id="surname" value="HSU" class="col-9 w-lg-80 px-3 py-2 border-1 border-secondary rounded-0 lh-lg bg-primary bg-opacity-25">
+              </div>
+
+              <div class="col-12 col-md-6 d-flex ps-md-1 ps-lg-4 mb-5 mb-sm-4 mb-md-3 mb-lg-0">
+                <label for="given_name" name="given_name" id="given_name" class="fs-5 col-3 w-lg-20 d-flex my-auto">名字<span class="text-danger">*</span></label>
+                <input type="text" name="given_name" id="given_name" value="CHING-WEN" class="col-9 w-lg-80 px-3 py-2 border-1 border-secondary rounded-0 lh-lg bg-primary bg-opacity-25">
+              </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 mb-md-5">
+              <div class="col-12 col-md-6 d-flex pe-md-4 mb-4 mb-sm-4 mb-md-3 mb-lg-0">
+                <label for="appellation" name="appellation" id="appellation" class="fs-5 col-3 w-lg-20 d-flex my-auto">稱謂<span class="text-danger">*</span></label>
+                <div class="dropdown-control-div col-9 w-lg-80 px-1 py-1 border border-1 border-secondary d-flex justify-content-between w-lg-80 bg-primary bg-opacity-25 h-50px">
+                  <button type="button" class="btn text-secondary text-start">小姐 (Ms.)</button>
+                  <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuDepartureTime" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 d-flex ps-md-1 ps-lg-4 mb-sm-4 mb-md-3 mb-lg-0">
+                <label for="email" name="email" id="email" class="col-3 w-lg-20 d-flex my-auto fs-5 flex-wrap">
+                  <p class="m-0">電子</p>
+                  <p class="m-0">信箱<span class="text-danger">*</span></p>
+                </label>
+                <input type="email" name="email" id="email" for="email" value="fake@gmail.com" class="col-9 w-lg-80 px-3 py-2 border-1 border-secondary rounded-0 lh-lg bg-primary bg-opacity-25 my-4 my-sm-0 h-50px">
+              </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 mb-md-5">
+              <div class="col-12 col-md-6 d-flex pe-md-4 mb-4 mb-md-3 mb-lg-0">
+                <label for="cellphone" name="cellphone" id="cellphone" class="col-3 w-lg-20 d-flex my-auto fs-5 flex-wrap">
+                  <p class="m-0">行動</p>
+                  <p class="m-0">電話<span class="text-danger">*</span></p>
+                </label>
+                <div class="col-9 col-lg-10 d-flex w-lg-80">
+                  <input type="text" name="country_code" id="country_code" value="+886" class="col-4 py-2 ps-2 px-sm-3 border-1 border-secondary rounded-0 lh-lg bg-primary bg-opacity-25 my-4 my-sm-0 h-50px">
+                  <p class="d-flex h-auto m-auto">-</p>
+                  <input type="text" name="cellphone" id="cellphone" value="123456789" class="col-7 px-3 py-2 border-1 border-secondary rounded-0 lh-lg bg-primary bg-opacity-25 my-4 my-sm-0 h-50px">
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 d-flex ps-md-1 ps-lg-4 mb-5 mb-sm-4 mb-md-3 mb-lg-0">
+                <label for="tel" name="tel" id="tel" class="fs-5 col-3 w-lg-20 d-flex my-auto">住家電話</label>
+                <input type="text" name="tel" id="tel" for="tel" class="col-9 w-lg-80 px-3 py-2 border-1 border-secondary rounded-0 lh-lg bg-primary bg-opacity-25 h-50px">
+              </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 mb-md-4">
+              <div class="col-12 col-md-6 d-flex pe-md-4 mb-5 mb-sm-4 mb-md-3 mb-lg-0">
+                <label for="appellation" name="appellation" id="appellation" class="fs-5 col-3 w-lg-20 d-flex pt-2">艙等<span class="text-danger">*</span></label>
+                <div class="col-9 col-lg-10 w-lg-80">
+                  <div class="dropdown-control-div px-1 py-1 border border-1 border-secondary d-flex justify-content-between bg-primary bg-opacity-25">
+                    <button type="button" class="btn text-secondary text-start pe-md-1">經濟艙 基本  NT. 10, 451</button>
+                    <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuDepartureTime" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                      <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 d-flex ps-md-1 ps-lg-4 mb-5 mb-sm-4 mb-md-3 mb-lg-0">
+                <label for="ticket" name="ticket" id="ticket" class="fs-5 col-3 w-lg-20 d-flex mt-2">票種<span class="text-danger">*</span></label>
+                <div class="col-9 col-lg-10 w-lg-80">
+                  <div class="dropdown-control-div col-12 px-1 py-1 border border-1 border-secondary d-flex justify-content-between bg-primary bg-opacity-25">
+                    <button type="button" class="btn text-secondary text-start">成人票</button>
+                    <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuDepartureTime" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                      <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-secondary fw-bold fs-5 my-sm-5 d-flex justify-content-end">
+              <p class="me-3">旅客人數<span class="text-danger"> 1 </span>人</p>
+              <p>合計 <span class="text-danger">NT. 10, 451</span></p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <p class="text-danger fw-bold pb-0">*請填寫下列付款資訊</p>
+
+          <div class="row row-cols-1 row-cols-md-2 mb-md-1 mb-lg-4">
+            <div class="col-12 col-md-6 d-flex pe-md-4 mb-4 mb-md-3 mb-lg-0">
+              <label for="card_number" name="card_number" id="card_number" class="fs-5 col-3 w-lg-20 d-flex my-auto flex-wrap align-items-center">
+                <p class="m-0">信用卡</p>
+                <p class="m-0">卡號
+                  <span class="text-danger">*</span>
+                </p>
+              </label>
+              <input type="text" name="card_number" id="card_number" placeholder="xxxx-xxxx-xxxx-xxxx" class="col-9 w-lg-80 px-3 py-2 border-1 border-secondary rounded-0 lh-lg bg-primary bg-opacity-25 h-50px my-4 my-sm-0 my-md-3">
+            </div>
+
+
+            <div class="col-12 col-md-6 d-flex ps-md-1 ps-lg-4 mb-5 mb-sm-4 mb-md-3 mb-lg-0">
+              <label for="ticket" name="ticket" id="ticket" class="fs-5 col-3 w-lg-20 d-flex mt-2 my-md-auto">到期日<span class="text-danger">*</span></label>
+              <div class="col-9 col-lg-10 w-lg-80 d-flex justify-content-between">
+                <div class="btn-group col-5 px-1 py-1 border border-1 border-secondary d-flex justify-content-between bg-primary bg-opacity-25 h-50px my-md-auto">
+                  <button type="button" class="btn text-secondary text-start">年</button>
+                  <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">2023</a></li>
+                    <li><a class="dropdown-item" href="#">2024</a></li>
+                    <li><a class="dropdown-item" href="#">2025</a></li>
+                    <li><a class="dropdown-item" href="#">2026</a></li>
+                    <li><a class="dropdown-item" href="#">2027</a></li>
+                    <li><a class="dropdown-item" href="#">2028</a></li>
+                    <li><a class="dropdown-item" href="#">2029</a></li>
+                    <li><a class="dropdown-item" href="#">2030</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group col-5 px-1 py-1 border border-1 border-secondary d-flex justify-content-between bg-primary bg-opacity-25 h-50px my-md-auto">
+                  <button type="button" class="btn text-secondary text-start">月</button>
+                  <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">1</a></li>
+                    <li><a class="dropdown-item" href="#">2</a></li>
+                    <li><a class="dropdown-item" href="#">3</a></li>
+                    <li><a class="dropdown-item" href="#">4</a></li>
+                    <li><a class="dropdown-item" href="#">5</a></li>
+                    <li><a class="dropdown-item" href="#">6</a></li>
+                    <li><a class="dropdown-item" href="#">7</a></li>
+                    <li><a class="dropdown-item" href="#">8</a></li>
+                    <li><a class="dropdown-item" href="#">9</a></li>
+                    <li><a class="dropdown-item" href="#">10</a></li>
+                    <li><a class="dropdown-item" href="#">11</a></li>
+                    <li><a class="dropdown-item" href="#">12</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 mb-md-5 mb-lg-4">
+            <div class="col-12 col-md-6 pe-md-4 mb-sm-3 mt-md-3 mb-md-0 mb-lg-0">
+              <div class="d-flex">
+                <div class="col-3 w-lg-20 d-flex flex-column">
+                  <label for="card_number" name="verification_number" id="verification_number" class="fs-5 my-auto">驗證碼<span class="text-danger">*</span></label>
+                  <button type="button" class="btn text-secondary opacity-50 d-flex px-0 d-none d-sm-flex d-md-none pt-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="驗證碼請見您的信用卡背面">
+                    <span class="material-symbols-outlined d-flex me-1 fs-5 my-auto">
+                      help
+                    </span>
+                    什麼是驗證碼
+                  </button>                
+                </div>
+                <input type="verification_number" name="verification_number" id="verification_number" placeholder="(共三碼)" class="col-9 w-lg-80 px-3 py-2 border-1 border-secondary rounded-0 lh-lg bg-primary bg-opacity-25 h-50px">
+              </div>
+              <p class="w-100 m-0">
+                <button type="button" class="btn text-secondary opacity-50 d-flex px-0 d-sm-none d-md-flex" data-bs-toggle="tooltip" data-bs-placement="bottom" title="驗證碼請見您的信用卡背面">
+                  <span class="material-symbols-outlined d-flex my-auto me-1 fs-5">
+                    help
+                  </span>
+                  什麼是驗證碼
+                </button>                
+              </p>
+            </div>
+
+            <div class="col-12 col-md-6 d-flex ps-md-1 ps-lg-4 mb-4 mb-md-3">
+              <label for="card_holder" name="card_holder" id="card_holder" class="fs-5 col-3 w-lg-20 d-flex my-auto flex-wrap align-items-center">
+                <p class="m-0">持卡人</p>
+                <p class="m-0">姓名
+                  <span class="text-danger">*</span>
+                </p>
+              </label>
+              <input type="text" name="card_holder" id="card_holder" class="col-9 w-lg-80 px-3 py-2 border-1 border-secondary rounded-0 lh-lg bg-primary bg-opacity-25 h-50px my-4 my-sm-0 my-md-3">
+            </div>
+          </div>
+        </section>
+
+        <div class="formFooter d-flex justify-content-end">
+          <a class="bg-secondary text-white py-2 px-4 fs-5 fw-bold mt-sm-5 mt-md-0" href="finishedOrder.html">下一步</a>
+        </div>
+      </form>
+    </div>
+
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../../main.js"></script>
+  </body>
+</html>
