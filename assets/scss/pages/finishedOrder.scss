@@ -1,0 +1,30 @@
+.finishedOrder-page {
+    .customized-highlight {
+        height: 1.5rem;
+        top: 50%;
+    }
+
+    .fs-11rem {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .w-lg-20 {
+        width: 20%;
+    }
+
+    .w-lg-80 {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .w-lg-20 {
+        width: 15%;
+    }
+
+    .w-lg-80 {
+        width: 85%;
+    }  
+}

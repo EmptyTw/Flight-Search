@@ -1,0 +1,41 @@
+.progress-bar {
+    width: 90%;
+}
+
+.progress-bar-circle {
+    aspect-ratio: 1;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #faefd2; //做出透明效果。如果用opacity的話會蓋不住hr
+}
+
+.progress-bar-label {
+    width: 40px;
+}
+  
+.progress-bar-hr {
+    border-top: 2px dashed #1d3455;
+    opacity: 0.5;
+    width: 90%;
+    top: 5%;
+    right: 5%;
+    z-index: -1;
+}
+
+@media screen and (min-width: 576px) {
+    .progress-bar {
+        width: auto;
+    }
+
+    .progress-bar-circle { 
+        width: 50px;
+    } 
+    
+    .progress-bar-label {
+        width: fit-content;
+    }
+
+    .progress-bar-hr {
+        top: 9%;
+    }
+}
