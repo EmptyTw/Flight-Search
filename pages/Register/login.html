@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlightEase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="icon" type="image/x-icon" href="/assets/images/homepage/LOGO-IMAGE.svg" />
+</head>
+
+<body>
+    <!-- ejs語法 -->
+    <%- include('./layout/header'); -%>
+        <div class="bg-gray400 py-40">
+            <section class="forgetpwd container mt-5">
+                <div class="text-center">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="">
+                            <a href="../index.html"><img class="footer__img pb-4" src="/assets/images/homepage/LOGO.png"
+                                    alt="logo-footer"></a>
+                        </div>
+                        <hr>
+                        <h2 class="fw-bold py-40">登入</h2>
+                        <form>
+                            <div class="mb-3 text-start">
+                                <label for="exampleInputEmail1" class="form-label fs-5">Email</label>
+                                <input type="email" class="form-control border-3 border-secondary"
+                                    placeholder="請輸入Email">
+
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label for="exampleInputEmail1" class="form-label fs-5">密碼</label>
+                                <input type="password" class="form-control border-3 border-secondary"
+                                    placeholder="請輸入密碼">
+
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <button type="submit" class="btn btn-primary w-50 me-32 ">登入</button>
+                                <a href="../Register/forgetpwd.html" class="btn btn-light w-50">忘記密碼</a>
+                            </div>
+                        </form>
+                        <hr>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <h5 class="me-12">還沒有 <span class="text-primary">FlightEase</span> 帳號?</h5>
+                            <p class="text-warning"><a href="../Register/register.html" class="text-warning">立即註冊</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <%- include('./layout/footer'); -%>
+
+            <script type="module" src="../../main.js"></script>
+</body>
+
+</html>
