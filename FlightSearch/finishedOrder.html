@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-    <link
-    rel="icon"
-    type="image/x-icon"
-    href="/Flight-Search/assets/LOGO-IMAGE-2b551039.svg"
-  />
-    <title>2-1 Search Form</title>
+    <title>2-5 Finished Order</title>
     <script type="module" crossorigin src="/Flight-Search/assets/main-306eaa60.js"></script>
     <link rel="stylesheet" href="/Flight-Search/assets/main-2bd7f367.css">
   </head>
@@ -99,12 +94,12 @@
 </nav>
 
     <!--進度條-->
-    <div class="searchForm-page container mt-5">
+    <div class="finishedOrder-page container-fluid mt-5">
       <div class="d-flex mt-5 mb-5 justify-content-center">
         <div class="progress-bar d-flex justify-content-between position-relative">
             <div class="d-flex flex-column align-items-center me-sm-5">
-                <div class="progress-bar-circle d-flex flex-column bg-primary">
-                    <a class="fs-5 fw-bold m-auto text-secondary" href="#">1</a>
+                <div class="progress-bar-circle d-flex flex-column">
+                    <a class="fs-5 fw-bold m-auto text-secondary" href="searchForm.html">1</a>
                 </div>
                 <p class="progress-bar-label mt-2 d-inline-block text-secondary w-md-100 text-center mb-0 mb-sm-3">查詢航班</p>
             </div>
@@ -127,7 +122,7 @@
                 <p class="progress-bar-label mt-2 d-inline-block text-secondary w-md-100 text-center mb-0 mb-sm-3">確認付款</p>
             </div>
             <div class="d-flex flex-column align-items-center">
-                <div class="progress-bar-circle d-flex flex-column">
+                <div class="progress-bar-circle d-flex flex-column bg-primary">
                     <span class="material-symbols-outlined fw-bold m-auto text-secondary">
                         done
                     </span>
@@ -138,115 +133,89 @@
         </div>
       </div>
 
-      <!--表單-->
-      <form action="">
-        <div class="formHeader border-bottom border-1 border-secondary">
-          <div class="row">
-            <div class="col-6 d-flex justify-content-end">
-              <a class="col-10 d-inline-block bg-primary text-secondary text-center py-2 py-sm-3 fs-4 fw-bold left-section" href="#">
-                來回
-              </a>
-            </div>
-            <div class="col-6 d-flex justify-content-start">
-              <a class="col-10 d-inline-block bg-primary text-secondary text-center py-2 py-sm-3 fs-4 fw-bold bg-opacity-25 right-section" href="#">
-                單程
-              </a>
-            </div>
+      <div class="content">
+        <div class="row justify-content-center">
+          <div class="col-10 col-md-8 col-lg-6 col-xl-4 position-relative">
+            <h3 class="text-secondary py-2 px-4 fw-bold fs-1 text-center">訂票成功</h3>
+            <div class="bg-primary position-absolute opacity-50 customized-highlight w-50 top-50 end-25"></div>
           </div>
+          <p class="fs-6 fw-bold text-center mt-2 text-secondary mb-3">詳細訂票資訊已寄至effie@gmail.com</p>
         </div>
-        <div class="formBody py-5 text-secondary">
-          <div class="row mb-md-5">
-            <div class="col-12 col-md-6 d-flex pe-md-4 mb-5 mb-sm-4 mb-md-3 mb-lg-0">
-              <label for="departure_location" name="departure_location" id="departure_location" class="fs-5 col-3 w-lg-20 d-flex my-auto">出發地<span class="text-danger">*</span></label>
-              <div class="btn-group col-9 w-lg-80">
-                <div class="dropdown-control-div border border-1 border-secondary d-flex justify-content-between">
-                  <button type="button" class="btn text-secondary py-2 text-start">--未選擇--</button>
-                  <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuDepartureLocation" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
-                    <span class="visually-hidden">Toggle Dropdown</span>
-                  </button>
-                </div>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuDepartureLocation">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Separated link</a></li>
-                </ul>
+          
+        <div class="py-5">
+          <!--row 1-->
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-9 col-lg-6 col-xl-5 d-flex mb-5 mb-sm-4 mb-lg-5 col-lg-5">
+              <label class="fs-5 col-3 w-lg-20 d-flex my-auto border-1">姓名<span class="text-danger">*</span></label>
+              <div class="col-9 w-lg-80 p-3 bg-primary bg-opacity-25">
+                <p class="text-secondary text-start m-0">Ms. Ching-Wen, Hsu</p>
               </div>
             </div>
-
-            <div class="col-12 col-md-6 fs-4 d-flex ps-md-1 ps-lg-4 mb-5 mb-sm-4 mb-md-3 mb-lg-0">
-              <label for="arrival_location" name="arrival_location" id="arrival_location" class="fs-5 col-3 w-lg-20 d-flex my-auto">目的地<span class="text-danger">*</span></label>
-              <div class="btn-group col-9 w-lg-80">
-                <div class="dropdown-control-div border border-1 border-secondary d-flex justify-content-between">
-                  <button type="button" class="btn text-secondary py-2 text-start">--未選擇--</button>
-                  <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuArrivalLocation" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
-                    <span class="visually-hidden">Toggle Dropdown</span>
-                  </button>
-                </div>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuArrivalLocation">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Separated link</a></li>
-                </ul>
+            <div class="col-12 col-md-9 col-lg-6 col-xl-5 d-flex ps-lg-2 mb-5 mb-sm-4 mb-lg-5 col-lg-5">
+              <label class="fs-5 col-3 w-lg-20 d-flex my-auto">票數<span class="text-danger">*</span></label>
+              <div class="col-9 w-lg-80 d-flex p-3 bg-primary bg-opacity-25">
+                <p class="text-secondary text-start m-0">經濟艙基本*2  (來回票)</p>
               </div>
             </div>
-
           </div>
 
-          <div class="row">
-            <div class="col-12 col-md-6 fs-4 d-flex pe-md-4 mb-5 mb-sm-4 mb-md-3 mb-lg-0">
+          <!--row 2-->
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-9 col-lg-6 col-xl-5 d-flex mb-5 mb-sm-4 mb-lg-5 col-lg-5">
               <div class="col-3 w-lg-20 d-flex flex-column">
-                <label for="departure_time" name="departure_time" id="departure_time" class="pt-2 fs-11rem">出發時間<span class="text-danger">*</span></label>
+                <label class="pt-2 fs-11rem">起程時間<span class="text-danger">*</span></label>
                 <p class="fs-6 mb-0">GMT+8</p>
               </div>
-              <div class="btn-group col-9 w-lg-80">
-                <div>
-                  <div class="dropdown-control-div border border-1 border-secondary d-flex justify-content-between">
-                    <button type="button" class="btn text-secondary py-2 text-start">--未選擇--</button>
-                    <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuDepartureTime" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
-                      <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
-                  </div>
-                  <p class="fs-6 mt-2 mb-0">( 僅供查詢未來 10 個小時以內 )</p>
-                </div>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuDepartureTime">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Separated link</a></li>
-                </ul>
+              <div class="col-9 w-lg-80 d-flex justify-content-between py-2 px-3 bg-primary bg-opacity-25 px-md-0">
+                <p class="text-secondary text-start m-0 my-auto ps-md-3">2023-08-20  15:00</p>
+                <p class="m-0 my-auto pe-md-3">桃園國際機場</p>
               </div>
             </div>
 
-            <div class="col-12 col-md-6 fs-4 d-flex ps-md-1 ps-lg-4">
-              <label for="airline" name="airline" id="airline" class="col-3 w-lg-20 pt-2 fs-11rem">航空公司</label>
-              <div class="btn-group col-9 w-lg-80">
-                <div class="dropdown-control-div border border-1 border-secondary d-flex justify-content-between w-100">
-                  <button type="button" class="btn text-secondary py-2 text-start">--未選擇--</button>
-                  <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuAirline" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
-                    <span class="visually-hidden">Toggle Dropdown</span>
-                  </button>
-                </div>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuAirline">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Separated link</a></li>
-                </ul>
+            <div class="col-12 col-md-9 col-lg-6 col-xl-5 d-flex ps-lg-2 mb-5 mb-sm-4 mb-lg-5 col-lg-5">
+              <label class="col-3 w-lg-20 d-flex my-auto fs-11rem">起程班次<span class="text-danger">*</span></label>
+              <div class="col-9 w-lg-80 d-flex justify-content-between py-2 px-3 bg-primary bg-opacity-25">
+                <p class="text-secondary py-2 text-start m-0 my-auto">長榮航空</p>
+                <p class="text-secondary py-2 text-start m-0 my-auto">XXXXXX 航班</p>
+              </div>
+            </div>
+          </div>
+
+          <!--row 3-->
+          <div class="row mb-md-5 justify-content-center">
+            <div class="col-12 col-md-9 col-lg-6 col-xl-5 d-flex mb-5 mb-sm-4 mb-md-3 mb-lg-0 col-lg-5">
+              <div class="col-3 w-lg-20 d-flex flex-column">
+                <label class="pt-2 fs-11rem">回程時間<span class="text-danger">*</span></label>
+                <p class="fs-6 mb-0">GMT+8</p>
+              </div>
+              <div class="col-9 w-lg-80 d-flex justify-content-between py-2 px-3 bg-primary bg-opacity-25">
+                <p class="text-secondary text-start m-0 my-auto">2023-08-30  10:00</p>
+                <p class="m-0 my-auto">東京成田機場</p>
               </div>
             </div>
 
+            <div class="col-12 col-md-9 col-lg-6 col-xl-5 d-flex ps-lg-2 mb-5 mb-sm-4 mb-md-0 mb-lg-0 col-lg-5">
+              <label class="col-3 w-lg-20 d-flex my-auto fs-11rem">起程班次<span class="text-danger">*</span></label>
+              <div class="col-9 w-lg-80 d-flex justify-content-between px-3 py-2 bg-primary bg-opacity-25">
+                <p class="text-secondary text-start py-2 m-0 my-auto">長榮航空</p>
+                <p class="text-secondary text-start py-2 m-0 my-auto">XXXXXX 航班</p>
+              </div>
+            </div>
           </div>
 
         </div>
 
-        <div class="formFooter d-flex justify-content-end">
-          <a class="btn btn-secondary text-white py-2 px-4 fs-5 fw-bold" href="flightSearch.html">查詢</a>
+        <div class="formFooter">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-9 col-lg-12 col-xl-10 d-flex justify-content-end">
+              <a class="d-inline-block me-4 p-2 px-sm-4 fs-5 bg-secondary fw-bold text-white border-0 text-center" href="../index.html">
+                返回首頁
+              </a>
+              <a class="d-inline-block p-2 px-sm-4 fs-5 bg-secondary fw-bold text-white border-0 text-center" href="../myOrder.html">
+                查看我的預定
+              </a>
+            </div>
+          </div>
         </div>
       </form>
     </div>
