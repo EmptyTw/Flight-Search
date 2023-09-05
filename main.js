@@ -21,3 +21,18 @@ flightSearchPage.addEventListener("click", function (e) {
     });
   }
 });
+
+//2-3 新增旅客資料
+const addPassenger = document.querySelector(".js-add-passenger");
+let formBody = document.querySelector(".formBody");
+let formFooter = document.querySelector(".formFooter");
+let newlyCreated;
+let passengerCount=1;
+
+addPassenger.addEventListener("click", (e)=>{
+  e.preventDefault();
+  passengerCount+=1;
+  newlyCreated = document.createElement("div");
+  newlyCreated.innerHTML = `<div class="position-relative w-100 d-block pb-5"><h3 class="text-secondary py-2 px-4 fs-5 fw-bold d-inline-block w-auto fs-2 ps-0">旅客 ${passengerCount}</h3><div class="bg-primary position-absolute opacity-50 customized-highlight"></div></div>` + formBody.innerHTML; 
+  formFooter.insertAdjacentElement("beforebegin", newlyCreated);
+})

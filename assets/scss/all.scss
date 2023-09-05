@@ -32,6 +32,7 @@
 @import "../node_modules/bootstrap/scss/breadcrumb";
 @import "./components/utilities";
 @import "./components/button";
+@import "./components/progressBar";
 
 // 5. Add additional custom code here
 @import "../node_modules/bootstrap/scss/helpers";
@@ -57,3 +58,6 @@
 @import "./pages/delayFlight.scss";
 @import "./pages/realTimeFlight.scss";
 @import "./pages/searchForm.scss";
+@import "./pages/passengerInfo.scss";
+@import "./pages/paymentInfo.scss";
+@import "./pages/finishedOrder.scss";
