@@ -35,7 +35,7 @@
   </div>
   <!-- FOOTER LOGO -->
   <div class="bg-secondary container-fluid text-center footer-logo-padding">
-    <a class="footer__logo" href="./pages/index.html">
+    <a class="footer__logo" href="<%= '/Flight-Search' %>/pages/index.html">
       <img
         class="footer__img pb-4"
         src="/assets/images/homepage/logo_footer.svg"
@@ -44,7 +44,7 @@
     <p class="h5 pt-4 text-light">讓夢想起飛</p>
   </div>
   <!--FOOTER ICONS AND CTA  -->
-  <nav class="navbar navbar-expand-lg py-3 bg-dark">
+  <nav class="navbar navbar-expand-lg py-5 py-sm-3 bg-dark">
     <div class="container justify-content-lg-between">
       <ul
         class="navbar-nav me-auto ms-auto mb-2 mb-lg-0 d-flex flex-row justify-content-between align-items-center gap-lg-4"
@@ -86,21 +86,23 @@
         class="navbar-nav me-auto mb-2 mb-lg-0 d-md-flex d-none flex-row justify-content-between align-items-center gap-xl-5 gap-lg-3"
       >
         <li class="nav-item">
-          <a class="nav-link nav-link-footer link-light h5 py-1 px-2" href="#"
+          <a
+            class="nav-link nav-link-footer link-light h5 py-1 px-2"
+            href="<%= '/Flight-Search' %>/pages/FlightSearch/searchForm.html"
             >航班檢索</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link nav-link-footer link-light h5 py-1 px-2"
-            href="./DelayFlight/delayFlight.html"
+            href="<%= '/Flight-Search' %>/pages/DelayFlight/delayFlight.html"
             >延遲航班</a
           >
         </li>
         <li class="nav-item">
           <a
             class="nav-link nav-link-footer link-light h5 py-1 px-2"
-            href="./RealTimeFlight/realTimeFlight.html"
+            href="<%= '/Flight-Search' %>/pages/RealTimeFlight/realTimeFlight.html"
             >班機座標</a
           >
         </li>

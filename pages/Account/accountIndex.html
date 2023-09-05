@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlightEase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- ejs語法 -->
+    <%- include('./layout/header_member'); -%>
+        <div class="account_index container">
+            <div class="row mt-5">
+                <ul
+                    class="sidebar col-lg-2 border py-lg-3 d-flex flex-lg-column justify-content-lg-start justify-content-sm-evenly justify-content-between">
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_myFavorite">
+                        <a class="text-decoration-none text-secondary" href="./favorite.html">我的最愛</a>
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_myOrder">
+                        <a class="text-decoration-none text-secondary" href="./myOrder.html">我的預定</a>
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_reviseData">
+                        <a class="text-decoration-none text-secondary" href="./reviseData.html">修改會員資料</a>
+                    </li>
+                    <li class="sidebar_fs py-2 sidebar_option sidebar_revisePassword">
+                        <a class="text-decoration-none text-secondary" href="./revisePassword.html">修改會員密碼</a>
+                    </li>
+                </ul>
+                <div class="col-lg-10 ps-lg-4">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="<%= '/Flight-Search' %>/pages/index.html">首頁</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">會員專區</li>
+                        </ol>
+                    </nav>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                                type="button" role="tab" aria-controls="home" aria-selected="true">我的收藏項目</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                type="button" role="tab" aria-controls="profile" aria-selected="false">訂閱電子報</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content border border-top-0" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="ticketCards_index d-flex flex-column px-3">
+                                <div class="ticketCard_index justify-content-evenly row py-3">
+                                    <div class="col-2 d-flex-center p-0 m-0">
+                                        <img src="/assets/images/account/cathay.png" alt="cathay air">
+                                    </div>
+                                    <div
+                                        class="departureTime d-none d-lg-flex timeTag col-lg-2 text-center p-0 d-flex-center">
+                                        2025/01/01 <br>
+                                        10:35 <br>
+                                        GMT+8
+                                    </div>
+                                    <div class="col-2 p-0 text-center d-flex-center flex-column">
+                                        <div class="airportCode">TPE</div>
+                                        <div class="airportName d-none d-sm-block">台北桃園國際機場</div>
+                                        <div class="airportCountry d-none d-sm-block">台灣</div>
+                                    </div>
+                                    <div class="col-2 p-2 d-flex flex-column justify-content-center">
+                                        <div class="timeUse text-center mb-2">2小時25分鐘</div>
+                                        <div class="singleArrow"></div>
+                                    </div>
+                                    <div class="col-2 p-0 text-center d-flex-center flex-column">
+                                        <div class="airportCode">ICN</div>
+                                        <div class="airportName d-none d-sm-block">首爾仁川國際機場</div>
+                                        <div class="airportCountry d-none d-sm-block">韓國</div>
+                                    </div>
+                                    <div
+                                        class="arrivalTime d-none d-lg-flex timeTag col-2 text-center p-0 d-flex-center">
+                                        2025/01/01 <br>
+                                        14:00 <br>
+                                        GMT+8
+                                    </div>
+                                </div>
+                                <div class="ticketCard_index justify-content-evenly row py-3">
+                                    <div class="col-2 d-flex-center p-0 m-0">
+                                        <img src="/assets/images/account/cathay.png" alt="cathay air">
+                                    </div>
+                                    <div
+                                        class="departureTime d-none d-lg-flex timeTag col-lg-2 text-center p-0 d-flex-center">
+                                        2025/01/01 <br>
+                                        10:35 <br>
+                                        GMT+8
+                                    </div>
+                                    <div class="col-2 p-0 text-center d-flex-center flex-column">
+                                        <div class="airportCode">TPE</div>
+                                        <div class="airportName d-none d-sm-block">台北桃園國際機場</div>
+                                        <div class="airportCountry d-none d-sm-block">台灣</div>
+                                    </div>
+                                    <div class="col-2 p-2 d-flex flex-column justify-content-center">
+                                        <div class="timeUse text-center mb-2">2小時25分鐘</div>
+                                        <div class="singleArrow"></div>
+                                    </div>
+                                    <div class="col-2 p-0 text-center d-flex-center flex-column">
+                                        <div class="airportCode">ICN</div>
+                                        <div class="airportName d-none d-sm-block">首爾仁川國際機場</div>
+                                        <div class="airportCountry d-none d-sm-block">韓國</div>
+                                    </div>
+                                    <div
+                                        class="arrivalTime d-none d-lg-flex timeTag col-2 text-center p-0 d-flex-center">
+                                        2025/01/01 <br>
+                                        14:00 <br>
+                                        GMT+8
+                                    </div>
+                                </div>
+                                <a class="btn m-0 pb-auto"
+                                    href="<%= '/Flight-Search' %>/pages/account/favorite.html">查看更多</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade p-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="row py-2">
+                                <div class="col-4 col-lg-2 d-flex-center">
+                                    <label for="departureAirport">出發機場:</label>
+                                </div>
+                                <div class="col-8 col-lg-6">
+                                    <select class="input-group" name="departureAirport" id="departureAirport">
+                                        <option value="any">不限</option>
+                                        <option value="KHH">高雄小港機場</option>
+                                        <option value="TPE">桃園國際機場</option>
+                                        <option value="HKG">香港國際機場</option>
+                                        <option value="MFM">澳門國際機場</option>
+                                        <option value="RJTT">東京國際機場</option>
+                                        <option value="ITM">大阪國際機場</option>
+                                        <option value="OKA">那霸機場</option>
+                                        <option value="ICN">仁川國際機場</option>
+                                        <option value="PUS">金海國際機場</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4 col-lg-2 d-flex-center">
+                                    <label for="arriveAirport">抵達機場:</label>
+                                </div>
+                                <div class="col-8 col-lg-6">
+                                    <select class="input-group" name="arriveAirport" id="arriveAirport">
+                                        <option value="any">不限</option>
+                                        <option value="KHH">高雄小港機場</option>
+                                        <option value="TPE">桃園國際機場</option>
+                                        <option value="HKG">香港國際機場</option>
+                                        <option value="MFM">澳門國際機場</option>
+                                        <option value="RJTT">東京國際機場</option>
+                                        <option value="ITM">大阪國際機場</option>
+                                        <option value="OKA">那霸機場</option>
+                                        <option value="ICN">仁川國際機場</option>
+                                        <option value="PUS">金海國際機場</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row py-2">
+                                <div class="col-4 col-lg-2 d-flex-center">
+                                    <label for="email">接收郵箱:</label>
+                                </div>
+                                <div class="col-8 col-lg-6">
+                                    <input class="ps-2 form-control" type="email" name="email" id="email"
+                                        value="jack@flightease.com">
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-start mt-3 ms-5">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        請寄給我所有好康消息
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        當有優惠票價時
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary mt-3 ms-3">確認訂閱</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('./layout/footer'); -%>
+
+            <script type="module" src="../../main.js"></script>
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+</body>
+
+</html>

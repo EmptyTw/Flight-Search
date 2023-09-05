@@ -49,7 +49,7 @@
 
   @include respond(lg) {
     &:hover {
-      transform: translateX(10rem);
+      transform: translateX(5rem);
     }
   }
 

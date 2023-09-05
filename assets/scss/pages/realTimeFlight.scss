@@ -5,3 +5,8 @@
     height: 1000px;
   }
 }
+
+// 360 跟 0 是朝上最上方  往右開始增加角度
+.realTimeFlight-dir {
+  transform: rotate(100deg);
+}

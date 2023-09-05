@@ -3,7 +3,7 @@
    
     <!--href還需要再次確認是否可以用 -->
     
-    <a class=" " href="./pages/index.html"
+    <a class=" " href="<%= '/Flight-Search' %>/pages/index.html"
       ><img class="navbar-img" src="/assets/images/homepage/logo_navbar.png" alt="logo navbar"
     /></a>
 
@@ -17,21 +17,22 @@
             <li class="navbar-navItem">
               <a
                 class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0"
-                href="#"
+                href="<%= '/Flight-Search' %>/pages/FlightSearch/searchForm.html"
                 >航班檢索</a
               >
             </li>
             <li class="navbar-navItem">
               <a
                 class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0" 
-                href="./DelayFlight/delayFlight.html"
+                href="<%= '/Flight-Search' %>/pages/DelayFlight/delayFlight.html"
+               
                 >延遲航班</a
               >
             </li>
             <li class="navbar-navItem">
               <a
                 class="nav-link nav-link-header link-dark focus-primary-light h5 px-sm-2 px-0  mb-0"
-                href="./RealTimeFlight/realTimeFlight.html"
+                href="<%= '/Flight-Search' %>/pages/RealTimeFlight/realTimeFlight.html"
                 >班機座標</a
               >
             </li>
@@ -63,6 +64,13 @@
                 class="nav-link nav-link-header link-dark h5 py-2 py-sm-1 px-sm-2 px-1 mb-0"
                 href="#"
                 >註冊</a
+              >
+            </li>
+            <li class="navbar-navItem-top">
+              <a
+                class="nav-link nav-link-header link-dark h5 py-2 py-sm-1 px-sm-2 px-1 mb-0"
+                href="<%= '/Flight-Search' %>/pages/account/accountIndex.html"
+                >會員</a
               >
             </li>
           </ul>
