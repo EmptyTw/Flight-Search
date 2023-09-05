@@ -1,0 +1,109 @@
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@mixin moveInLeft {
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-3rem);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(3rem);
+    }
+  }
+}
+
+@mixin moveUpandDown {
+  @keyframes moveUpandDown {
+    0% {
+      transform: translateY(-0.5rem);
+    }
+
+    50% {
+      transform: translateY(0.5rem);
+    }
+    100% {
+      transform: translateY(-0.5rem);
+    }
+  }
+}
+
+@mixin rainbow {
+  @keyframes rainbow {
+    0% {
+      border-image-source: linear-gradient(
+        45deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+      );
+    }
+
+    25% {
+      border-image-source: linear-gradient(
+        45deg,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet,
+        red,
+        orange
+      );
+    }
+
+    50% {
+      border-image-source: linear-gradient(
+        45deg,
+        blue,
+        indigo,
+        violet,
+        red,
+        orange,
+        yellow,
+        green
+      );
+    }
+
+    75% {
+      border-image-source: linear-gradient(
+        45deg,
+        violet,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo
+      );
+    }
+
+    100% {
+      border-image-source: linear-gradient(
+        45deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+      );
+    }
+  }
+}

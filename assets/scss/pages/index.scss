@@ -1,0 +1,260 @@
+.border-left-2 {
+  border-left: 2px solid #0000003e;
+}
+
+.rotate-90 {
+  transform: rotate(270deg);
+}
+
+.carousel-hover {
+  background-color: #ead390;
+}
+
+.bg-blend-mode-screen {
+  background-blend-mode: screen;
+}
+
+.border-top-primary {
+  border-top: 1px solid $primary;
+}
+
+.border-top-secondary {
+  border-top: 1px solid $secondary;
+}
+
+.img-height-setting {
+  height: 764px;
+
+  @include respond(lg) {
+    height: 1000px;
+  }
+}
+
+////HERO///////
+
+.clip-path-hero {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+
+  @include respond(sm) {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  }
+}
+
+.hero-text-mt {
+  margin-top: 250px;
+  @include respond(sm) {
+    margin-top: 200px;
+  }
+
+  @include respond(lg) {
+    margin-top: 370px;
+  }
+
+  @include respond(xxl) {
+    margin-top: 500px;
+  }
+}
+
+////CAROUSEL////
+.carousel-active {
+  opacity: 1 !important;
+}
+.flightSearch-arrow-position {
+  position: absolute;
+  right: 0%;
+  top: 100%;
+  @include respond(lg) {
+    transform: translateY(-100%);
+    right: 9.4%;
+  }
+}
+
+.flightSearch-img-rwd-height {
+  height: 100%;
+
+  @include respond(lg) {
+    height: 358px;
+  }
+}
+
+.flightSearch-img-rwd-height-2 {
+  height: 197px;
+
+  @include respond(lg) {
+    height: 358px;
+  }
+}
+
+// NEAR AIRPORTS //
+
+.nearAirport {
+  &-container-pt {
+    padding-top: 140px;
+
+    @include respond(lg) {
+      padding-top: 240px;
+    }
+  }
+
+  &-clip-path {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    @include respond(lg) {
+      clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    }
+  }
+
+  &-btn-mt {
+    margin-top: 150px;
+
+    @include respond(lg) {
+      margin-top: 200px;
+    }
+    @include respond(xxl) {
+      margin-top: 340px;
+    }
+  }
+
+  &-bg-pos {
+    background-position: 75% 0%;
+
+    @include respond(sm) {
+      background-position: 60% 0%;
+    }
+
+    @include respond(md) {
+      background-position: 50% 0%;
+    }
+  }
+}
+
+////TOURCARD/////
+
+.card-scroll-rwd {
+  overflow: scroll;
+  @include respond(lg) {
+    overflow: visible;
+  }
+}
+
+.card-hover {
+  &-spot {
+    transition: all 0.5s;
+    outline-offset: 16px;
+  }
+
+  &:hover &-spot:hover {
+    outline: 0.3rem solid $primary;
+    transform: scale(1.05) translateY(-5rem);
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.5);
+    z-index: 20;
+  }
+
+  &:hover &-spot:not(:hover) {
+    transform: scale(0.95);
+  }
+}
+
+.card-img-height-rwd {
+  height: 368px;
+  @include respond(xl) {
+    height: 549px;
+  }
+}
+
+.card-scroll-width-rwd {
+  white-space: nowrap;
+  width: 240%;
+  @include respond(lg) {
+    width: 100%;
+  }
+}
+
+//////CTA 卡片翻轉效果//////
+.cta-mt {
+  margin-top: 80px;
+
+  @include respond(lg) {
+    margin-top: 240px;
+  }
+}
+.cta_right_card {
+  &-side {
+    position: static;
+    width: 100%;
+
+    transition: all 1s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($dark, 0.15);
+
+    @include respond(md) {
+      position: absolute;
+      height: 328px;
+      width: 300px;
+    }
+  }
+
+  &-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include respond(md) {
+      top: 30%;
+    }
+
+    transform: rotateY(180deg);
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($primary, 0.2),
+      rgba($primary, 0.85)
+    );
+  }
+
+  &:hover &-front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &-back {
+    transform: rotateY(0deg);
+  }
+}
+
+.cta-left {
+  &-textAlign {
+    text-align: center;
+    @include respond(md) {
+      text-align: left;
+    }
+  }
+
+  &-width {
+    width: 100%;
+    @include respond(md) {
+      width: auto;
+    }
+  }
+}
+
+// 圖片濾鏡
+
+.img-caption {
+  &-filter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &-img {
+    filter: blur(1px) brightness(80%);
+  }
+
+  &:hover &-filter {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}

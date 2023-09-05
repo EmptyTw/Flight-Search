@@ -1,0 +1,46 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+@import "./utils/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "./utils/utilities";
+@import "./utils/mixins";
+@import "../node_modules/rfs/scss";
+@import "./base/animations";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "./components/utilities";
+@import "./components/button";
+
+// 5. Add additional custom code here
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+//ejs layouts
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+
+//pages
+@import "./pages/index.scss";
+@import "./pages/flightSearch.scss";
+@import "./pages/delayFlight.scss";
+@import "./pages/realTimeFlight.scss";

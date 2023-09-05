@@ -1,0 +1,44 @@
+.formInfo {
+  display: block;
+  transition: all 0.3s;
+  border: 3px solid $secondary;
+  box-shadow: none;
+
+  &:focus {
+    border: 3px solid $secondary;
+    box-shadow: none;
+  }
+
+  &:focus:invalid {
+    border: 3px solid $danger;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $secondary;
+    font-weight: 700;
+  }
+
+  &-label {
+    transition: all 0.3s;
+    display: block;
+  }
+
+  &:placeholder-shown + &-label {
+    color: $secondary;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-1rem);
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.fs-rwd-16-sm-24 {
+  font-size: 16px;
+
+  @include respond(sm) {
+    font-size: 20px;
+  }
+}
