@@ -2,23 +2,23 @@
   <div class="container-fluid  d-flex flex-lg-row flex-sm-column flex-row justify-content-sm-around justify-content-between px-lg-0 align-items-center gap-sm-3 w-100 p-0 m-0 ">
    
     <!--href還需要再次確認是否可以用 -->
-    
-    <a class=" " href="<%= '/Flight-Search' %>/pages/index.html"
+    <% 
+    const _url='http://127.0.0.1:3000';//local
+    //const _url='https://emptytw.github.io'; //github
+    let baseUrl=`${_url}/Flight-Search` ;
+
+    if(baseUrl.indexOf('emptytw')<0){
+      baseUrl+='/pages';
+    }
+    %>
+    <!-- <%= baseUrl %> -->
+    <a class=" " href="<%= baseUrl %>/index.html"
       ><img class="navbar-img" src="/assets/images/homepage/logo_navbar.png" alt="logo navbar"
     /></a>
 
     <!-- collapse navbar-collapse -->
     <div class="d-flex justify-content-center">
-      <% 
-      //const _url='http://127.0.0.1:3000';//local
-      const _url='https://emptytw.github.io/'; //github
-      let baseUrl=`${_url}/Flight-Search` ;
-
-      if(baseUrl.indexOf('emptytw')<0){
-        baseUrl+='/pages';
-      }
-      %>
-      <!-- <%= baseUrl %> -->
+     
       <!--每個分頁待大家完成後 要再加上正確的href-->
           <ul
             class="d-flex list-unstyled mb-0 flex-row justify-content-between bg-lg-primary align-items-center gap-lg-4 gap-sm-1 gap-2 py-2 py-sm-1 px-3 px-sm-0 px-md-3  navbar-position-bottom"
@@ -79,7 +79,7 @@
             <li class="navbar-navItem-top">
               <a
                 class="nav-link nav-link-header link-dark h5 py-2 py-sm-1 px-sm-2 px-1 mb-0"
-                href="<%= baseUrl %>/account/accountIndex.html"
+                href="<%= baseUrl %>/Account/accountIndex.html"
                 >會員</a
               >
             </li>

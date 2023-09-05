@@ -4,8 +4,8 @@
 
     <!--href還需要再次確認是否可以用 -->
     <% 
-    //const _url='http://127.0.0.1:3000'; //local
-    const _url='https://emptytw.github.io/'; //github
+    const _url='http://127.0.0.1:3000'; //local
+    //const _url='https://emptytw.github.io'; //github
     let baseUrl=`${_url}/Flight-Search` ;
     if(baseUrl.indexOf('emptytw')<0){
       baseUrl+='/pages';
@@ -41,7 +41,7 @@
       <ul class="list-unstyled d-flex ms-lg-5 ms-sm-3 mb-0 flex-row bg-lg-primary  gap-sm-4 ">
         <li class="navbar-navItem-top">
           <a class="nav-link nav-link-header link-dark h5 py-2 py-sm-1  px-sm-2 px-1 mb-0"
-            href="<%= baseUrl %>/account/accountIndex.html">會員專區</a>
+            href="<%= baseUrl %>/Account/accountIndex.html">會員專區</a>
         </li>
         <li class="navbar-navItem-top">
           <a class="nav-link nav-link-header link-dark h5 py-2 py-sm-1 px-sm-2 px-1 mb-0"
