@@ -77,11 +77,12 @@
             <div class="row row-cols-1 row-cols-md-2 mb-md-5">
               <div class="col-12 col-md-6 d-flex pe-md-4 mb-4 mb-sm-4 mb-md-3 mb-lg-0">
                 <label for="appellation" name="appellation" id="appellation" class="fs-5 col-3 w-lg-20 d-flex my-auto">稱謂<span class="text-danger">*</span></label>
-                <div class="dropdown-control-div col-9 w-lg-80 px-1 py-1 border border-1 border-secondary d-flex justify-content-between w-lg-80 bg-primary bg-opacity-25 h-50px">
-                  <button type="button" class="btn text-secondary text-start">小姐 (Ms.)</button>
-                  <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuDepartureTime" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
-                    <span class="visually-hidden">Toggle Dropdown</span>
-                  </button>
+                <div class="col-9 w-lg-80">
+                  <select class="px-3 py-2 border border-1 border-secondary bg-primary bg-opacity-25 h-50px w-100" autocomplete="off">
+                    <option value="Mr." class="bg-white">先生 (Mr.)</option>
+                    <option value="Ms." class="bg-white">女士 (Ms.)</option>
+                    <option value="Miss" class="bg-white" selected>小姐 (Miss)</option>
+                  </select>
                 </div>
               </div>
 
@@ -117,23 +118,22 @@
               <div class="col-12 col-md-6 d-flex pe-md-4 mb-5 mb-sm-4 mb-md-3 mb-lg-0">
                 <label for="appellation" name="appellation" id="appellation" class="fs-5 col-3 w-lg-20 d-flex pt-2">艙等<span class="text-danger">*</span></label>
                 <div class="col-9 col-lg-10 w-lg-80">
-                  <div class="dropdown-control-div px-1 py-1 border border-1 border-secondary d-flex justify-content-between bg-primary bg-opacity-25">
-                    <button type="button" class="btn text-secondary text-start pe-md-1">經濟艙 基本  NT. 10, 451</button>
-                    <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuDepartureTime" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
-                      <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
-                  </div>
+                  <select class="px-3 py-2 border border-1 border-secondary bg-primary bg-opacity-25 w-100 h-50px" autocomplete="off">
+                    <option value="" class="bg-white" selected>經濟艙 基本</option>
+                    <option value="" class="bg-white">經濟艙 經典</option>
+                    <option value="" class="bg-white">商務艙 基本</option>
+                    <option value="" class="bg-white">商務艙 經典</option>
+                  </select>
                 </div>
               </div>
               <div class="col-12 col-md-6 d-flex ps-md-1 ps-lg-4 mb-5 mb-sm-4 mb-md-3 mb-lg-0">
                 <label for="ticket" name="ticket" id="ticket" class="fs-5 col-3 w-lg-20 d-flex mt-2">票種<span class="text-danger">*</span></label>
                 <div class="col-9 col-lg-10 w-lg-80">
-                  <div class="dropdown-control-div col-12 px-1 py-1 border border-1 border-secondary d-flex justify-content-between bg-primary bg-opacity-25">
-                    <button type="button" class="btn text-secondary text-start">成人票</button>
-                    <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" id="dropdownMenuDepartureTime" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
-                      <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
-                  </div>
+                  <select class="px-3 py-2 border border-1 border-secondary bg-primary bg-opacity-25 h-50px w-100" autocomplete="off">
+                    <option value="adult" class="bg-white" selected>成人</option>
+                    <option value="child" class="bg-white">兒童</option>
+                    <option value="baby" class="bg-white">嬰兒</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -146,6 +146,16 @@
 
         <section>
           <p class="text-danger fw-bold pb-0">*請填寫下列付款資訊</p>
+          <div class="d-flex mt-4 mb-3 mb-sm-4">
+            <div class="me-3 fs-5 fw-light">
+              <input type="radio" name="credit_card" id="visa">
+              <label for="visa" name="credit_card">visa</label>
+            </div>
+            <div class="fs-5 fw-light">
+              <input type="radio" name="credit_card" id="master">
+              <label for="master" name="credit_card">master</label>
+            </div>
+          </div>
 
           <div class="row row-cols-1 row-cols-md-2 mb-md-1 mb-lg-4">
             <div class="col-12 col-md-6 d-flex pe-md-4 mb-4 mb-md-3 mb-lg-0">
@@ -162,41 +172,36 @@
             <div class="col-12 col-md-6 d-flex ps-md-1 ps-lg-4 mb-5 mb-sm-4 mb-md-3 mb-lg-0">
               <label for="ticket" name="ticket" id="ticket" class="fs-5 col-3 w-lg-20 d-flex mt-2 my-md-auto">到期日<span class="text-danger">*</span></label>
               <div class="col-9 col-lg-10 w-lg-80 d-flex justify-content-between">
-                <div class="btn-group col-5 px-1 py-1 border border-1 border-secondary d-flex justify-content-between bg-primary bg-opacity-25 h-50px my-md-auto">
-                  <button type="button" class="btn text-secondary text-start">年</button>
-                  <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="visually-hidden">Toggle Dropdown</span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">2023</a></li>
-                    <li><a class="dropdown-item" href="#">2024</a></li>
-                    <li><a class="dropdown-item" href="#">2025</a></li>
-                    <li><a class="dropdown-item" href="#">2026</a></li>
-                    <li><a class="dropdown-item" href="#">2027</a></li>
-                    <li><a class="dropdown-item" href="#">2028</a></li>
-                    <li><a class="dropdown-item" href="#">2029</a></li>
-                    <li><a class="dropdown-item" href="#">2030</a></li>
-                  </ul>
+                <div class="col-5 h-50px my-md-auto">
+                  <select class="text-secondary bg-primary bg-opacity-25 w-100 h-100 px-3 py-2 border border-1 border-secondary">
+                    <option value="" class="bg-white">年</option>
+                    <option value=2023 class="bg-white">2023</option>
+                    <option value=2024 class="bg-white">2024</option>
+                    <option value=2025 class="bg-white">2025</option>
+                    <option value=2026 class="bg-white">2026</option>
+                    <option value=2027 class="bg-white">2027</option>
+                    <option value=2028 class="bg-white">2028</option>
+                    <option value=2029 class="bg-white">2029</option>
+                    <option value=2030 class="bg-white">2030</option>
+                  </select>
                 </div>
-                <div class="btn-group col-5 px-1 py-1 border border-1 border-secondary d-flex justify-content-between bg-primary bg-opacity-25 h-50px my-md-auto">
-                  <button type="button" class="btn text-secondary text-start">月</button>
-                  <button type="button" class="btn btn-transparent dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="visually-hidden">Toggle Dropdown</span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">1</a></li>
-                    <li><a class="dropdown-item" href="#">2</a></li>
-                    <li><a class="dropdown-item" href="#">3</a></li>
-                    <li><a class="dropdown-item" href="#">4</a></li>
-                    <li><a class="dropdown-item" href="#">5</a></li>
-                    <li><a class="dropdown-item" href="#">6</a></li>
-                    <li><a class="dropdown-item" href="#">7</a></li>
-                    <li><a class="dropdown-item" href="#">8</a></li>
-                    <li><a class="dropdown-item" href="#">9</a></li>
-                    <li><a class="dropdown-item" href="#">10</a></li>
-                    <li><a class="dropdown-item" href="#">11</a></li>
-                    <li><a class="dropdown-item" href="#">12</a></li>
-                  </ul>
+
+                <div class="col-5 h-50px my-md-auto">
+                  <select class="text-secondary bg-primary bg-opacity-25 w-100 h-100 px-3 py-2 border border-1 border-secondary">
+                    <option value="" class="bg-white">月</option>
+                    <option value=1 class="bg-white">1</option>
+                    <option value=2 class="bg-white">2</option>
+                    <option value=3 class="bg-white">3</option>
+                    <option value=4 class="bg-white">4</option>
+                    <option value=5 class="bg-white">5</option>
+                    <option value=6 class="bg-white">6</option>
+                    <option value=7 class="bg-white">7</option>
+                    <option value=8 class="bg-white">8</option>
+                    <option value=9 class="bg-white">9</option>
+                    <option value=10 class="bg-white">10</option>
+                    <option value=11 class="bg-white">11</option>
+                    <option value=12 class="bg-white">12</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -222,7 +227,7 @@
                     help
                   </span>
                   什麼是驗證碼
-                </button>                
+                </button>             
               </p>
             </div>
 

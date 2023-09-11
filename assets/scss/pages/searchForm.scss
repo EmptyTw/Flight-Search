@@ -7,8 +7,15 @@
         margin-left: -($grid-gutter-width *0.5);
     }
 
-    .fs-11rem {
-        font-size: 1.1rem;
+    select {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        height: fit-content;
+    }
+
+    .search-btn:hover {
+        background-color: $secondary;
+        box-shadow: none;
     }
 }
 
